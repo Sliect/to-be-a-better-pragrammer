@@ -50,3 +50,91 @@ function App() {
   )
 }
 ```
+
+
+## 分层
+
+### 状态与操作封装
+
+``` js
+export default useMethods = (methods, initialValue) => {
+  const [val, setVal] = useState(initialValue)
+  const boundMethods = useMemo(
+    () => Object.entries(methods).reduce((acc, [name, fn]) => {
+      const method = (...args) => {
+        setVal(val => fn(val, ...args))
+      }
+      acc[name] = method
+      return acc
+    }, {}),
+    [methods]
+  )
+  return [val, boundMethods, setVal]
+}
+```
+
+### 封装常用数据结构
+
+``` js
+const useArray = (initialValue = []) => useMethods({
+  push(state, item) {
+    return state.concat(item)
+  },
+  remove(state, item) {
+    const idx = state.indexOf(item)
+    if (idx < 0) {
+      return state
+    }
+    // 优化：用useImmer
+    return [...state.slice(0, idx), ...state.slice(idx + 1)]
+  }
+}, initialValue)
+const useNumber = (initialValue = 0) => useMethods({
+  increment(val) {
+    return val + 1
+  },
+  decrement(val) {
+    return val - 1
+  }
+}, initialValue)
+```
+
+### 通用过程封装
+
+``` js
+const useTaskPending = task => {
+  const [pendingCount, { increment, decrement }] = useNumber(0)
+  const taskWithPending = useCallback(async (...args) => {
+    increment()
+    const result = await task(...args)
+    decrement()
+    return result
+  }, [task, increment, decrement])
+  return [taskWithPending, pendingCount > 0]
+}
+
+const useTaskPendingState = (task, storeResult) => {
+  const [taskWithPending, pending] = useTaskPending(task)
+  const callAndStore = useCallback((...args) => {
+    const result = await taskWithPending(...args)
+    storeResult(result)
+  }, [taskWithPending, storeResult])
+  return [callAndStore, pending]
+}
+```
+
+### 拼装成业务
+
+``` js
+const useUserList = () => {
+  const [users, { push, remove }, setUsers] = useArray([])
+  const [load, pending] = useTaskPendingState(getUsers, setUsers)
+  return [user, { pending, load, addUser: push, deleteUser: remove }]
+}
+```
+
+## 状态粒度细分
+
+同类型的状态保存，避免状态拆分的过细，导致连续多个状态的更新，最佳实践是选择 useReducer  
+同时过粗的拆分会导致耦合性过大，不利于复用  
+

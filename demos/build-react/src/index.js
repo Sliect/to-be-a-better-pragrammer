@@ -71,7 +71,9 @@ function updateDom(dom, prevProps, nextProps) {
 function commitRoot() {
   deletions.forEach(commitWork)
   commitWork(wipRoot.child)
+  // 当前树指向刚更新完成的未来树
   currentRoot = wipRoot
+  // 未来树指向null，等待重新构建
   wipRoot = null
 }
 function commitWork(fiber) {
