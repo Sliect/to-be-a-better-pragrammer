@@ -140,10 +140,73 @@ function log(message) {
 
 ```
 
-
-
 ## 浏览器渲染 —— commit 阶段
 
+useEffect处理  
+触发useLayoutEffect、useEffect的生命周期  
+
+## diff 
+
+单节点diff  
+1. 先判断是否存在 DOM 节点  
+2. 通过对比 key 和 type 判断是否可以复用 DOM 节点
+3. 若key 和 type 相同则复用 DOM 节点  
+   若key 相同 type 不同则将fiber 及其兄弟fiber 标记为删除  
+   其他则删除当前fiber  
+
+``` html
+// 未设置 key 则默认都为 null
+// key 相同, li和p的type 不同, 满足3.2
+ul > li * 3
+ul > p
+
+// key, type 相同, 满足 3.1
+<div>foo</div>
+<div>bar</div>
+
+// key 不同, 满足 3.3
+<div key="xxx">ka song</div>
+<p key="ooo">ka song</p>
+```
+
+多节点diff  
+
+优先更新操作，第一轮遍历处理更新的节点，第二轮遍历处理不属于更新的节点  
+
+第一轮遍历  
+1. 遍历newChildren, 将 newChildren[i] 与 oldFiber 相比, 判断 DOM 节点是否可复用
+2. 若可复用, i++, 继续比较 newChildren[i] 与 oldFiber.sibling
+3. 若不可复用, 分两种情况：key不同导致不可复用, 跳出第一轮遍历; key相同type不同导致不可复用, 将 oldFiber 标记为 Deletion, 继续遍历
+4. 若遍历完newChildren 或 oldFiber, 跳出第一轮遍历
+
+第二轮遍历
+1. 第一轮中第4种情况跳出的遍历分3种情况
+    - 同时遍历完
+    - oldFiber 遍历完, newChildren 还没遍历完, newChildren 剩下的标记为 Placement
+    - oldFiber 没遍历完, newChildren 遍历完, oldFiber 剩下的标记为 Deletion
+2. 第一轮中的第3种情况跳出遍历(改变位置)
+    1. 将剩余的 oldFiber 保存为 map
+    2. 将第一轮中对比跳出的 i 记为 lastPlacedIndex
+    3. 根据 map 找到 newChildren[i] 在旧的列表中的位置, 记为 oldIndex
+    4. 若 oldIndex < lastPlacedIndex, 标记该节点需要右移
+    5. 若 oldIndex >= lastPlacedIndex, 则 lastPlacedIndex = oldIndex, 表示不需要移动且最右侧的下标改变
+
+``` 
+abcd(旧)
+dcba(新)
+
+dcba
+oldIndex 3 > lastPlacedIndex 0  lastPlacedIndex = 3   d不动
+
+cba
+oldIndex 2 < lastPlacedIndex 3  c右移
+
+ba
+oldIndex 1 < lastPlacedIndex 3  b右移
+
+a
+oldIndex 0 < lastPlacedIndex 3  a右移
+```
 
 ## 源码解析
 

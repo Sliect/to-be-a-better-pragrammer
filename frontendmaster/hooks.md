@@ -129,7 +129,7 @@ const useTaskPendingState = (task, storeResult) => {
 const useUserList = () => {
   const [users, { push, remove }, setUsers] = useArray([])
   const [load, pending] = useTaskPendingState(getUsers, setUsers)
-  return [user, { pending, load, addUser: push, deleteUser: remove }]
+  return [users, { pending, load, addUser: push, deleteUser: remove }]
 }
 ```
 
