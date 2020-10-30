@@ -15,3 +15,5 @@ react-use-gesture 鼠标和手势库，配合react-spring动画库一起使用
 puppeteer         Puppeteer是一个Node库，它提供了高级API来通过DevTools协议控制Chrome或Chromium
 
 pdf-merge         合并pdf
+
+commitizen        git 提交规范

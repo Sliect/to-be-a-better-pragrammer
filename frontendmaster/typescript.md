@@ -37,3 +37,31 @@ React.FC 函数组件
 React.ReactElement 组件实例
 
 RefObject<Element> ref
+
+## 泛型工具类
+
+``` ts
+// 将T所有取得的属性变为可选
+Partial<T> 
+
+// 将K中所有的属性的值转为T类型
+Record<K, T>
+
+// 在T中挑出子属性作为新类型
+Pick<K, T>
+
+// 在T中剔除子属性后作为新类型
+Exclude<K, T>
+```
+
+## 特殊符号
+
+``` ts
+// ?.
+// val = a === null || a === undefined ? undefined : a.b
+const val = a?.b
+
+// ??
+// foo = a !== null && a !== undefined ? a : 'default string'
+const foo = a ?? 'default string'
+```

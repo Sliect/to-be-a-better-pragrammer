@@ -5,3 +5,5 @@ git reset xxx       // 本地撤销，并不进行提交
 git revert xxx      // 将撤销作为一个提交记录  
 git pull            // fetch 和 merge 的缩写  
 git pull --rebase   // git fetch 和 git rebase 的缩写  
+
+cnpm config set registry https://registry.npm.taobao.org 切换淘宝镜像源
