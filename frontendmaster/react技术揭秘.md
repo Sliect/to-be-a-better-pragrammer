@@ -208,6 +208,22 @@ a
 oldIndex 0 < lastPlacedIndex 3  a右移
 ```
 
+## 异步可中断可恢复
+
+1. 同步模式下的更新链路和挂载链路的 render 阶段基本一致，都是通过 performSyncWorkOnRoot 触发  
+2. 更新都是通过创建 update 对象，进入同一套更新工作流  
+3. dispatchAction => performSyncWorkOnRoot(render阶段) => commit 阶段  
+    1. dispatchAction 会创建一个 update 对象，将 update 入队，调度当前触发更新的节点  
+    2. performSyncWorkOnRoot 是同步更新模式下的 render 阶段入口，performConcurrentWorkOnRoot 是异步模式下的render阶段入口 
+    3. scheduleSyncCallback 和 scheduleCallback 都是通过 unstable_scheduleCallback 执行任务调度
+        1. unstable_scheduleCallback 结合任务优先级执行不同的调度逻辑
+        2. 优先级越高, expirationTime 越小
+        3. 针对当前任务创建一个task, 结合startTime 将task 推入 timerQueue 或 taskQueue
+        4. timerQueue 是以 startTime 为排序的小堆顶，存储的是待执行的任务
+        5. taskQueue 是以 expirationTime 为排序的小堆顶，存储的是已过期的任务
+            1. 若没有过期任务且最早需要被执行的未过期任务是当前任务，将其从 timerQueue 中取出，加入 taskQueue 中，然后触发 flushWork，flushWork 会调用 workLoop 直至任务清空或时间片用尽
+            2. 否则用 flushWork 对 taskQueue 中的 task 执行即时任务, 即用 setTimeout、MessageChannel 在下一次事件循环中执行
+
 ## 源码解析
 
 > ### reactElement
