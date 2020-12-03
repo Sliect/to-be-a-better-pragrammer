@@ -1,0 +1,25 @@
+{
+  "name": "to-be-a-better-pragrammer",
+  "version": "1.0.0",
+  "description": "记录一些看过的书，一些好的想法",
+  "main": "index.js",
+  "scripts": {
+    "start": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "publish": "deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sliect/to-be-a-better-pragrammer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sliect/to-be-a-better-pragrammer/issues"
+  },
+  "homepage": "https://github.com/Sliect/to-be-a-better-pragrammer#readme",
+  "devDependencies": {
+    "vuepress": "^1.7.1"
+  }
+}
