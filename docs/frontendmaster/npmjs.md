@@ -1,4 +1,4 @@
-# 依赖库
+# npmjs依赖库
 
 react-scripts     create react app, 用 react-scripts start 启动
 

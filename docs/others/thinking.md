@@ -1,3 +1,5 @@
+# thinking
+
 列出所有相关元素 思考 what how why 不断递归提问 最后总结
 
 项目反思  

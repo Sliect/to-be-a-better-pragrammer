@@ -1,4 +1,4 @@
-# [react技术揭秘](https://react.iamkasong.com/)
+# react技术揭秘
 
 ## React 理念
 

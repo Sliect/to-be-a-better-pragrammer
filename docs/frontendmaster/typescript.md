@@ -1,3 +1,5 @@
+# typescript
+
 .d.ts 为声明文件，方便第三方文件引入
 
 基础类型
@@ -30,29 +32,30 @@ interface可以声明合并, type不行; type 可以声明基本类型别名，�
 
 ## React JSX
 
+::: ts
 React.HTMLAttributes HTML标签
 
 React.FC 函数组件
 
 React.ReactElement 组件实例
 
-RefObject<Element> ref
+RefObject&lt;Element&gt; ref
+:::
 
 ## 泛型工具类
-
-``` ts
+::: ts
 // 将T所有取得的属性变为可选
-Partial<T> 
+Partial&lt;T&gt; 
 
 // 将K中所有的属性的值转为T类型
-Record<K, T>
+Record&lt;K, T&gt;
 
 // 在T中挑出子属性作为新类型
-Pick<K, T>
+Pick&lt;K, T&gt;
 
 // 在T中剔除子属性后作为新类型
-Exclude<K, T>
-```
+Exclude&lt;K, T&gt;
+:::
 
 ## 特殊符号
 
