@@ -14,5 +14,6 @@
   - [react in depth](./frontendmaster/react技术揭秘.md)
   - [redux](./frontendmaster/redux.md)
   - [typescript](./frontendmaster/typescript.md)
+  - [算法](./frontendmaster/算法.md)
 - 其它
   - [优质资源](./others/资源.md)
