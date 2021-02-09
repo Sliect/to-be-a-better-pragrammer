@@ -37,6 +37,10 @@ npm全局环境下有个 _cacache 目录，目录下有 content-v2, index-v5, tm
 
 可以直接执行 node_modules/.bin 文件夹下的文件，且会在执行模块时优先安装依赖，在安装执行后便删除此依赖，避免全局安装模块带来的问题  
 
+## yarn
+
+npm dedupe 会优化重构 node_modules 结构, yarn 在安装依赖得时候会自动执行 dedupe 命令
+
 ## npmjs依赖库
 
 react-scripts     create react app, 用 react-scripts start 启动
