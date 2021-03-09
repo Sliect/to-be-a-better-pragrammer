@@ -538,3 +538,41 @@ React 在 render 第一次渲染时，会通过 React.createElement 创建一颗
 
 3. 如果在执行更新任务的时候，有新的任务进来，会判断两个任务的优先级高低。假如新任务优先级高，那么打断旧的任务，重新开始，否则继续执行任务
 
+
+
+## 其它
+
+### 原生事件和React合成事件
+
+React合成事件大多数绑定在document上, 优化了性能, 但是会有以下两个问题
+
+1. 异步访问事件对象
+
+``` js
+function onClick(e) {
+  console.log(e)
+
+  setTimeout(() => {
+    // 输出undefined
+    console.log(e)
+  })
+}
+
+// --- 正确做法 ---
+function onClick(e) {
+  console.log(e)
+  // 持久化事件对象
+  e.persist()
+  setTimeout(() => {
+    console.log(e)
+  })
+}
+```
+
+2. 阻止原生事件冒泡
+
+因为事件在document上处理, 所以e.stopProgation没有用, 正确的方法是用 e.nativeEvent.stopImmediatePropagation()
+
+### 自定义 hook
+
+可组合、可调式来判断函数是否是 hook
