@@ -2,41 +2,35 @@
 
 ## 组件&props
 
-``` js
+```js
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
 const element = <Welcome name="Sara" />;
-ReactDOM.render(
-  element,
-  document.getElementById('root')
-);
+ReactDOM.render(element, document.getElementById("root"));
 ```
 
-1. react将调用render函数，并将Welcome传入作为参数
-2. 将{name: 'Sara'}作为props传入，并调用Welcome组件
-3. Welcome将返回 h1元素
+1. react 将调用 render 函数，并将 Welcome 传入作为参数
+2. 将{name: 'Sara'}作为 props 传入，并调用 Welcome 组件
+3. Welcome 将返回 h1 元素
 4. 高效更新 h1 元素
 
-单向数据流 不允许修改props props仅只读
+单向数据流 不允许修改 props props 仅只读
 
 ## state&生命周期
 
-state 和 props 类似，但是state是私有的，并完全受控于当前组件
+state 和 props 类似，但是 state 是私有的，并完全受控于当前组件
 
-``` js
+```js
 class Clock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = { date: new Date() };
   }
 
   componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
+    this.timerID = setInterval(() => this.tick(), 1000);
   }
 
   componentWillUnmount() {
@@ -45,7 +39,7 @@ class Clock extends React.Component {
 
   tick() {
     this.setState({
-      date: new Date()
+      date: new Date(),
     });
   }
 
@@ -59,23 +53,20 @@ class Clock extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <Clock />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Clock />, document.getElementById("root"));
 ```
 
-1. 调用ReactDOM.render函数，调用Clock的构造函数，初始化this.state
-2. 调用Clock的render方法
-3. Clock被挂载到root节点上，并调用componentDidMount生命周期，每秒更新state
-4. react监听state的改变重新渲染render方法以更新DOM
-5. Clock组件被移除，调用componentWillUnmount生命周期，停止定时器
+1. 调用 ReactDOM.render 函数，调用 Clock 的构造函数，初始化 this.state
+2. 调用 Clock 的 render 方法
+3. Clock 被挂载到 root 节点上，并调用 componentDidMount 生命周期，每秒更新 state
+4. react 监听 state 的改变重新渲染 render 方法以更新 DOM
+5. Clock 组件被移除，调用 componentWillUnmount 生命周期，停止定时器
 
 ## 事件处理
 
 1. e.preventDefault() 阻止默认行为
-2. this指向，推荐在constructor里bind
-3. 若需要传递参数可以在事件回调上bind函数里传参，如 onClick={this.deleteRow.bind(this, id)}
+2. this 指向，推荐在 constructor 里 bind
+3. 若需要传递参数可以在事件回调上 bind 函数里传参，如 onClick={this.deleteRow.bind(this, id)}
 
 合成事件的实现机制
 
@@ -85,64 +76,62 @@ ReactDOM.render(
 
 2. 自动绑定
 
-每个方法的this会自动绑定到该组件实例上。在class上自动绑定失效，需要手动去绑定
+每个方法的 this 会自动绑定到该组件实例上。在 class 上自动绑定失效，需要手动去绑定
 
 ## 列表&key
 
-1. 如果列表的顺序可能发生变化，不推荐使用index作为下标
-2. key不会传递给组件，如果需要获取到key值，使用其他属性名单独进行传递
+1. 如果列表的顺序可能发生变化，不推荐使用 index 作为下标
+2. key 不会传递给组件，如果需要获取到 key 值，使用其他属性名单独进行传递
 
 ## 表单
 
-表单受控组件的值始终由state驱动
+表单受控组件的值始终由 state 驱动
 
 ## 状态提升
 
-自上而下的数据流，仅有组件自己能修改自己的state
+自上而下的数据流，仅有组件自己能修改自己的 state
 
-## react哲学
+## react 哲学
 
 1. 划分各个组件和层级
-2. 根据划分的组件创建不包含交互功能的版本，目前只有render方法，且不需要state
-3. 列出所有数据，判断是否是state
-4. 确定state放置的位置
+2. 根据划分的组件创建不包含交互功能的版本，目前只有 render 方法，且不需要 state
+3. 列出所有数据，判断是否是 state
+4. 确定 state 放置的位置
 5. 添加反向数据流
 
 ## Context
 
-共享组件树的全局数据，避免通过中间元素传递props
+共享组件树的全局数据，避免通过中间元素传递 props
 
-``` js
+```js
 // 每一个Context对象都会返回一个Provider React组件
 // Provider接收一个value属性，传递给消费组件
 // 如果传递的是一个对象，在对象里传递值和更改值的回调，即可完成在consumer组件更新context对象
 // 当Provider的value值发生变化时，内部所有的消费组件都会重新渲染
-const ThemeContext = React.createContext('light')
+const ThemeContext = React.createContext("light");
 class App extends React.Component {
   render() {
     return (
       <ThemeContext.Provider value="dark">
         <Toolbar />
       </ThemeContext.Provider>
-    )
+    );
   }
 }
 
-function Toolbar () {
+function Toolbar() {
   return (
     <div>
       <ThemedButton />
     </div>
-  )
+  );
 }
 
 class ThemedButton extends React.Component {
   // 挂载完才能通过 this.context 消费最近Context对象上的值
-  static contextType = ThemeContext
+  static contextType = ThemeContext;
   render() {
-    return (
-      <Button theme={this.context} />
-    )
+    return <Button theme={this.context} />;
   }
 }
 ```
@@ -151,7 +140,7 @@ class ThemedButton extends React.Component {
 
 捕捉子组件的错误，防止其他部分不崩溃
 
-``` js
+```js
 // class组件定义static getDerivedStateFromError() 或 componentDidCatch()时
 // 其变成一个错误边界
 // getDerivedStateFromError() 渲染备用UI
@@ -178,21 +167,21 @@ class ErrorBoundary extends React.Component {
       return <h1>Something went wrong.</h1>;
     }
 
-    return this.props.children; 
+    return this.props.children;
   }
 }
-
 ```
 
-## ref转发
+## ref 转发
 
 React.forwardRef 可以转发 ref
 
 ## 高阶组件
 
 1. 使用组合而不是更改原组件，也不要去更改其原型
-2. 不要在render中使用HOC
-``` js
+2. 不要在 render 中使用 HOC
+
+```js
 render() {
   // 每次调用 render 函数都会创建一个新的 EnhancedComponent
   // EnhancedComponent1 !== EnhancedComponent2
@@ -201,11 +190,15 @@ render() {
   return <EnhancedComponent />;
 }
 ```
+
 3. 复制静态方法
-``` js
-import hoistNonReactStatic from 'hoist-non-react-statics';
+
+```js
+import hoistNonReactStatic from "hoist-non-react-statics";
 function enhance(WrappedComponent) {
-  class Enhance extends React.Component {/*...*/}
+  class Enhance extends React.Component {
+    /*...*/
+  }
   // 自动拷贝所有非 React 静态方法
   hoistNonReactStatic(Enhance, WrappedComponent);
   return Enhance;
@@ -214,9 +207,9 @@ function enhance(WrappedComponent) {
 
 ## Portals
 
-将子组件渲染到父组件以外的DOM节点
+将子组件渲染到父组件以外的 DOM 节点
 
-``` js
+```js
 render() {
   return ReactDOM.createPortal(
     this.props.children,
@@ -231,8 +224,8 @@ render prop 是一个用于告知组件需要渲染什么内容的函数 prop
 
 ## PropTypes
 
-``` js
-import PropTypes from 'prop-types';
+```js
+import PropTypes from "prop-types";
 
 MyComponent.propTypes = {
   // 你可以将属性声明为 JS 原生类型，默认情况下
@@ -261,13 +254,13 @@ MyComponent.propTypes = {
 
   // 你可以让你的 prop 只能是特定的值，指定它为
   // 枚举类型。
-  optionalEnum: PropTypes.oneOf(['News', 'Photos']),
+  optionalEnum: PropTypes.oneOf(["News", "Photos"]),
 
   // 一个对象可以是几种类型中的任意一个类型
   optionalUnion: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.instanceOf(Message)
+    PropTypes.instanceOf(Message),
   ]),
 
   // 可以指定一个数组由某一类型的元素组成
@@ -279,14 +272,14 @@ MyComponent.propTypes = {
   // 可以指定一个对象由特定的类型值组成
   optionalObjectWithShape: PropTypes.shape({
     color: PropTypes.string,
-    fontSize: PropTypes.number
+    fontSize: PropTypes.number,
   }),
-  
+
   // An object with warnings on extra properties
   optionalObjectWithStrictShape: PropTypes.exact({
     name: PropTypes.string,
-    quantity: PropTypes.number
-  }),   
+    quantity: PropTypes.number,
+  }),
 
   // 你可以在任何 PropTypes 属性后面加上 `isRequired` ，确保
   // 这个 prop 没有被提供时，会打印警告信息。
@@ -300,8 +293,12 @@ MyComponent.propTypes = {
   customProp: function(props, propName, componentName) {
     if (!/matchme/.test(props[propName])) {
       return new Error(
-        'Invalid prop `' + propName + '` supplied to' +
-        ' `' + componentName + '`. Validation failed.'
+        "Invalid prop `" +
+          propName +
+          "` supplied to" +
+          " `" +
+          componentName +
+          "`. Validation failed."
       );
     }
   },
@@ -311,43 +308,55 @@ MyComponent.propTypes = {
   // 验证器将验证数组或对象中的每个值。验证器的前两个参数
   // 第一个是数组或对象本身
   // 第二个是他们当前的键。
-  customArrayProp: PropTypes.arrayOf(function(propValue, key, componentName, location, propFullName) {
+  customArrayProp: PropTypes.arrayOf(function(
+    propValue,
+    key,
+    componentName,
+    location,
+    propFullName
+  ) {
     if (!/matchme/.test(propValue[key])) {
       return new Error(
-        'Invalid prop `' + propFullName + '` supplied to' +
-        ' `' + componentName + '`. Validation failed.'
+        "Invalid prop `" +
+          propFullName +
+          "` supplied to" +
+          " `" +
+          componentName +
+          "`. Validation failed."
       );
     }
-  })
+  }),
 };
-
 ```
 
 ## hooks
 
-1. 在不编写class的情况下，使用state以及其他特性，hook不能在class里使用
-2. useEffect当作componentDidMount, componentDidUpdate, componentWillUnmount的组合
-3. 副作用分无需清除的和需要清除两种，清除副作用的在useEffect里return 清除副作用的函数
-4. 跳过Effect进行性能优化
-``` js
+1. 在不编写 class 的情况下，使用 state 以及其他特性，hook 不能在 class 里使用
+2. useEffect 当作 componentDidMount, componentDidUpdate, componentWillUnmount 的组合
+3. 副作用分无需清除的和需要清除两种，清除副作用的在 useEffect 里 return 清除副作用的函数
+4. 跳过 Effect 进行性能优化
+
+```js
 useEffect(() => {
-  document.title = `you click ${count} times`
-}, [count]) // 仅在 count 更新时更新 
+  document.title = `you click ${count} times`;
+}, [count]); // 仅在 count 更新时更新
 // 如果第二个参数为 [], 表示effect不依赖props或state中的任何值，仅在组件挂载和卸载时执行
 ```
-5. react靠hook的调用顺序知道哪个state对应哪个useState，因此必须保证hook的调用顺序在每次渲染中都相同
-6. 避免循环，条件或嵌套函数中调用hook，如果想要有条件的执行一个effect，可以将判断放到hook内部
-7. 自定义Hook以use开头
-8. useReducer适用于state 逻辑较复杂且包含多个子值，或者下一个 state 依赖于之前的 state 等
-``` js
-const initialState = {count: 0};
+
+5. react 靠 hook 的调用顺序知道哪个 state 对应哪个 useState，因此必须保证 hook 的调用顺序在每次渲染中都相同
+6. 避免循环，条件或嵌套函数中调用 hook，如果想要有条件的执行一个 effect，可以将判断放到 hook 内部
+7. 自定义 Hook 以 use 开头
+8. useReducer 适用于 state 逻辑较复杂且包含多个子值，或者下一个 state 依赖于之前的 state 等
+
+```js
+const initialState = { count: 0 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'increment':
-      return {count: state.count + 1};
-    case 'decrement':
-      return {count: state.count - 1};
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count - 1 };
     default:
       throw new Error();
   }
@@ -358,28 +367,28 @@ function Counter() {
   return (
     <>
       Count: {state.count}
-      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
-      <button onClick={() => dispatch({type: 'increment'})}>+</button>
+      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+      <button onClick={() => dispatch({ type: "increment" })}>+</button>
     </>
   );
 }
 ```
 
-## useEffect完全指南
+## useEffect 完全指南
 
-把不依赖props和state的函数提取到组件外面，把仅被effect使用的函数放到effect里。如果effect还是用到了组件内的函数（如props传进来的函数），可以在定义它们的地方用useCallback包一层。防止这些函数访问到props和state，参与到数据流中。
+把不依赖 props 和 state 的函数提取到组件外面，把仅被 effect 使用的函数放到 effect 里。如果 effect 还是用到了组件内的函数（如 props 传进来的函数），可以在定义它们的地方用 useCallback 包一层。防止这些函数访问到 props 和 state，参与到数据流中。
 
-React会记住你提供的effect函数，并且会在每次更改作用于DOM并让浏览器绘制屏幕后去调用它
+React 会记住你提供的 effect 函数，并且会在每次更改作用于 DOM 并让浏览器绘制屏幕后去调用它
 
-React在单次渲染的范围内不会修改props和state, 如果想在effect里获取最新的值而不是捕获的值, 可以使用ref
+React 在单次渲染的范围内不会修改 props 和 state, 如果想在 effect 里获取最新的值而不是捕获的值, 可以使用 ref
 
-React识别不了新旧effect的不同，只会根据依赖是否改变来判断是否在浏览器绘制屏幕后去调用
+React 识别不了新旧 effect 的不同，只会根据依赖是否改变来判断是否在浏览器绘制屏幕后去调用
 
-第一次绘制 -> 第一次调用effect函数 -> 第二次绘制 -> 清除第一次的effect函数 -> 第二次调用effect函数 ->...
+第一次绘制 -> 第一次调用 effect 函数 -> 第二次绘制 -> 清除第一次的 effect 函数 -> 第二次调用 effect 函数 ->...
 
-useLayoutEffect 回调会在绘制前执行，读取DOM布局并同步触发重渲染，但是有可能会阻塞视觉更新
+useLayoutEffect 回调会在绘制前执行，读取 DOM 布局并同步触发重渲染，但是有可能会阻塞视觉更新
 
-``` js
+```js
 // 当你想更新一个状态，并且这个状态更新依赖于另一个状态的值时，你可能需要用useReducer去替换它们
 const initialState = {
   count: 0,
@@ -388,9 +397,9 @@ const initialState = {
 
 function reducer(state, action) {
   const { count, step } = state;
-  if (action.type === 'tick') {
+  if (action.type === "tick") {
     return { count: count + step, step };
-  } else if (action.type === 'step') {
+  } else if (action.type === "step") {
     return { count, step: action.step };
   } else {
     throw new Error();
@@ -402,29 +411,29 @@ const { count, step } = state;
 
 useEffect(() => {
   const id = setInterval(() => {
-    dispatch({ type: 'tick' }); // Instead of setCount(c => c + step); step作为依赖会每次移除新增计时器
+    dispatch({ type: "tick" }); // Instead of setCount(c => c + step); step作为依赖会每次移除新增计时器
   }, 1000);
   return () => clearInterval(id);
 }, [dispatch]);
 ```
 
-useReducer可以把更新逻辑和描述发生了什么分开，用来移除effect中不必需的依赖，避免不必要的effect调用
+useReducer 可以把更新逻辑和描述发生了什么分开，用来移除 effect 中不必需的依赖，避免不必要的 effect 调用
 
-useEffect就是关注数据流的改变，拥抱同步的思想
+useEffect 就是关注数据流的改变，拥抱同步的思想
 
-useCallback本质上是添加了一层依赖检查，我们使函数本身只在需要的时候才改变，而不是去掉对函数的依赖
+useCallback 本质上是添加了一层依赖检查，我们使函数本身只在需要的时候才改变，而不是去掉对函数的依赖
 
 用 useCallback 缓存函数，再把缓存的函数作为 useEffect 的依赖
 
 ## react fiber
 
-fiber是一种工作单元
+fiber 是一种工作单元
 
 单处理器进程调度策略
 
 - 先到先得 （排队阻塞）
 
-- 轮转   公平地给每一个进程一定的执行时间，当时间消耗完毕或阻塞，操作系统就会调度其他进程，将执行权抢占过来。
+- 轮转 公平地给每一个进程一定的执行时间，当时间消耗完毕或阻塞，操作系统就会调度其他进程，将执行权抢占过来。
 
 - 最短进程优先
 
@@ -436,13 +445,13 @@ fiber是一种工作单元
 
 - 每个进程一开始都有相同的优先级，每次被抢占(需要配合其他抢占策略使用，如轮转)，优先级就会降低一级。因此通常它会根据优先级划分多个队列。
 
-react fiber的思想：React 渲染的过程可以被中断，可以将控制权交回浏览器，让位给高优先级的任务，浏览器空闲后再恢复渲染。
+react fiber 的思想：React 渲染的过程可以被中断，可以将控制权交回浏览器，让位给高优先级的任务，浏览器空闲后再恢复渲染。
 
 浏览器在一帧内执行任务的顺序
 
 - 处理用户输入事件
 
-- Javascript执行
+- Javascript 执行
 
 - requestAnimation 调用
 
@@ -464,19 +473,19 @@ react fiber的思想：React 渲染的过程可以被中断，可以将控制权
 
 - Idle (没有超时时间) 一些没有必要做的任务 (e.g. 比如隐藏的内容), 可能会被饿死
 
-旧版 将所有vdom 递归遍历完成后才能给出补丁传递给renderer进行渲染,然后屏幕上才能显示此次更新内容
+旧版 将所有 vdom 递归遍历完成后才能给出补丁传递给 renderer 进行渲染,然后屏幕上才能显示此次更新内容
 
-新版 Scheduler（调度） 并不是所有state的更新需要立即显示出来，并不是所有更新优先级都是一样的，优先相应高优先级的任务
+新版 Scheduler（调度） 并不是所有 state 的更新需要立即显示出来，并不是所有更新优先级都是一样的，优先相应高优先级的任务
 
-函数调用栈中每个函数是一个工作，每个工作被称为堆栈帧，它会一直工作，直到堆栈为空，无法中断。fiber类比为函数，其特性是时间分片和暂停
+函数调用栈中每个函数是一个工作，每个工作被称为堆栈帧，它会一直工作，直到堆栈为空，无法中断。fiber 类比为函数，其特性是时间分片和暂停
 
 ### how?
 
-1. Reack.renderDOM()或者setState的时候开始创建更新
+1. Reack.renderDOM()或者 setState 的时候开始创建更新
 
 2. 将创建的更新加入任务队列，等待调度
 
-3. 在requestIdleCallback空闲的时候执行任务
+3. 在 requestIdleCallback 空闲的时候执行任务
 
 4. 从根节点开始遍历 Fiber Node，并且构建 WorkInProgress Tree
 
@@ -484,7 +493,7 @@ react fiber的思想：React 渲染的过程可以被中断，可以将控制权
 
 6. 根据 effectList 更新 DOM
 
-``` js
+```js
 {
   ...
   // 跟当前Fiber相关本地状态（比如浏览器环境就是DOM节点）
@@ -526,7 +535,7 @@ react fiber的思想：React 渲染的过程可以被中断，可以将控制权
 
 提交阶段
 
-React 在 render 第一次渲染时，会通过 React.createElement 创建一颗 Element 树，可以称之为 Virtual DOM Tree，由于要记录上下文信息，加入了 Fiber，每一个 Element 会对应一个 Fiber Node，将 Fiber Node 链接起来的结构成为 Fiber Tree。它反映了用于渲染 UI 的应用程序的状态。这棵树通常被称为 current 树（当前树，记录当前页面的状态），在后续的更新过程中（setState），每次重新渲染都会重新创建 Element, 但是 Fiber 不会，Fiber 只会使用对应的 Element 中的数据来更新自己必要的属性。WorkInProgress Tree反映了要刷新到屏幕的未来状态，构造完毕后得到的就是新的Fiber Tree，并把current 指针指向新的Fiber Tree。创建 WorkInProgress Tree 的过程也是一个 Diff 的过程，Diff 完成之后会生成一个 Effect List，这个 Effect List 就是最终 Commit 阶段用来处理副作用的阶段
+React 在 render 第一次渲染时，会通过 React.createElement 创建一颗 Element 树，可以称之为 Virtual DOM Tree，由于要记录上下文信息，加入了 Fiber，每一个 Element 会对应一个 Fiber Node，将 Fiber Node 链接起来的结构成为 Fiber Tree。它反映了用于渲染 UI 的应用程序的状态。这棵树通常被称为 current 树（当前树，记录当前页面的状态），在后续的更新过程中（setState），每次重新渲染都会重新创建 Element, 但是 Fiber 不会，Fiber 只会使用对应的 Element 中的数据来更新自己必要的属性。WorkInProgress Tree 反映了要刷新到屏幕的未来状态，构造完毕后得到的就是新的 Fiber Tree，并把 current 指针指向新的 Fiber Tree。创建 WorkInProgress Tree 的过程也是一个 Diff 的过程，Diff 完成之后会生成一个 Effect List，这个 Effect List 就是最终 Commit 阶段用来处理副作用的阶段
 
 ## react 源码
 
@@ -538,41 +547,51 @@ React 在 render 第一次渲染时，会通过 React.createElement 创建一颗
 
 3. 如果在执行更新任务的时候，有新的任务进来，会判断两个任务的优先级高低。假如新任务优先级高，那么打断旧的任务，重新开始，否则继续执行任务
 
-
-
 ## 其它
 
-### 原生事件和React合成事件
+### 原生事件和 React 合成事件
 
-React合成事件大多数绑定在document上, 优化了性能, 但是会有以下两个问题
+React 合成事件大多数绑定在 document 上, 优化了性能, 但是会有以下两个问题
 
 1. 异步访问事件对象
 
-``` js
+```js
 function onClick(e) {
-  console.log(e)
+  console.log(e);
 
   setTimeout(() => {
     // 输出undefined
-    console.log(e)
-  })
+    console.log(e);
+  });
 }
 
 // --- 正确做法 ---
 function onClick(e) {
-  console.log(e)
+  console.log(e);
   // 持久化事件对象
-  e.persist()
+  e.persist();
   setTimeout(() => {
-    console.log(e)
-  })
+    console.log(e);
+  });
 }
 ```
 
 2. 阻止原生事件冒泡
 
-因为事件在document上处理, 所以e.stopProgation没有用, 正确的方法是用 e.nativeEvent.stopImmediatePropagation()
+因为事件在 document 上处理, 所以 e.stopProgation 没有用, 正确的方法是用 e.nativeEvent.stopImmediatePropagation()
 
 ### 自定义 hook
 
 可组合、可调式来判断函数是否是 hook
+
+### 构建 React 组件步骤
+
+1. 划分层级模块
+2. 构建静态页面
+3. 找到最小状态有哪些
+4. 确定状态归属哪个模块
+5. 添加交互
+
+### others
+
+在“严格模式”下开发时，React 会调用每个组件的函数两次，这有助于暴露由不纯函数引起的错误。
