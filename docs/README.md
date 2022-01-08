@@ -17,3 +17,5 @@
   - [算法](./frontendmaster/算法.md)
 - 其它
   - [优质资源](./others/资源.md)
+- 爪哇
+  - [1.promise](./zhaowa/1.promise.md)
