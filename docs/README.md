@@ -19,3 +19,4 @@
   - [优质资源](./others/资源.md)
 - 爪哇
   - [1.promise](./zhaowa/1.promise.md)
+  - [2.js_module](./zhaowa/2.js_module.md)
