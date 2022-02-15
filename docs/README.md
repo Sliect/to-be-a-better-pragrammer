@@ -20,3 +20,6 @@
 - 爪哇
   - [1.promise](./zhaowa/1.promise.md)
   - [2.js_module](./zhaowa/2.js_module.md)
+  - [3.browser](./zhaowa/3.browser.md)
+  - [4.ts](./zhaowa/4.ts.md)
+  
