@@ -22,4 +22,7 @@
   - [2.js_module](./zhaowa/2.js_module.md)
   - [3.browser](./zhaowa/3.browser.md)
   - [4.ts](./zhaowa/4.ts.md)
+  - [5.前端工程化](./zhaowa/5.前端工程化.md)
+  - [6.es6](./zhaowa/6.es6.md)
+  - [7.面向对象](./zhaowa/7.面向对象.md)
   
