@@ -48,6 +48,13 @@ module.exports = {
           children: getChildrenFilesFrom('others')
         }
       ],
+      '/zhaowa/': [
+        {
+          title: 'zhaowa',
+          collapsable: false,
+          children: getChildrenFilesFrom('zhaowa')
+        }
+      ],
       // '/': [
       //   '',        /* / */
       // ]
