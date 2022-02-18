@@ -25,4 +25,5 @@
   - [5.前端工程化](./zhaowa/5.前端工程化.md)
   - [6.es6](./zhaowa/6.es6.md)
   - [7.面向对象](./zhaowa/7.面向对象.md)
+  - [8.vue](./zhaowa/8.vue.md)
   
