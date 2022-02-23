@@ -26,4 +26,7 @@
   - [6.es6](./zhaowa/6.es6.md)
   - [7.面向对象](./zhaowa/7.面向对象.md)
   - [8.vue](./zhaowa/8.vue.md)
-  
+  - [9.js基础](./zhaowa/9.js基础.md)
+  - [10.vue-cli](./zhaowa/10.vue-cli.md)
+  - [11.vue状态管理及ssr](./zhaowa/11.vue状态管理及ssr.md)
+  - [12.vue源码](./zhaowa/12.vue源码.md)

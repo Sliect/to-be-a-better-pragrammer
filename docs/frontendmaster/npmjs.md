@@ -60,3 +60,7 @@ puppeteer         Puppeteer是一个Node库，它提供了高级API来通过DevT
 pdf-merge         合并pdf
 
 commitizen        git 提交规范
+
+minimist          解析node命令传参
+
+esbuild           go语言实现的构建工具
