@@ -30,3 +30,6 @@
   - [10.vue-cli](./zhaowa/10.vue-cli.md)
   - [11.vue状态管理及ssr](./zhaowa/11.vue状态管理及ssr.md)
   - [12.vue源码](./zhaowa/12.vue源码.md)
+  - [13.微前端](./zhaowa/13.微前端.md)
+  - [14.vuex4](./zhaowa/14.vuex4.md)
+  - [13.vue-router](./zhaowa/15.vue-router.md)
