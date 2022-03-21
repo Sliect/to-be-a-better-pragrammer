@@ -32,4 +32,5 @@
   - [12.vue源码](./zhaowa/12.vue源码.md)
   - [13.微前端](./zhaowa/13.微前端.md)
   - [14.vuex4](./zhaowa/14.vuex4.md)
-  - [13.vue-router](./zhaowa/15.vue-router.md)
+  - [15.react基础](./zhaowa/15.react基础.md)
+  - [16.设计模式](./zhaowa/16.设计模式.md)
