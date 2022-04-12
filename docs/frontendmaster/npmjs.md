@@ -64,3 +64,5 @@ commitizen        git 提交规范
 minimist          解析node命令传参
 
 esbuild           go语言实现的构建工具
+
+nrm               管理多个npm源
