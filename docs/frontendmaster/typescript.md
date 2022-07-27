@@ -98,19 +98,37 @@ RefObject&lt;Element&gt; ref
 :::
 
 ## 泛型工具类
-::: ts
+``` ts
 // 将T所有取得的属性变为可选
-Partial&lt;T&gt; 
+Partial<T>
 
-// 将K中所有的属性的值转为T类型
-Record&lt;K, T&gt;
+// 将T所有取得的属性变为必选
+Required<T>
 
-// 在T中挑出子属性作为新类型
-Pick&lt;K, T&gt;
+// 将T所有取得的属性变为只读
+Readonly<T>
 
-// 在T中剔除子属性后作为新类型
-Exclude&lt;K, T&gt;
-:::
+// 组合将K中所有的属性的值转为T类型
+Record<K, T>
+
+// 在K中挑出一组T子属性来构造新类型
+Pick<K, T>
+
+// 在K中剔除一组T子属性来构造新类型
+Omit<K, T>
+
+// 在K中移除T来构造新类型
+Exclude<K, T>
+
+// 移除T中的null和undefined
+NonNullable<T>
+
+// T为函数，用T中的参数列表返来构造新类型
+Parameters<T>
+
+// T为函数，用T中的返回值来构造新类型
+ReturnType<T>
+```
 
 ## 特殊符号
 
@@ -122,4 +140,106 @@ const val = a?.b
 // ??
 // foo = a !== null && a !== undefined ? a : 'default string'
 const foo = a ?? 'default string'
+```
+
+
+表示 B 是 A 的子类型，即类型为 B 的变量可以赋值给类型为 A 的变量  
+A -> B      
+B extends A
+子小父大
+
+此为协变（顺变），逆变是 子类型推导到超类型，只有函数的参数位置是逆变  
+A | B -> A or B -> A & B  
+
+## infer
+
+infer 必须在 extends 右侧使用，因为必须保证这个已知类型是由右侧的泛型推导出来的
+
+P的类型推导有以下四种情况： 
+1. P只在一个位置占位：直接推导出类型
+2. P都在协变位置占位：推出占位类型的联合
+3. P都在逆变位置占位：推出占位类型的交叉
+4. P既在协变位置又在逆变位置占位：只有占位类型相同才能使 extends 为 true
+
+``` ts
+type Foo<T> = T extends (a: infer U) => void ? U : any;
+// 第1种情况
+type T0 = Foo<(a: string) => void>; // string
+
+type Bar<T> = T extends { a: infer U; b: infer U } ? U : never;
+// 第2种情况 协变
+type T1 = Bar<{ a: string, b: number }> // string | number
+
+type Baz<T> = T extends (a: infer U, b: infer U) => void ? U : never;
+// 第3种情况 逆变
+type T2 = Baz<(a: string, b: number) => void>; // string & number 即 never
+
+type Tar<T> = T extends (a: infer U, b: infer U) => infer U ? U : 'hello';
+// 第4种情况
+type T3 = Tar<(a: string, b: number) => number>;  // 'hello'
+// 第4种情况
+type T4 = Tar<(a: string, b: string) => string>; // string
+```
+
+
+infer 示例
+``` ts
+type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
+
+type Unpacked<T> = T extends (infer U)[]
+  ? U
+  : T extends (...args: any[]) => infer U
+  ? U
+  : T extends Promise<infer U>
+  ? U
+  : T;
+type T0 = Unpacked<string>; // string
+type T1 = Unpacked<string[]>; // string
+type T2 = Unpacked<() => string>; // string
+type T3 = Unpacked<Promise<string>>; // string
+type T4 = Unpacked<Promise<string>[]>; // Promise<string>
+type T5 = Unpacked<Unpacked<Promise<string>[]>>; // string
+
+```
+
+
+tips
+``` ts
+const obj = {
+  a: 'A',
+  b: 'B',
+  c: 'C',
+}
+type for0 = 'a' | 'b' | 'c'
+// P为迭代项，只能在循环中作为值使用
+type item = { [P in for0]: P }
+
+// string | number | symbol
+type for1 = keyof any
+
+// 声明结构类型
+type interface1 = typeof obj
+
+// P in keyof T as P 将迭代项P作为U的子类型
+// as 后面可以任意填值做判断
+type MyOmit<T, U extends keyof T> = {
+  [P in keyof T as P extends U ? never : P]: T[P]
+}
+
+// 需要严格相等
+// Equal<{a: 'a', b: 'b' }, { a: 'a' } & { b: 'b' }> 为 false
+type StrictEqual<X, Y> =
+  (<T>() => T extends X ? 1 : 2) extends
+  (<T>() => T extends Y ? 1 : 2) ? true : false
+
+type ComputedEqual<X, Y> = X extends Y ? Y extends X ? true : false : false
+
+// Equal<A, B> extends true ? TrueType : FalseType
+// 如果该子属性是readonly 则保留
+type GetReadonlyKeys<T> = keyof {
+  [P in keyof T as Equal<Pick<T, P>, Readonly<Pick<T, P>>> extends true ? P : never]: T[P]
+}
+
+// 协变 A extends B 可以视为 A < B
+// infer 在string中的占位可以视为正则匹配
 ```
