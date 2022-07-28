@@ -242,4 +242,77 @@ type GetReadonlyKeys<T> = keyof {
 
 // 协变 A extends B 可以视为 A < B
 // infer 在string中的占位可以视为正则匹配
+
+// 等价
+function dfs(str: string, res = []) {
+  if (str === '')
+    return res
+
+  let reg = /([^&]*)&(.*)/g
+  if (reg.test(str)) {
+    let L = str.replace(reg, '$1')
+    let R = str.replace(reg, '$2')
+    dfs(R, OtherOp(L, res))
+  }
+  else {
+    dfs('', OtherOp(str, res))
+  }
+  return res
+}
+// S extends '' ? Res : xxx 来控制输出
+// 泛型上新增参数Res来保存结果
+type Dfs<S extends string, Res extends string[] = []> =
+  S extends '' ? Res :
+    S extends `${infer L}&${infer R}` ?
+      Dfs<R, OtherOp<L, Res>> :
+      Dfs<'', OtherOp<S, Res>>
+
+// [P in keyof Res | K] 利用 | 给对象添加键值对
+type Merge<Res extends { [k: string]: any }, K extends string, V> = {
+  [P in keyof Res | K]:
+  P extends K ? // K
+    P extends keyof Res ? // 更新
+      Res[P] : // 即 K 已在Res上存在 仍用旧值
+      V // 即 K 不在Res上存在
+    : Res[P] // 即 P 不为 K
+}
+
+```
+
+模拟两个数组的增加和移除来计算加法和减法
+``` ts
+type Rang<T extends Number = 0, P extends any[] = []> =
+  P['length'] extends T ?
+    P : Rang<T, [any, ...P]>
+
+type Concat<T extends any[], U extends any[]> = [...T, ...U]
+
+type Add<T extends number, U extends number> = Concat<Rang<T>, Rang<U>>['length']
+
+type Shift<T extends any[]> = T extends [infer F, ...infer Rest] ? Rest : []
+
+type Append<T extends any[], E = any> = [...T, E]
+
+type IsEmpty<T extends any[]> = T['length'] extends 0 ? true : false
+type NotEmpty<T extends any[]> = IsEmpty<T> extends true ? false : true
+type And<T extends boolean, P extends boolean> = T extends false
+  ? false
+  : P extends false
+    ? false
+    : true
+
+type LessEqList<T extends any[], U extends any[]> =
+  And<NotEmpty<T>, NotEmpty<U>> extends true ?
+    LessEqList<Shift<T>, Shift<U>> :
+    IsEmpty<T>
+type LessEq<T extends number, U extends number> = LessEqList<Rang<T>, Rang<U>>
+
+type SubList<T extends any[], P extends any[], R extends any[] = []> =
+  T['length'] extends P['length'] ?
+    R['length'] : SubList<Shift<T>, P, Append<R>>
+
+type Sub<T extends number, R extends number> = 
+  LessEq<R, T> extends true ?
+    SubList<Rang<T>, Rang<R>> :
+    SubList<Rang<R>, Rang<T>
 ```
