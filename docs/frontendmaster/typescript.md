@@ -202,8 +202,34 @@ type T5 = Unpacked<Unpacked<Promise<string>[]>>; // string
 
 ```
 
+## 分布式条件类型
 
-tips
+``` ts
+type Condition<T> = T extends 1 | 2 | 3 ? T : never;
+// 1 | 2 | 3
+type Res1 = Condition<1 | 2 | 3 | 4 | 5>;
+
+// never
+type Res2 = 1 | 2 | 3 | 4 | 5 extends 1 | 2 | 3 ? 1 | 2 | 3 | 4 | 5 : never;
+
+type Naked<T> = T extends boolean ? "Y" : "N";
+type Wrapped<T> = [T] extends [boolean] ? "Y" : "N";
+
+// "N" | "Y"
+type Res3 = Naked<number | boolean>;
+
+// "N"
+type Res4 = Wrapped<number | boolean>;
+```
+
+满足分布式条件类型的前提是
+1. 是否作为泛型参数（看Res1和Res2的区别）
+2. 泛型参数在条件类型是否被数组包裹了（看Res3和Res4的区别）
+
+好处是更容易实现集合运算
+
+## tips
+
 ``` ts
 const obj = {
   a: 'A',
@@ -277,6 +303,31 @@ type Merge<Res extends { [k: string]: any }, K extends string, V> = {
     : Res[P] // 即 P 不为 K
 }
 
+type IsNegative<T extends number> = `${T}` extends `-${infer U}` ? true : false
+
+type IsAny<T> = unknow extends T ? [T] extends [1] ? true : false : false
+
+// 将两个对象的属性重新遍历合并，用于 StrictEqual 比较
+type mergeObject<T> = {
+  [P in keyof T]: T[P]
+}
+type AppendToObject<T, U extends string, V> = mergeObject<T & {
+  [P in U as U]: V
+}>
+
+type Key = keyof any // number | string | symbol
+type NeedString<T extends string> = T
+// & string 可以与string取交集，强制缩小类型
+type t0 = NeedString<Key & string>
+
+type NeverToStr<T> = [T] extends [never] ? '' : T
+// `foo${never}` 仍然是 never类型
+type t1 = NeverToStr<`foo${never}`>
+
+// 1 | 2  T与unknow取交集 则为T
+type t2 = 1 | 2 & unknow
+// unknow T与unknow取并集 则为unknow
+type t3 = 1 | 2 | unknow
 ```
 
 模拟两个数组的增加和移除来计算加法和减法
