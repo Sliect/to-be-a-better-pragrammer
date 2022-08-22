@@ -1,3 +1,6 @@
 /node_modules
 /docs/.vuepress/dist
+/docs/.obsidian/**
+!/docs/.obsidian/hotkeys.json
+!/docs/.obsidian/core-plugins.json
 /**/node_modules
