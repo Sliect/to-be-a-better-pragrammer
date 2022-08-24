@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "3b8d9445e64a273b",
+        "id": "ef4a2b18526055f3",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "daily/TASK一览.md",
+            "file": "anki/面向对象.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "daily/TASK一览.md",
+                "file": "anki/面向对象.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "daily/TASK一览.md",
+                "file": "anki/面向对象.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "daily/TASK一览.md"
+                "file": "anki/面向对象.md"
               }
             }
           }
@@ -128,17 +128,17 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "3b8d9445e64a273b",
+  "active": "ef4a2b18526055f3",
   "lastOpenFiles": [
-    "daily/2022-08-23.md",
+    "anki/foo.md",
+    "anki/面向对象.md",
     "daily/TASK一览.md",
     "daily/2022-08-24.md",
+    "daily/2022-08-23.md",
     "daily/template.md",
     "daily/20220823-20220828.md",
     "README.md",
     "zhaowa/9.js基础.md",
-    "others/obsidian.md",
-    "others/后端.md",
-    "others/投资.md"
+    "others/obsidian.md"
   ]
 }
