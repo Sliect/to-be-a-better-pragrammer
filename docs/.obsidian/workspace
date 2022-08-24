@@ -4,11 +4,23 @@
     "type": "split",
     "children": [
       {
+<<<<<<< HEAD
         "id": "55e30be37ec5d118",
         "type": "leaf",
         "state": {
           "type": "empty",
           "state": {}
+=======
+        "id": "ef4a2b18526055f3",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "anki/面向对象.md",
+            "mode": "source",
+            "source": false
+          }
+>>>>>>> b89f5d768e0ece91bd650b3dddd8f13cee61c5f1
         }
       }
     ],
@@ -73,6 +85,10 @@
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
+=======
+                "file": "anki/面向对象.md",
+>>>>>>> b89f5d768e0ece91bd650b3dddd8f13cee61c5f1
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +105,10 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
+=======
+                "file": "anki/面向对象.md",
+>>>>>>> b89f5d768e0ece91bd650b3dddd8f13cee61c5f1
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -110,7 +130,13 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+<<<<<<< HEAD
               "state": {}
+=======
+              "state": {
+                "file": "anki/面向对象.md"
+              }
+>>>>>>> b89f5d768e0ece91bd650b3dddd8f13cee61c5f1
             }
           }
         ],
@@ -120,17 +146,30 @@
     "direction": "horizontal",
     "width": 300
   },
+<<<<<<< HEAD
   "active": "55e30be37ec5d118",
   "lastOpenFiles": [
     "others/obsidian.md",
     "daily/2022-08-24.md",
     "daily/TASK一览.md",
+=======
+  "active": "ef4a2b18526055f3",
+  "lastOpenFiles": [
+    "anki/foo.md",
+    "anki/面向对象.md",
+    "daily/TASK一览.md",
+    "daily/2022-08-24.md",
+>>>>>>> b89f5d768e0ece91bd650b3dddd8f13cee61c5f1
     "daily/2022-08-23.md",
     "daily/template.md",
     "daily/20220823-20220828.md",
     "README.md",
     "zhaowa/9.js基础.md",
+<<<<<<< HEAD
     "others/后端.md",
     "others/投资.md"
+=======
+    "others/obsidian.md"
+>>>>>>> b89f5d768e0ece91bd650b3dddd8f13cee61c5f1
   ]
 }
