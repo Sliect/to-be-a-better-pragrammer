@@ -1,0 +1,34 @@
+{
+  "choices": [
+    {
+      "id": "514375b2-708e-4cfd-b1a9-b053aa5683e0",
+      "name": "anki",
+      "type": "Template",
+      "command": true,
+      "templatePath": "templates/anki.md",
+      "fileNameFormat": {
+        "enabled": false,
+        "format": ""
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "anki"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false
+      },
+      "appendLink": false,
+      "incrementFileName": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    }
+  ],
+  "macros": [],
+  "inputPrompt": "single-line"
+}

@@ -7,7 +7,7 @@ ECMAScript 标准提供的内置对象有：Boolean、Error、Date、RegExp 等
 DOM 和 BOM 提供的内置对象有：Document、HTMLElement、Event、NodeList 等
 
 keyof 获取key的类型
-``` js
+``` ts
 type OptionFlags<T> = {
   [Property in keyof T]: boolean
 } 
@@ -32,14 +32,14 @@ type NewType2 = Getter<FeatureFlags>
 ```
 
 typeof 获取复杂的类型如下
-``` js
+``` ts
 function f() {
   return { x: 10, y: 3 };
 }
 type P = ReturnType<typeof f>;
 ```
 
-``` js
+``` ts
 type Greeting = "Hello, world"
 type ShoutyGreeting = Uppercase<Greeting>
 //   ^ = type ShoutyGreeting = "HELLO, WORLD"
@@ -367,3 +367,4 @@ type Sub<T extends number, R extends number> =
     SubList<Rang<T>, Rang<R>> :
     SubList<Rang<R>, Rang<T>
 ```
+
