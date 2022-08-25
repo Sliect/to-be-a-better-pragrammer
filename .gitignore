@@ -5,5 +5,6 @@
 !/docs/.obsidian/app.json
 !/docs/.obsidian/community-plugins.json
 !/docs/.obsidian/core-plugins.json
+!/docs/.obsidian/daily-notes.json
 !/docs/.obsidian/hotkeys.json
 /**/node_modules
