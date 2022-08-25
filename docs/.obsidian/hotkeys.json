@@ -42,5 +42,13 @@
       "key": "P"
     }
   ],
-  "editor:toggle-comments": []
+  "editor:toggle-comments": [],
+  "workspace:undo-close-pane": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Tab"
+    }
+  ]
 }

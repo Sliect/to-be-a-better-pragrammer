@@ -1,39 +1,41 @@
 {
   "settings": {
     "CUSTOM_REGEXPS": {
-      "Basic": "((?:[^\\n][\\n]?)+)\\s#flashcard\\s?\\n*((?:\\n(?:^.{1,3}$|^.{4}(?<!<!--).*))+)",
-      "Basic (and reversed card)": "",
-      "Basic (optional reversed card)": "",
-      "Basic (type in the answer)": "",
-      "Cloze": ""
+      "基础": "((?:[^\\n][\\n]?)+)\\s#flashcard\\s?\\n*((?:\\n(?:^.{1,3}$|^.{4}(?<!<!--).*))+)",
+      "基础 （输入答案）": "",
+      "基础-6a87b": "",
+      "基础的（和相反的卡片）": "",
+      "基础（任意相反的卡片）": "",
+      "填空题": ""
     },
     "FILE_LINK_FIELDS": {
-      "Basic": "Front",
-      "Basic (and reversed card)": "Front",
-      "Basic (optional reversed card)": "Front",
-      "Basic (type in the answer)": "Front",
-      "Cloze": "Text"
+      "基础": "正面",
+      "基础 （输入答案）": "正面",
+      "基础-6a87b": "正面",
+      "基础的（和相反的卡片）": "正面",
+      "基础（任意相反的卡片）": "正面",
+      "填空题": "文字"
     },
     "CONTEXT_FIELDS": {},
     "FOLDER_DECKS": {
-      "anki": "",
-      "cs": "",
       "assets": "",
+      "cs": "",
       "daily": "",
       "frontendmaster": "",
       "others": "",
-      "templates": "",
-      "zhaowa": ""
+      "zhaowa": "",
+      "anki": "",
+      "templates": ""
     },
     "FOLDER_TAGS": {
-      "anki": "",
-      "cs": "",
       "assets": "",
+      "cs": "",
       "daily": "",
       "frontendmaster": "",
       "others": "",
-      "templates": "",
-      "zhaowa": ""
+      "zhaowa": "",
+      "anki": "",
+      "templates": ""
     },
     "Syntax": {
       "Begin Note": "START",
@@ -59,85 +61,96 @@
   },
   "Added Media": [],
   "File Hashes": {
-    "zhaowa/7.面向对象.md": "a7084bde51a13e9267babe615bec90be",
     "zhaowa/9.js基础.md": "057bed2ef0bc54aa6094ea45d0a25ba3",
-    "zhaowa/8.vue.md": "714a4b4b0039d72b242377b69d49bd14",
-    "zhaowa/6.es6.md": "fd11cdfea6e980726e16859a725ebd60",
-    "zhaowa/5.前端工程化.md": "36d5cdb9de0877987af27b55efb44392",
-    "zhaowa/4.ts.md": "cc1e5927942db78e0884c2e6a2aa18b1",
-    "zhaowa/3.browser.md": "b337ca6059d1042eeb8ddef95649b42c",
-    "zhaowa/18.微信小程序.md": "1f2f185d9802d87be12713b11e225f13",
-    "zhaowa/2.js_module.md": "d55f6edf210c54b6edb962aa98ff8252",
-    "zhaowa/17.react源码.md": "38d694a0f7f30c9b3da3c2e8cfb20f0c",
+    "zhaowa/8.vue.md": "0c811f1d518548d1f09529f148acc3c1",
+    "zhaowa/7.面向对象.md": "46bfd58ac6ee8833344f03c17f0b847b",
+    "zhaowa/6.es6.md": "46c462cf9f04edf05530fe86ad2c3656",
+    "zhaowa/5.前端工程化.md": "f0c5e1b5232a5dd66028e0dfbc54cde6",
+    "zhaowa/4.ts.md": "08407a6d8038ee061049917e86163312",
+    "zhaowa/3.browser.md": "02eede08ba4fde1f48b28e2f443d23e5",
+    "zhaowa/2.js_module.md": "25478cccb02a98a5f8902398fa83abd8",
+    "zhaowa/18.微信小程序.md": "7fd0b669673b8906d40a1235ac3cbe50",
+    "zhaowa/17.react源码.md": "3eb20b7bb073f2816193468cadafc6cb",
     "zhaowa/16.设计模式.md": "4e60b81dce6074c98677ccb46550f020",
-    "zhaowa/15.react基础.md": "2ee8026849fa5a617ce6759a48473c12",
-    "zhaowa/14.vuex4.md": "cc3b0292a797a1f5de1a354589c6404e",
-    "zhaowa/13.微前端.md": "7a67b7f9c2794260ffd87c34ab6c049f",
-    "zhaowa/12.vue源码.md": "1bca1e4749c3cd014e92f371a76438f5",
-    "zhaowa/11.vue状态管理及ssr.md": "2427f965e2b66862de6a881dde65823a",
-    "zhaowa/10.vue-cli.md": "151310b805b27d88cd6a7119ddf21108",
-    "zhaowa/1.promise.md": "e39ee5355b2c97e615ae870d8a864025",
-    "templates/anki.md": "7cc2bce14f8a5d25b71efd527cf07203",
+    "zhaowa/15.react基础.md": "ca5d6baa9fc0fa4cd0d0d3b6cae74233",
+    "zhaowa/14.vuex4.md": "79b826f0df4badae7f4779027809f431",
+    "zhaowa/13.微前端.md": "0fb58545b4fb48788a33f9b8210d4b84",
+    "zhaowa/12.vue源码.md": "c0feb7d8fb8893142afb4d1b8720bc2a",
+    "zhaowa/11.vue状态管理及ssr.md": "31220ee4844fabe1ce0e08ca05835964",
+    "zhaowa/10.vue-cli.md": "efdea5e82ab429f18c4e1ccc61501f5f",
+    "zhaowa/1.promise.md": "6853453c944dda6ed18fdbfc64ac78f4",
+    "README.md": "76f546f81daa511b5aa64b68e4c493d3",
     "others/资源.md": "b063f3215cc0b7c43b342e00e40375da",
     "others/计算之魂.md": "22bd0e0d0d8ea5932abf27fafee1af41",
     "others/程序员的哲学.md": "e83f5a37ebf54615e45ec5abc50081ca",
     "others/知识体系.md": "466ce50618a7da1bc8b9541e523b14ef",
     "others/投资.md": "bcc931945599c9c4462dfbf51b5dcc9b",
-    "others/python.md": "25b36c37fe7205f8234d8acbe5f0e5d6",
     "others/后端.md": "803ae68a5710c0464d62727929795ab8",
     "others/thinking.md": "f096d2d650dc53d2aaf059497826fb3a",
-    "others/obsidian.md": "44a5d9e0c4f04417f4fee5e6fac8df9f",
+    "others/python.md": "18f3014454e2e0d531acde298964cd7f",
     "frontendmaster/面试.md": "33558ece7d0569126282cf229ee63640",
-    "frontendmaster/设计模式.md": "0ddc863710dacd3291399df9485314be",
+    "frontendmaster/设计模式.md": "6ed652d0d1f7735d68e6959b55617146",
     "frontendmaster/算法.md": "e39f58694cfb2b59f7a8299f74853145",
     "frontendmaster/微信小程序.md": "097abf956a439dac46eef4dfbf5659dd",
-    "frontendmaster/开发流程.md": "966873d9b8a60bda6bb82c5ce8bc3171",
-    "frontendmaster/工程化.md": "346153031a0a61d1ee937754c2162dc3",
+    "frontendmaster/开发流程.md": "d3f893c0897ee15dcf09b7893f3dc115",
+    "frontendmaster/工程化.md": "bf39878b9d6fd241f6f06c283d1ace17",
     "frontendmaster/typescript.md": "5516ad54e98eb4dd91eb96ecfe332559",
-    "frontendmaster/tailwindcss.md": "abcf08bdddc2acff84a32c4202ad4405",
-    "frontendmaster/redux.md": "07d4955d744357ecfda603464fa79f9f",
-    "frontendmaster/react技术揭秘.md": "6a2a2eecf7db7be7fde613a3731654ef",
-    "frontendmaster/react.md": "d7d72225bba54888f9b2d814635d2c60",
-    "frontendmaster/npmjs.md": "1686a905a275706cca7f50f7d0de5512",
-    "frontendmaster/koa.md": "22fbb8f72bdfaea9d3729bd611cab395",
-    "frontendmaster/js.md": "4ca89a5fbdf6c4772e9faf11c5eed3b6",
-    "frontendmaster/immer.md": "3da641b171cae579a33cbb733079debf",
-    "frontendmaster/hooks.md": "84ac2b43bb2190585f7372b18bc505f5",
-    "frontendmaster/git.md": "6d43c86c08787cf276927b64b65d0f8e",
-    "frontendmaster/gulp.md": "5c054feead282a370a6574ccc422779a",
-    "frontendmaster/css.md": "fd03f8efcf880e3be4c31cbfd1936fa5",
-    "frontendmaster/babel.md": "0e158ee51aaad8bd257f83e9ceb94caa",
+    "frontendmaster/redux.md": "ac8629ca56e0ff0ccaf754ac0e495577",
+    "frontendmaster/tailwindcss.md": "516f906d6db4c550fcb736766cd74cac",
+    "frontendmaster/react技术揭秘.md": "a03dd0c610b7e8dbbf2f56c63ad0bb36",
+    "frontendmaster/react.md": "3b4eb29bbfb524031b913e6c3c7d9eee",
+    "frontendmaster/npmjs.md": "f7a186111f203f57247bcb161d4a9d05",
+    "frontendmaster/koa.md": "2bffd28de9d022b4632a828dabd0de68",
+    "frontendmaster/js.md": "c5973b7d24252d0ebc23a0b005bbdaa7",
+    "frontendmaster/immer.md": "7bfa0867f55d5f687c9ef9c78313b5ce",
+    "frontendmaster/hooks.md": "72bf82a988d47fd56a022999aa2dbbfd",
+    "frontendmaster/gulp.md": "6c80aa8e319dd0da7a565f9319028fb7",
+    "frontendmaster/git.md": "872a46c221a85dee109fe82544de9b43",
+    "frontendmaster/css.md": "00af9cf72ad0b107619baa3951259862",
+    "frontendmaster/babel.md": "740db71c5dc2df3bce5e7fb1f417bb10",
     "daily/template.md": "0be7b6d59615348eb77b5c11e6ae988d",
-    "daily/TASK一览.md": "39d2c7e9e9420ba94fa2741d23dbfa71",
-    "daily/2022-08-24.md": "e36d48ddfdda1d2c5f48a405b9188167",
-    "daily/2022-08-23.md": "20d6dca10ac6c260c1070af059d31315",
+    "daily/2022-08-23.md": "fd716356a13f46e5cb2edf25ff2ddf9c",
     "cs/计算机网络.md": "eb698f55f3fd7fec21761f88f6ae748d",
     "cs/计算机系统.md": "fddcd073f6c5363e758bffbd78931fc5",
-    "anki/面向对象.md": "e01e883b5b08f69fe1fc4a753662a0a1",
-    "anki/foo.md": "35412608e6e7712c2d034c09890d6707",
-    "README.md": "76f546f81daa511b5aa64b68e4c493d3"
+    "20220823-20220828.md": "d0c2bdc14aad6b89c9e87f15b3e80287",
+    "anki/test.md": "ad6870682f43baeb06c6cb2682235be4",
+    "anki/面向对象.md": "56dfc6c39b8d2b2ecda88c677d2d2fa2",
+    "templates/anki.md": "7cc2bce14f8a5d25b71efd527cf07203",
+    "others/obsidian.md": "803c07237a8b33cca8c590165d43a72f",
+    "daily/TASK一览.md": "3fe1e622c39a6d4fb93e319f390d6ddd",
+    "daily/2022-08-24.md": "4b6614bb5fe719fd079e29b0c8df7c86",
+    "others/经济学.md": "d41d8cd98f00b204e9800998ecf8427e",
+    "others/学习之道.md": "d41d8cd98f00b204e9800998ecf8427e",
+    "others/anki.md": "8cb9960cbb8b83683a9af422f2dc9f2b",
+    "daily/2022-08-25.md": "3afc739f73b5c12d3e62a6ccbf1cfce3",
+    "daily/kanban.md": "5c625276167d1b0eaca938ea606899ba",
+    "anki/anki.md": "2d316ffd650f1bf64e4f586491e6b7d7"
   },
   "fields_dict": {
-    "Basic": [
-      "Front",
-      "Back"
+    "基础": [
+      "正面",
+      "背面"
     ],
-    "Basic (and reversed card)": [
-      "Front",
-      "Back"
+    "基础 （输入答案）": [
+      "正面",
+      "背面"
     ],
-    "Basic (optional reversed card)": [
-      "Front",
-      "Back",
-      "Add Reverse"
+    "基础-6a87b": [
+      "正面",
+      "背面"
     ],
-    "Basic (type in the answer)": [
-      "Front",
-      "Back"
+    "基础的（和相反的卡片）": [
+      "正面",
+      "背面"
     ],
-    "Cloze": [
-      "Text",
-      "Back Extra"
+    "基础（任意相反的卡片）": [
+      "正面",
+      "背面",
+      "反向添加"
+    ],
+    "填空题": [
+      "文字",
+      "背面额外"
     ]
   }
 }

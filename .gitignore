@@ -1,4 +1,9 @@
 /node_modules
 /docs/.vuepress/dist
-/docs/.obsidian/workspace
+/docs/.obsidian/**
+!/docs/.obsidian/plugins/**
+!/docs/.obsidian/app.json
+!/docs/.obsidian/community-plugins.json
+!/docs/.obsidian/core-plugins.json
+!/docs/.obsidian/hotkeys.json
 /**/node_modules
