@@ -368,3 +368,7 @@ type Sub<T extends number, R extends number> =
     SubList<Rang<R>, Rang<T>
 ```
 
+### Design Patterns with Ts
+
+@types/xxx 安装没有typescript的库
+

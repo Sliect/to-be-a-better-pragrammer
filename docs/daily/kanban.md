@@ -6,20 +6,20 @@ kanban-plugin: basic
 
 ## Todo
 
-- [ ] [[学习之道]]
 - [ ] [[babel]]
 - [ ] [[经济学]]
-- [ ] [[typescript]]
 
 
 ## In Progress
 
-- [ ] [[模型思维]]
+- [ ] [[typescript]]
 
 
 ## Done
 
 - [ ] [[others/anki]]
+- [ ] [[模型思维]]
+- [ ] [[学习之道]]
 
 
 

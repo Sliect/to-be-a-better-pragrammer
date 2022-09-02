@@ -65,4 +65,11 @@ minimist          解析node命令传参
 
 esbuild           go语言实现的构建工具
 
-nrm               管理多个npm源
+nrm                管理多个npm源
+
+concurrently  同时执行多个node命令
+
+pnpm             包管理工具
+
+nodemon       监听js变化后自动运行
+
