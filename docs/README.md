@@ -36,3 +36,8 @@
   - [16.设计模式](./zhaowa/16.设计模式.md)
   - [17.react源码](./zhaowa/17.react源码.md)
   - [18.微信小程序](./zhaowa/18.微信小程序.md)
+  - [19.设计模式](./zhaowa/19.设计模式.md)
+  - [20.nodejs](./zhaowa/20.nodejs.md)
+  - [21.算法](./zhaowa/21.算法.md)
+  - [22.移动端开发](./zhaowa/22.移动端开发.md)
+  - [23.electron](./zhaowa/23.electron.md)

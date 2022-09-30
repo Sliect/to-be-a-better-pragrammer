@@ -73,3 +73,7 @@ pnpm             包管理工具
 
 nodemon       监听js变化后自动运行
 
+commander     命令行的解决方案
+
+inquire       命令行选择交互
+ 
