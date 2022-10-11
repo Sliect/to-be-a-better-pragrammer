@@ -69,7 +69,7 @@ nrm                管理多个npm源
 
 concurrently  同时执行多个node命令
 
-pnpm             包管理工具
+pnpm          包管理工具
 
 nodemon       监听js变化后自动运行
 
@@ -77,3 +77,4 @@ commander     命令行的解决方案
 
 inquire       命令行选择交互
  
+mousetrap     键盘交互监听    
