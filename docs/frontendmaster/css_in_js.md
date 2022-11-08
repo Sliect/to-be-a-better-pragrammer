@@ -69,7 +69,7 @@ const Input = styled.input`
 <Input />
 
 // 也可以用组件 props 的用法
-// 强类推荐安装 vscode-styled-components 插件，自动填充 + 高亮 css 语法
+// 强裂推荐安装 vscode-styled-components 插件，自动填充 + 高亮 css 语法
 const Div = styled.div`
   color: ${props => props.color};
   background-color: ${({ disabled }) => disabled ? 'gray' : 'white' }

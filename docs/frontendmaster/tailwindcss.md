@@ -173,3 +173,110 @@ module.exports = {
   }
 }
 ```
+
+## 自定义插件
+
+``` js
+// tailwind.config.js
+const plugin = require('tailwindcss/plugin')
+
+module.exports = {
+  // ...
+  plugins: [
+    plugin(function ({ addBase, addComponents, addUtilities, addVariant, theme }) {
+      /* 给类似 h1 div 这些选择器添加样式 */
+      addBase({
+        'h1': {
+          fontSize: theme('fontSize.2xl'),
+        },
+        'h2': {
+          fontSize: theme('fontSize.xl'),
+        },
+      })
+      /* 给固定的复杂的类添加样式 比如框架中通用的 按钮、表单等组件 */
+      addComponents({
+        '.card': {
+          backgroundColor: theme('colors.white'),
+          borderRadius: theme('borderRadius.lg'),
+          padding: theme('spacing.6'),
+          boxShadow: theme('boxShadow.xl'),
+        }
+      })
+      /* 添加自定义的功能类 */
+      addUtilities({
+        '.content-auto': {
+          contentVisibility: 'auto',
+        }
+      })
+      /** 添加自定义修饰符 */
+      // Add a `third` variant, ie. `third:pb-0`
+      addVariant('third', '&:nth-child(3)')
+    })
+  ]
+}
+```
+
+### 源码
+
+要理解 tailwind 的运作原理，首先要理解 postcss 的原理
+
+q: 什么是 postcss ？
+a: postcss 类似 Babel，通过 parse => transform => generate 的步骤，先将源码转化成 js 固定结构对象，再用访问者模式转换 [AST](https://astexplorer.net/)，最后用生成处理后的 css 字符串
+
+
+q: tailwind 代码怎么实现？
+``` js
+function processTailwindFeatures(setupContext) {
+  return function (root, result) {
+    // 获取指令的 AST 对象
+    let { tailwindDirectives, applyDirectives } = normalizeTailwindDirectives(root)
+    // 检测死循环
+    detectNesting()(root, result)
+
+    // 将 apply 指令的父级 拆成多个 rule
+    // 比如 .parent {  @apply border border-gray-300 rounded; color: red; }
+    // 转换成 .parent { @apply border border-gray-300 rounded; }  .parent { color: red; }
+    partitionApplyAtRules()(root, result)
+
+    let context = setupContext({
+      tailwindDirectives,
+      applyDirectives,
+      registerDependency(dependency) {
+        result.messages.push({
+          plugin: 'tailwindcss',
+          parent: result.opts.from,
+          ...dependency,
+        })
+      },
+      createContext(tailwindConfig, changedContent) {
+        return createContext(tailwindConfig, changedContent, root)
+      },
+    })(root, result)
+
+    if (context.tailwindConfig.separator === '-') {
+      throw new Error(
+        "The '-' character cannot be used as a custom separator in JIT mode due to parsing ambiguity. Please use another character like '_' instead."
+      )
+    }
+
+    issueFlagNotices(context.tailwindConfig)
+
+    // 转换 tailwind 的AST
+    expandTailwindAtRules(context)(root, result)
+    // 同上
+    partitionApplyAtRules()(root, result)
+    // 转换 APPLY 的AST
+    expandApplyAtRules(context)(root, result)
+    // theme 和 screen 函数 读取配置后转换成相应的 AST对象
+    evaluateTailwindFunctions(context)(root, result)
+    // 读取 tailwindConfig 下的 theme.screens 的配置
+    // 将其转化成类似 @media (min-width: 976px) and (max-width: 1440px) 的 AST对象
+    substituteScreenAtRules(context)(root, result)
+    resolveDefaultsAtRules(context)(root, result)
+    collapseAdjacentRules(context)(root, result)
+    collapseDuplicateDeclarations(context)(root, result)
+  }
+}
+```
+
+[tailwind的默认css设置](https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css)适配了浏览器和移动端的表现，为响应式和更好的使用tailwind做了一些css样式预设

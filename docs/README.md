@@ -41,3 +41,5 @@
   - [21.算法](./zhaowa/21.算法.md)
   - [22.移动端开发](./zhaowa/22.移动端开发.md)
   - [23.electron](./zhaowa/23.electron.md)
+  - [24.babel](./zhaowa/24.babel.md)
+  - [25.webpack](./zhaowa/25.webpack.md)
