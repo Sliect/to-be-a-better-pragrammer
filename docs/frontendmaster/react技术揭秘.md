@@ -100,17 +100,26 @@ function workLoop() {
   }
 }
 function performUnitOfWork(workInProgress) {
+  // 优先进子节点深度遍历
   let next = beginWork(workInProgress)
   if (next === null) {
+    // 执行当前任务单元并返回兄弟或父节点任务单元
     next = completeUnitOfWork(workInProgress)
   }
   return next
 }
 function beginWork(workInProgress) { // 分为 mount 和 update 两种情况
+  // 在 mount 阶段对 rootFiber 赋值 Placement effectTag，在 commit 阶段一次性插入
+  // 在 update 阶段 reconcileChildren，对 fiber 赋值 effectTag
   log('work performed for ' + workInProgress.name)
   return workInProgress.child
 }
 // 执行当前任务单元 并返回下一个任务单元
+// 所有子节点遍历完
+// 给有 effectTag 的 fiber 节点执行对应操作
+// mount 阶段给 fiber 创建对应的 DOM 节点，并赋值给 fiber.stateNode，将子孙节DOM点插入，初始化DOM对象的事件监听和属性
+// update 阶段赋值给 workInProgress 的 updateQueue 
+// 将有 effectTag 的 fiber 挂在父级 fiber 的 effectList 上
 function completeUnitOfWork(workInProgress) {
   while(true) {
     let siblingFiber = workInProgress.sibling
@@ -127,7 +136,7 @@ function completeUnitOfWork(workInProgress) {
     }
   }
 }
-// 所有子节点遍历完
+
 function completeWork(workInProgress) {
   log('work completed for ' + workInProgress.name)
   return null
