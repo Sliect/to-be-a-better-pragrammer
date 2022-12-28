@@ -78,3 +78,5 @@ commander     命令行的解决方案
 inquire       命令行选择交互
  
 mousetrap     键盘交互监听    
+
+speed-measure-webpack-plugin  速度分析插件作用  

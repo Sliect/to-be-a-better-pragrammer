@@ -11,8 +11,8 @@ kanban-plugin: basic
 
 ## In Progress
 
-- [ ] CS
-- [ ] debug调试
+- [ ] 函数式
+- [ ] react设计原理
 
 
 ## Done
@@ -23,6 +23,7 @@ kanban-plugin: basic
 - [x] [[babel]]
 - [x] [[经济学]]
 - [x] [[typescript]]
+- [ ] debug调试
 
 
 
