@@ -1,5 +1,12 @@
 # nodejs
 
+Module Wrapper
+
+``` js
+// exports 是 module的引用
+(function(exports, require, module, __filename, __dirname) {})
+```
+
 ## File
 
 - fs.dir 操作目录的子模块，提供dir.read、dir.readSync等 API 来读取目录信息

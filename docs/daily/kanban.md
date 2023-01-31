@@ -11,8 +11,9 @@ kanban-plugin: basic
 
 ## In Progress
 
-- [ ] 函数式
-- [ ] react设计原理
+- [ ] 看书
+- [ ] 自动化测试
+- [ ] 写作技巧
 
 
 ## Done
@@ -21,7 +22,9 @@ kanban-plugin: basic
 - [x] [[模型思维]]
 - [x] [[学习之道]]
 - [x] [[babel]]
+- [ ] 函数式
 - [x] [[经济学]]
+- [ ] react设计原理
 - [x] [[typescript]]
 - [ ] debug调试
 
