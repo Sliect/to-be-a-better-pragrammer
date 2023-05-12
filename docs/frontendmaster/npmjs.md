@@ -82,3 +82,5 @@ mousetrap     键盘交互监听
 speed-measure-webpack-plugin  速度分析插件作用  
 
 @ebay/nice-modal-react  全局弹窗
+
+eruda         调试栏
