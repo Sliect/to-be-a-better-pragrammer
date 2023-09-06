@@ -6,6 +6,9 @@
 安装这个包后可以用命令式添加crate
 > cargo install cargo-edit
 
+删除依赖
+> cargo rm xxx
+
 ## 所有权
 
 1. Rust中每个值都被一个变量所拥有
