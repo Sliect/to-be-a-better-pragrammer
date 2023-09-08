@@ -6,14 +6,15 @@ kanban-plugin: basic
 
 ## Todo
 
-- [ ] 全栈
+- [ ] gpt prompt学习
+- [ ] nestjs学习
+- [ ] rust学习
 
 
 ## In Progress
 
-- [ ] 看书
-- [ ] 自动化测试
-- [ ] 写作技巧
+- [ ] 英语单词 Anki 记忆，每天10个
+- [ ] kk的pdf，每天一章
 
 
 ## Done
@@ -27,6 +28,7 @@ kanban-plugin: basic
 - [ ] react设计原理
 - [x] [[typescript]]
 - [ ] debug调试
+- [ ] 写作技巧
 
 
 
