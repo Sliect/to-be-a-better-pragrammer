@@ -44,6 +44,8 @@ module.exports = {
 
 umijs中启用 tailwindcss
 > umi g tailwindcss
+或者
+> npx umi g tailwindcss
 
 加入tailwind中不存在的工具类时，可以用 top-[117px] 来表示 top: 117px; 语法就是 [] 内部表示特定值
 

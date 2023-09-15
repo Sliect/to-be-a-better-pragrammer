@@ -1,5 +1,9 @@
 目标：学会卡片制作和学习方法
 
+英文单词快速制卡
+1. pdf线上预览 https://mozilla.github.io/pdf.js/web/viewer.html
+2. Anki划词助手谷歌插件
+3. shift 添加
   
 每天走完最小闭环
 学习-思考-记录-复习  
