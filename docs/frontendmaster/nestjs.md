@@ -154,6 +154,25 @@ export class CatsController {
 }
 ```
 
+```ts
+const connectionFactory = {
+  provide: 'CONNECTION',
+  // 动态创建
+  useFactory: (optionsProvider: OptionsProvider) => {
+    const options = optionsProvider.get();
+    return new DatabaseConnection(options);
+  },
+  // 注入到 useFactory 的参数
+  inject: [OptionsProvider],
+};
+
+@Module({
+  providers: [connectionFactory],
+  exports: [connectionFactory],
+})
+export class AppModule {}
+```
+
 ## Module
 
 ``` ts

@@ -153,3 +153,40 @@ Button.tsx --tsc--> Button.js --babel--> Button.js --> bundle.js
   "stopOnEntry": true
 },
 ```
+
+## 调试Jest测试用例
+
+运行单个测试文件的单个用例
+npx jest src/test.ts -t "xxx"
+
+``` json
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Launch Program",
+  "console": "integratedTerminal",
+  "program": "${workspaceFolder}\\node_modules\\jest\\bin\\jest.js",
+  // "preLaunchTask": "tsc: build - tsconfig.json",
+  "args": ["-i", "src/app.controller.spec.ts", "-t", "root"]
+}
+```
+
+如果提示不能用 import 语法，尝试在 package.json 中添加 jest 配置
+``` json
+"jest": {
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "collectCoverageFrom": [
+    "**/*.(t|j)s"
+  ],
+  "coverageDirectory": "../coverage",
+  "testEnvironment": "node",
+  "preset": "ts-jest"
+}
+```
