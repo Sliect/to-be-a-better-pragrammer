@@ -154,6 +154,25 @@ Button.tsx --tsc--> Button.js --babel--> Button.js --> bundle.js
 },
 ```
 
+## 调试ts
+
+``` json
+{
+  "name": "调试 TS Node 程序 - args",
+  "type": "node",
+  "request": "launch",
+  "runtimeExecutable": "node",
+  // 在node启动时注入 ts-node/register 模块
+  "runtimeArgs": [
+    "-r",
+    "ts-node/register"
+  ],
+  "args": [
+    "${workspaceFolder}/src/index.ts"
+  ]
+}
+```
+
 ## 调试Jest测试用例
 
 运行单个测试文件的单个用例

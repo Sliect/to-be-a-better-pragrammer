@@ -464,6 +464,54 @@ async findOne(@User('firstName') firstName: string) {
 }
 ```
 
+## Configuration
+
+```ts
+import { Module } from '@nestjs/common';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import * as Joi from 'joi';
+
+@Module({
+  // 默认导入 .env 文件
+  // imports: [ConfigModule.forRoot()],
+  // 通过加载其他格式的文件
+  imports: [ConfigModule.forRoot({
+    load: ['./config/configuration'],
+    // 可以加上格式验证
+    validationSchema: Joi.object({
+      NODE_ENV: Joi.string().required(),
+      PORT: Joi.number().default(3000),
+    }),
+    // 扩展环境变量  
+    // APP_URL=mywebsite.com
+    // SUPPORT_EMAIL=support@${APP_URL}
+    // SUPPORT_EMAIL 会被解析为 'support@mywebsite.com'
+    expandVariables: true,
+  })],
+  controllers: [AppController],
+  providers: [AppService],
+})
+export class AppModule {}
+```
+```ts
+// config/configuration.ts
+export default () => ({
+  port: parseInt(process.env.PORT, 10) || 3000,
+  database: {
+    host: process.env.DATABASE_HOST,
+    port: parseInt(process.env.DATABASE_PORT, 10) || 5432,
+  },
+});
+```
+
+main.ts 也可以获取配置信息
+```ts
+const configService = app.get(ConfigService);
+const port = configService.get('port');
+```
+
 ## 概念
 
 IOC（Inverse Of Control）: class 上声明依赖了啥，然后让工具去分析我声明的依赖关系，根据先后顺序自动把对象创建好了，然后组装起来
