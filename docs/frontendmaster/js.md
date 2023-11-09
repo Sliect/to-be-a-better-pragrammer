@@ -199,3 +199,22 @@ function HOF0(fn) {
   }
 }
 ```
+
+尾递归优化的原理是使用尾调用优化（Tail Call Optimization），即在尾递归调用之前，将当前函数的栈帧（包括局部变量和参数）替换为新的栈帧，从而复用当前栈帧，避免了不必要的栈空间消耗。这样可以使得递归调用的深度不再增加，从而避免了堆栈溢出的问题。
+所谓尾调用，就是函数的返回值是另一个函数的直接返回值
+```js
+// bad
+function factorial(n) {
+  if (n < 2) {
+    return 1;
+  }
+  return n * factorial(n - 1); // <-- 不是尾调用
+}
+// good
+function factorial(n, result = 1) {
+  if (n < 2) {
+    return result;
+  }
+  return factorial(n - 1, n * result); // <-- 尾调用
+} 
+```

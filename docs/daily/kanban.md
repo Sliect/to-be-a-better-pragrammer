@@ -6,7 +6,6 @@ kanban-plugin: basic
 
 ## Todo
 
-- [ ] gpt prompt学习
 - [ ] nestjs学习
 - [ ] rust学习
 
