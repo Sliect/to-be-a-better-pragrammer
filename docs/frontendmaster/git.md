@@ -16,3 +16,7 @@ cnpm config set registry https://registry.npm.taobao.org 切换淘宝镜像源
 1. 先提交一次最新的gitignore 
 2. 再执行 git rm -r --cached path/to/folder
 3. 最后再提交一次
+
+
+可以修改当前分支的提交
+git rebase -i HEAD~3   // 修改最近的三个提交，并进入vi 模式，输入 i 进行提交的编辑，按esc按钮退出编辑状态，输入 :wq 保存
