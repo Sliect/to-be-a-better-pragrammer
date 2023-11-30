@@ -11,8 +11,12 @@
             "id": "dc86f4e1cf651ad3",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "docs/daily/2023-10-31.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/daily/2023-10-31.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/daily/2023-10-31.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2023-11-20.md"
+                "file": "docs/daily/2023-10-31.md"
               }
             }
           }
@@ -140,8 +146,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "bdb794446138a31e",
+  "active": "dc86f4e1cf651ad3",
   "lastOpenFiles": [
+    "docs/daily/2022-08-23.md",
     "docs/daily/2023-11-20.md",
     "2023-11-20.md",
     "demos/function-lib/src/index.js",
