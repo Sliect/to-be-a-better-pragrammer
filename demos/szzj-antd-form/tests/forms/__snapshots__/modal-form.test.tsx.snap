@@ -1,0 +1,1360 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalForm basic 1`] = `
+<ModalForm
+  dataSource={
+    Object {
+      "name": "史泰龙",
+    }
+  }
+  visible={true}
+>
+  <Modal
+    className="szzj-antd-modal-form"
+    forceRender={true}
+    onCancel={[Function]}
+    onOk={[Function]}
+    open={true}
+  >
+    <Empty />
+    <NoCompactStyle>
+      <NoFormStyle
+        override={true}
+        status={true}
+      >
+        <Dialog
+          className="css-dev-only-do-not-override-12upa3x szzj-antd-modal-form"
+          closeIcon={
+            <span
+              className="ant-modal-close-x"
+            >
+              <ForwardRef(CloseOutlined)
+                className="ant-modal-close-icon"
+              />
+            </span>
+          }
+          focusTriggerAfterClose={true}
+          footer={
+            <Footer
+              className="szzj-antd-modal-form"
+              forceRender={true}
+              onCancel={[Function]}
+              onOk={[Function]}
+              open={true}
+            >
+              <BaseForm
+                form={
+                  Object {
+                    "__INTERNAL__": Object {
+                      "itemRef": [Function],
+                      "name": undefined,
+                    },
+                    "_init": true,
+                    "getFieldError": [Function],
+                    "getFieldInstance": [Function],
+                    "getFieldValue": [Function],
+                    "getFieldWarning": [Function],
+                    "getFieldsError": [Function],
+                    "getFieldsValue": [Function],
+                    "getInternalHooks": [Function],
+                    "isFieldTouched": [Function],
+                    "isFieldValidating": [Function],
+                    "isFieldsTouched": [Function],
+                    "isFieldsValidating": [Function],
+                    "resetFields": [Function],
+                    "scrollToField": [Function],
+                    "setFieldValue": [Function],
+                    "setFields": [Function],
+                    "setFieldsValue": [Function],
+                    "submit": [Function],
+                    "validateFields": [Function],
+                  }
+                }
+                layout="vertical"
+              >
+                <Field
+                  label="姓名"
+                  name="name"
+                />
+              </BaseForm>
+            </Footer>
+          }
+          forceRender={true}
+          maskTransitionName="ant-fade"
+          onCancel={[Function]}
+          onClose={[Function]}
+          onOk={[Function]}
+          prefixCls="ant-modal"
+          rootClassName="css-dev-only-do-not-override-12upa3x"
+          transitionName="ant-zoom"
+          visible={true}
+          width={520}
+          wrapClassName=""
+        >
+          <Portal
+            autoDestroy={false}
+            autoLock={true}
+            open={true}
+          >
+            <Portal
+              containerInfo={
+                <div>
+                  <style
+                    data-rc-order="prepend"
+                    rc-util-key="@ant-design-icons"
+                  >
+                    
+.anticon {
+  display: inline-block;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.anticon &gt; * {
+  line-height: 1;
+}
+
+.anticon svg {
+  display: inline-block;
+}
+
+.anticon::before {
+  display: none;
+}
+
+.anticon .anticon-icon {
+  display: block;
+}
+
+.anticon[tabindex] {
+  cursor: pointer;
+}
+
+.anticon-spin::before,
+.anticon-spin {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}
+
+@-webkit-keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+                  </style>
+                  <div
+                    class="ant-modal-root css-dev-only-do-not-override-12upa3x"
+                  >
+                    <div
+                      class="ant-modal-mask"
+                    />
+                    <div
+                      class="ant-modal-wrap"
+                      tabindex="-1"
+                    >
+                      <div
+                        aria-modal="true"
+                        class="ant-modal css-dev-only-do-not-override-12upa3x szzj-antd-modal-form ant-zoom-appear ant-zoom-appear-prepare ant-zoom"
+                        role="dialog"
+                        style="width: 520px;"
+                      >
+                        <div
+                          aria-hidden="true"
+                          style="width: 0px; height: 0px; overflow: hidden; outline: none;"
+                          tabindex="0"
+                        />
+                        <div
+                          class="ant-modal-content"
+                        >
+                          <button
+                            aria-label="Close"
+                            class="ant-modal-close"
+                            type="button"
+                          >
+                            <span
+                              class="ant-modal-close-x"
+                            >
+                              <span
+                                aria-label="close"
+                                class="anticon anticon-close ant-modal-close-icon"
+                                role="img"
+                              >
+                                <svg
+                                  aria-hidden="true"
+                                  data-icon="close"
+                                  fill="currentColor"
+                                  focusable="false"
+                                  height="1em"
+                                  viewBox="64 64 896 896"
+                                  width="1em"
+                                >
+                                  <path
+                                    d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"
+                                  />
+                                </svg>
+                              </span>
+                            </span>
+                          </button>
+                          <div
+                            class="ant-modal-body"
+                          >
+                            <div>
+                              <form
+                                class="ant-form ant-form-vertical css-dev-only-do-not-override-12upa3x"
+                              >
+                                <div
+                                  class="ant-form-item szzj-antd-form-item css-dev-only-do-not-override-12upa3x ant-form-item-has-success"
+                                >
+                                  <div
+                                    class="ant-row ant-form-item-row css-dev-only-do-not-override-12upa3x"
+                                  >
+                                    <div
+                                      class="ant-col ant-form-item-label css-dev-only-do-not-override-12upa3x"
+                                    >
+                                      <label
+                                        class="ant-form-item-required"
+                                        for="name"
+                                        title="姓名"
+                                      >
+                                        姓名
+                                      </label>
+                                    </div>
+                                    <div
+                                      class="ant-col ant-form-item-control css-dev-only-do-not-override-12upa3x"
+                                    >
+                                      <div
+                                        class="ant-form-item-control-input"
+                                      >
+                                        <div
+                                          class="ant-form-item-control-input-content"
+                                        >
+                                          <input
+                                            aria-required="true"
+                                            class="ant-input ant-input-status-success css-dev-only-do-not-override-12upa3x"
+                                            id="name"
+                                            maxlength="30"
+                                            placeholder="请输入姓名"
+                                            type="text"
+                                            value="史泰龙"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div
+                            class="ant-modal-footer"
+                          >
+                            <button
+                              class="ant-btn css-dev-only-do-not-override-12upa3x ant-btn-default"
+                              type="button"
+                            >
+                              <span>
+                                Cancel
+                              </span>
+                            </button>
+                            <button
+                              class="ant-btn css-dev-only-do-not-override-12upa3x ant-btn-primary"
+                              type="button"
+                            >
+                              <span>
+                                OK
+                              </span>
+                            </button>
+                          </div>
+                        </div>
+                        <div
+                          aria-hidden="true"
+                          style="width: 0px; height: 0px; overflow: hidden; outline: none;"
+                          tabindex="0"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              }
+            >
+              <Dialog
+                afterClose={[Function]}
+                className="css-dev-only-do-not-override-12upa3x szzj-antd-modal-form"
+                closeIcon={
+                  <span
+                    className="ant-modal-close-x"
+                  >
+                    <ForwardRef(CloseOutlined)
+                      className="ant-modal-close-icon"
+                    />
+                  </span>
+                }
+                destroyOnClose={false}
+                focusTriggerAfterClose={true}
+                footer={
+                  <Footer
+                    className="szzj-antd-modal-form"
+                    forceRender={true}
+                    onCancel={[Function]}
+                    onOk={[Function]}
+                    open={true}
+                  >
+                    <BaseForm
+                      form={
+                        Object {
+                          "__INTERNAL__": Object {
+                            "itemRef": [Function],
+                            "name": undefined,
+                          },
+                          "_init": true,
+                          "getFieldError": [Function],
+                          "getFieldInstance": [Function],
+                          "getFieldValue": [Function],
+                          "getFieldWarning": [Function],
+                          "getFieldsError": [Function],
+                          "getFieldsValue": [Function],
+                          "getInternalHooks": [Function],
+                          "isFieldTouched": [Function],
+                          "isFieldValidating": [Function],
+                          "isFieldsTouched": [Function],
+                          "isFieldsValidating": [Function],
+                          "resetFields": [Function],
+                          "scrollToField": [Function],
+                          "setFieldValue": [Function],
+                          "setFields": [Function],
+                          "setFieldsValue": [Function],
+                          "submit": [Function],
+                          "validateFields": [Function],
+                        }
+                      }
+                      layout="vertical"
+                    >
+                      <Field
+                        label="姓名"
+                        name="name"
+                      />
+                    </BaseForm>
+                  </Footer>
+                }
+                forceRender={true}
+                maskTransitionName="ant-fade"
+                onCancel={[Function]}
+                onClose={[Function]}
+                onOk={[Function]}
+                prefixCls="ant-modal"
+                rootClassName="css-dev-only-do-not-override-12upa3x"
+                transitionName="ant-zoom"
+                visible={true}
+                width={520}
+                wrapClassName=""
+              >
+                <div
+                  className="ant-modal-root css-dev-only-do-not-override-12upa3x"
+                >
+                  <Mask
+                    motionName="ant-fade"
+                    prefixCls="ant-modal"
+                    style={
+                      Object {
+                        "zIndex": undefined,
+                      }
+                    }
+                    visible={true}
+                  >
+                    <CSSMotion
+                      key="mask"
+                      leavedClassName="ant-modal-mask-hidden"
+                      motionName="ant-fade"
+                      visible={true}
+                    >
+                      <DomWrapper>
+                        <div
+                          className="ant-modal-mask"
+                          style={
+                            Object {
+                              "zIndex": undefined,
+                            }
+                          }
+                        />
+                      </DomWrapper>
+                    </CSSMotion>
+                  </Mask>
+                  <div
+                    className="ant-modal-wrap"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    style={
+                      Object {
+                        "display": null,
+                        "zIndex": undefined,
+                      }
+                    }
+                    tabIndex={-1}
+                  >
+                    <Content
+                      afterClose={[Function]}
+                      ariaId="test-id"
+                      className="css-dev-only-do-not-override-12upa3x szzj-antd-modal-form"
+                      closable={true}
+                      closeIcon={
+                        <span
+                          className="ant-modal-close-x"
+                        >
+                          <ForwardRef(CloseOutlined)
+                            className="ant-modal-close-icon"
+                          />
+                        </span>
+                      }
+                      destroyOnClose={false}
+                      focusTriggerAfterClose={true}
+                      footer={
+                        <Footer
+                          className="szzj-antd-modal-form"
+                          forceRender={true}
+                          onCancel={[Function]}
+                          onOk={[Function]}
+                          open={true}
+                        >
+                          <BaseForm
+                            form={
+                              Object {
+                                "__INTERNAL__": Object {
+                                  "itemRef": [Function],
+                                  "name": undefined,
+                                },
+                                "_init": true,
+                                "getFieldError": [Function],
+                                "getFieldInstance": [Function],
+                                "getFieldValue": [Function],
+                                "getFieldWarning": [Function],
+                                "getFieldsError": [Function],
+                                "getFieldsValue": [Function],
+                                "getInternalHooks": [Function],
+                                "isFieldTouched": [Function],
+                                "isFieldValidating": [Function],
+                                "isFieldsTouched": [Function],
+                                "isFieldsValidating": [Function],
+                                "resetFields": [Function],
+                                "scrollToField": [Function],
+                                "setFieldValue": [Function],
+                                "setFields": [Function],
+                                "setFieldsValue": [Function],
+                                "submit": [Function],
+                                "validateFields": [Function],
+                              }
+                            }
+                            layout="vertical"
+                          >
+                            <Field
+                              label="姓名"
+                              name="name"
+                            />
+                          </BaseForm>
+                        </Footer>
+                      }
+                      forceRender={true}
+                      maskTransitionName="ant-fade"
+                      motionName="ant-zoom"
+                      onCancel={[Function]}
+                      onClose={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseUp={[Function]}
+                      onOk={[Function]}
+                      onVisibleChanged={[Function]}
+                      prefixCls="ant-modal"
+                      rootClassName="css-dev-only-do-not-override-12upa3x"
+                      transitionName="ant-zoom"
+                      visible={true}
+                      width={520}
+                      wrapClassName=""
+                    >
+                      <CSSMotion
+                        forceRender={true}
+                        motionName="ant-zoom"
+                        onAppearPrepare={[Function]}
+                        onEnterPrepare={[Function]}
+                        onVisibleChanged={[Function]}
+                        removeOnLeave={false}
+                        visible={true}
+                      >
+                        <DomWrapper>
+                          <Panel
+                            afterClose={[Function]}
+                            ariaId="test-id"
+                            className="css-dev-only-do-not-override-12upa3x szzj-antd-modal-form ant-zoom-appear ant-zoom-appear-prepare ant-zoom"
+                            closable={true}
+                            closeIcon={
+                              <span
+                                className="ant-modal-close-x"
+                              >
+                                <ForwardRef(CloseOutlined)
+                                  className="ant-modal-close-icon"
+                                />
+                              </span>
+                            }
+                            destroyOnClose={false}
+                            focusTriggerAfterClose={true}
+                            footer={
+                              <Footer
+                                className="szzj-antd-modal-form"
+                                forceRender={true}
+                                onCancel={[Function]}
+                                onOk={[Function]}
+                                open={true}
+                              >
+                                <BaseForm
+                                  form={
+                                    Object {
+                                      "__INTERNAL__": Object {
+                                        "itemRef": [Function],
+                                        "name": undefined,
+                                      },
+                                      "_init": true,
+                                      "getFieldError": [Function],
+                                      "getFieldInstance": [Function],
+                                      "getFieldValue": [Function],
+                                      "getFieldWarning": [Function],
+                                      "getFieldsError": [Function],
+                                      "getFieldsValue": [Function],
+                                      "getInternalHooks": [Function],
+                                      "isFieldTouched": [Function],
+                                      "isFieldValidating": [Function],
+                                      "isFieldsTouched": [Function],
+                                      "isFieldsValidating": [Function],
+                                      "resetFields": [Function],
+                                      "scrollToField": [Function],
+                                      "setFieldValue": [Function],
+                                      "setFields": [Function],
+                                      "setFieldsValue": [Function],
+                                      "submit": [Function],
+                                      "validateFields": [Function],
+                                    }
+                                  }
+                                  layout="vertical"
+                                >
+                                  <Field
+                                    label="姓名"
+                                    name="name"
+                                  />
+                                </BaseForm>
+                              </Footer>
+                            }
+                            forceRender={true}
+                            holderRef={[Function]}
+                            maskTransitionName="ant-fade"
+                            motionName="ant-zoom"
+                            onCancel={[Function]}
+                            onClose={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseUp={[Function]}
+                            onOk={[Function]}
+                            onVisibleChanged={[Function]}
+                            prefixCls="ant-modal"
+                            rootClassName="css-dev-only-do-not-override-12upa3x"
+                            style={Object {}}
+                            transitionName="ant-zoom"
+                            visible={true}
+                            width={520}
+                            wrapClassName=""
+                          >
+                            <div
+                              aria-labelledby={null}
+                              aria-modal="true"
+                              className="ant-modal css-dev-only-do-not-override-12upa3x szzj-antd-modal-form ant-zoom-appear ant-zoom-appear-prepare ant-zoom"
+                              key="dialog-element"
+                              onMouseDown={[Function]}
+                              onMouseUp={[Function]}
+                              role="dialog"
+                              style={
+                                Object {
+                                  "width": 520,
+                                }
+                              }
+                            >
+                              <div
+                                aria-hidden="true"
+                                style={
+                                  Object {
+                                    "height": 0,
+                                    "outline": "none",
+                                    "overflow": "hidden",
+                                    "width": 0,
+                                  }
+                                }
+                                tabIndex={0}
+                              />
+                              <Component
+                                shouldUpdate={true}
+                              >
+                                <div
+                                  className="ant-modal-content"
+                                >
+                                  <button
+                                    aria-label="Close"
+                                    className="ant-modal-close"
+                                    onClick={[Function]}
+                                    type="button"
+                                  >
+                                    <span
+                                      className="ant-modal-close-x"
+                                    >
+                                      <ForwardRef(CloseOutlined)
+                                        className="ant-modal-close-icon"
+                                      >
+                                        <AntdIcon
+                                          className="ant-modal-close-icon"
+                                          icon={
+                                            Object {
+                                              "icon": Object {
+                                                "attrs": Object {
+                                                  "focusable": "false",
+                                                  "viewBox": "64 64 896 896",
+                                                },
+                                                "children": Array [
+                                                  Object {
+                                                    "attrs": Object {
+                                                      "d": "M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z",
+                                                    },
+                                                    "tag": "path",
+                                                  },
+                                                ],
+                                                "tag": "svg",
+                                              },
+                                              "name": "close",
+                                              "theme": "outlined",
+                                            }
+                                          }
+                                        >
+                                          <span
+                                            aria-label="close"
+                                            className="anticon anticon-close ant-modal-close-icon"
+                                            role="img"
+                                          >
+                                            <IconReact
+                                              icon={
+                                                Object {
+                                                  "icon": Object {
+                                                    "attrs": Object {
+                                                      "focusable": "false",
+                                                      "viewBox": "64 64 896 896",
+                                                    },
+                                                    "children": Array [
+                                                      Object {
+                                                        "attrs": Object {
+                                                          "d": "M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z",
+                                                        },
+                                                        "tag": "path",
+                                                      },
+                                                    ],
+                                                    "tag": "svg",
+                                                  },
+                                                  "name": "close",
+                                                  "theme": "outlined",
+                                                }
+                                              }
+                                            >
+                                              <svg
+                                                aria-hidden="true"
+                                                data-icon="close"
+                                                fill="currentColor"
+                                                focusable="false"
+                                                height="1em"
+                                                key="svg-close"
+                                                viewBox="64 64 896 896"
+                                                width="1em"
+                                              >
+                                                <path
+                                                  d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z"
+                                                  key="svg-close-svg-0"
+                                                />
+                                              </svg>
+                                            </IconReact>
+                                          </span>
+                                        </AntdIcon>
+                                      </ForwardRef(CloseOutlined)>
+                                    </span>
+                                  </button>
+                                  <div
+                                    className="ant-modal-body"
+                                  >
+                                    <BaseForm
+                                      form={
+                                        Object {
+                                          "__INTERNAL__": Object {
+                                            "itemRef": [Function],
+                                            "name": undefined,
+                                          },
+                                          "_init": true,
+                                          "getFieldError": [Function],
+                                          "getFieldInstance": [Function],
+                                          "getFieldValue": [Function],
+                                          "getFieldWarning": [Function],
+                                          "getFieldsError": [Function],
+                                          "getFieldsValue": [Function],
+                                          "getInternalHooks": [Function],
+                                          "isFieldTouched": [Function],
+                                          "isFieldValidating": [Function],
+                                          "isFieldsTouched": [Function],
+                                          "isFieldsValidating": [Function],
+                                          "resetFields": [Function],
+                                          "scrollToField": [Function],
+                                          "setFieldValue": [Function],
+                                          "setFields": [Function],
+                                          "setFieldsValue": [Function],
+                                          "submit": [Function],
+                                          "validateFields": [Function],
+                                        }
+                                      }
+                                      layout="vertical"
+                                    >
+                                      <div>
+                                        <ForwardRef(InternalForm)
+                                          form={
+                                            Object {
+                                              "__INTERNAL__": Object {
+                                                "itemRef": [Function],
+                                                "name": undefined,
+                                              },
+                                              "_init": true,
+                                              "getFieldError": [Function],
+                                              "getFieldInstance": [Function],
+                                              "getFieldValue": [Function],
+                                              "getFieldWarning": [Function],
+                                              "getFieldsError": [Function],
+                                              "getFieldsValue": [Function],
+                                              "getInternalHooks": [Function],
+                                              "isFieldTouched": [Function],
+                                              "isFieldValidating": [Function],
+                                              "isFieldsTouched": [Function],
+                                              "isFieldsValidating": [Function],
+                                              "resetFields": [Function],
+                                              "scrollToField": [Function],
+                                              "setFieldValue": [Function],
+                                              "setFields": [Function],
+                                              "setFieldsValue": [Function],
+                                              "submit": [Function],
+                                              "validateFields": [Function],
+                                            }
+                                          }
+                                          layout="vertical"
+                                        >
+                                          <Empty />
+                                          <DisabledContextProvider
+                                            disabled={false}
+                                          >
+                                            <SizeContextProvider>
+                                              <FormProvider>
+                                                <FormProvider>
+                                                  <ForwardRef(Form)
+                                                    className="ant-form ant-form-vertical css-dev-only-do-not-override-12upa3x"
+                                                    form={
+                                                      Object {
+                                                        "__INTERNAL__": Object {
+                                                          "itemRef": [Function],
+                                                          "name": undefined,
+                                                        },
+                                                        "_init": true,
+                                                        "getFieldError": [Function],
+                                                        "getFieldInstance": [Function],
+                                                        "getFieldValue": [Function],
+                                                        "getFieldWarning": [Function],
+                                                        "getFieldsError": [Function],
+                                                        "getFieldsValue": [Function],
+                                                        "getInternalHooks": [Function],
+                                                        "isFieldTouched": [Function],
+                                                        "isFieldValidating": [Function],
+                                                        "isFieldsTouched": [Function],
+                                                        "isFieldsValidating": [Function],
+                                                        "resetFields": [Function],
+                                                        "scrollToField": [Function],
+                                                        "setFieldValue": [Function],
+                                                        "setFields": [Function],
+                                                        "setFieldsValue": [Function],
+                                                        "submit": [Function],
+                                                        "validateFields": [Function],
+                                                      }
+                                                    }
+                                                    onFinishFailed={[Function]}
+                                                  >
+                                                    <form
+                                                      className="ant-form ant-form-vertical css-dev-only-do-not-override-12upa3x"
+                                                      onReset={[Function]}
+                                                      onSubmit={[Function]}
+                                                    >
+                                                      <Field
+                                                        label="姓名"
+                                                        name="name"
+                                                      >
+                                                        <FormItem
+                                                          label="姓名"
+                                                          name="name"
+                                                          rules={
+                                                            Array [
+                                                              Object {
+                                                                "message": "请输入姓名",
+                                                                "required": true,
+                                                                "whitespace": true,
+                                                              },
+                                                              Object {
+                                                                "validator": [Function],
+                                                              },
+                                                            ]
+                                                          }
+                                                        >
+                                                          <InternalFormItem
+                                                            className="szzj-antd-form-item"
+                                                            label="姓名"
+                                                            name="name"
+                                                            required={true}
+                                                            rules={
+                                                              Array [
+                                                                Object {
+                                                                  "message": "请输入姓名",
+                                                                  "required": true,
+                                                                  "whitespace": true,
+                                                                },
+                                                                Object {
+                                                                  "validator": [Function],
+                                                                },
+                                                              ]
+                                                            }
+                                                            validateFirst={true}
+                                                          >
+                                                            <Empty />
+                                                            <WrapperField
+                                                              className="szzj-antd-form-item"
+                                                              label="姓名"
+                                                              messageVariables={
+                                                                Object {
+                                                                  "label": "姓名",
+                                                                }
+                                                              }
+                                                              name="name"
+                                                              onMetaChange={[Function]}
+                                                              required={true}
+                                                              rules={
+                                                                Array [
+                                                                  Object {
+                                                                    "message": "请输入姓名",
+                                                                    "required": true,
+                                                                    "whitespace": true,
+                                                                  },
+                                                                  Object {
+                                                                    "validator": [Function],
+                                                                  },
+                                                                ]
+                                                              }
+                                                              trigger="onChange"
+                                                              validateFirst={true}
+                                                              validateTrigger="onChange"
+                                                            >
+                                                              <Field
+                                                                className="szzj-antd-form-item"
+                                                                fieldContext={
+                                                                  Object {
+                                                                    "__INTERNAL__": Object {
+                                                                      "itemRef": [Function],
+                                                                      "name": undefined,
+                                                                    },
+                                                                    "_init": true,
+                                                                    "getFieldError": [Function],
+                                                                    "getFieldInstance": [Function],
+                                                                    "getFieldValue": [Function],
+                                                                    "getFieldWarning": [Function],
+                                                                    "getFieldsError": [Function],
+                                                                    "getFieldsValue": [Function],
+                                                                    "getInternalHooks": [Function],
+                                                                    "isFieldTouched": [Function],
+                                                                    "isFieldValidating": [Function],
+                                                                    "isFieldsTouched": [Function],
+                                                                    "isFieldsValidating": [Function],
+                                                                    "resetFields": [Function],
+                                                                    "scrollToField": [Function],
+                                                                    "setFieldValue": [Function],
+                                                                    "setFields": [Function],
+                                                                    "setFieldsValue": [Function],
+                                                                    "submit": [Function],
+                                                                    "validateFields": [Function],
+                                                                    "validateTrigger": "onChange",
+                                                                  }
+                                                                }
+                                                                isListField={false}
+                                                                key="_name"
+                                                                label="姓名"
+                                                                messageVariables={
+                                                                  Object {
+                                                                    "label": "姓名",
+                                                                  }
+                                                                }
+                                                                name={
+                                                                  Array [
+                                                                    "name",
+                                                                  ]
+                                                                }
+                                                                onMetaChange={[Function]}
+                                                                required={true}
+                                                                rules={
+                                                                  Array [
+                                                                    Object {
+                                                                      "message": "请输入姓名",
+                                                                      "required": true,
+                                                                      "whitespace": true,
+                                                                    },
+                                                                    Object {
+                                                                      "validator": [Function],
+                                                                    },
+                                                                  ]
+                                                                }
+                                                                trigger="onChange"
+                                                                validateFirst={true}
+                                                                validateTrigger="onChange"
+                                                                valuePropName="value"
+                                                              >
+                                                                <ItemHolder
+                                                                  className="szzj-antd-form-item css-dev-only-do-not-override-12upa3x"
+                                                                  errors={Array []}
+                                                                  fieldId="name"
+                                                                  isRequired={true}
+                                                                  key="row"
+                                                                  label="姓名"
+                                                                  meta={
+                                                                    Object {
+                                                                      "destroy": undefined,
+                                                                      "errors": Array [],
+                                                                      "name": Array [
+                                                                        "name",
+                                                                      ],
+                                                                      "touched": true,
+                                                                      "validated": true,
+                                                                      "validating": false,
+                                                                      "warnings": Array [],
+                                                                    }
+                                                                  }
+                                                                  name="name"
+                                                                  onSubItemMetaChange={[Function]}
+                                                                  prefixCls="ant-form"
+                                                                  required={true}
+                                                                  rules={
+                                                                    Array [
+                                                                      Object {
+                                                                        "message": "请输入姓名",
+                                                                        "required": true,
+                                                                        "whitespace": true,
+                                                                      },
+                                                                      Object {
+                                                                        "validator": [Function],
+                                                                      },
+                                                                    ]
+                                                                  }
+                                                                  validateFirst={true}
+                                                                  warnings={Array []}
+                                                                >
+                                                                  <div
+                                                                    className="ant-form-item szzj-antd-form-item css-dev-only-do-not-override-12upa3x ant-form-item-has-success"
+                                                                  >
+                                                                    <Row
+                                                                      className="ant-form-item-row"
+                                                                    >
+                                                                      <Empty />
+                                                                      <div
+                                                                        className="ant-row ant-form-item-row css-dev-only-do-not-override-12upa3x"
+                                                                        style={Object {}}
+                                                                      >
+                                                                        <FormItemLabel
+                                                                          className="szzj-antd-form-item css-dev-only-do-not-override-12upa3x"
+                                                                          errors={Array []}
+                                                                          fieldId="name"
+                                                                          htmlFor="name"
+                                                                          isRequired={true}
+                                                                          label="姓名"
+                                                                          meta={
+                                                                            Object {
+                                                                              "destroy": undefined,
+                                                                              "errors": Array [],
+                                                                              "name": Array [
+                                                                                "name",
+                                                                              ],
+                                                                              "touched": true,
+                                                                              "validated": true,
+                                                                              "validating": false,
+                                                                              "warnings": Array [],
+                                                                            }
+                                                                          }
+                                                                          name="name"
+                                                                          onSubItemMetaChange={[Function]}
+                                                                          prefixCls="ant-form"
+                                                                          required={true}
+                                                                          requiredMark={true}
+                                                                          rules={
+                                                                            Array [
+                                                                              Object {
+                                                                                "message": "请输入姓名",
+                                                                                "required": true,
+                                                                                "whitespace": true,
+                                                                              },
+                                                                              Object {
+                                                                                "validator": [Function],
+                                                                              },
+                                                                            ]
+                                                                          }
+                                                                          validateFirst={true}
+                                                                          warnings={Array []}
+                                                                        >
+                                                                          <Col
+                                                                            className="ant-form-item-label"
+                                                                          >
+                                                                            <Empty />
+                                                                            <div
+                                                                              className="ant-col ant-form-item-label css-dev-only-do-not-override-12upa3x"
+                                                                              style={Object {}}
+                                                                            >
+                                                                              <label
+                                                                                className="ant-form-item-required"
+                                                                                htmlFor="name"
+                                                                                title="姓名"
+                                                                              >
+                                                                                姓名
+                                                                              </label>
+                                                                            </div>
+                                                                          </Col>
+                                                                        </FormItemLabel>
+                                                                        <FormItemInput
+                                                                          className="szzj-antd-form-item css-dev-only-do-not-override-12upa3x"
+                                                                          errors={Array []}
+                                                                          fieldId="name"
+                                                                          isRequired={true}
+                                                                          label="姓名"
+                                                                          marginBottom={null}
+                                                                          meta={
+                                                                            Object {
+                                                                              "destroy": undefined,
+                                                                              "errors": Array [],
+                                                                              "name": Array [
+                                                                                "name",
+                                                                              ],
+                                                                              "touched": true,
+                                                                              "validated": true,
+                                                                              "validating": false,
+                                                                              "warnings": Array [],
+                                                                            }
+                                                                          }
+                                                                          name={
+                                                                            Array [
+                                                                              "name",
+                                                                            ]
+                                                                          }
+                                                                          onErrorVisibleChanged={[Function]}
+                                                                          onSubItemMetaChange={[Function]}
+                                                                          prefixCls="ant-form"
+                                                                          required={true}
+                                                                          rules={
+                                                                            Array [
+                                                                              Object {
+                                                                                "message": "请输入姓名",
+                                                                                "required": true,
+                                                                                "whitespace": true,
+                                                                              },
+                                                                              Object {
+                                                                                "validator": [Function],
+                                                                              },
+                                                                            ]
+                                                                          }
+                                                                          status="success"
+                                                                          touched={true}
+                                                                          validateFirst={true}
+                                                                          validated={true}
+                                                                          validating={false}
+                                                                          warnings={Array []}
+                                                                        >
+                                                                          <Col
+                                                                            className="ant-form-item-control"
+                                                                          >
+                                                                            <Empty />
+                                                                            <div
+                                                                              className="ant-col ant-form-item-control css-dev-only-do-not-override-12upa3x"
+                                                                              style={Object {}}
+                                                                            >
+                                                                              <div
+                                                                                className="ant-form-item-control-input"
+                                                                              >
+                                                                                <div
+                                                                                  className="ant-form-item-control-input-content"
+                                                                                >
+                                                                                  <Component
+                                                                                    childProps={
+                                                                                      Array [
+                                                                                        "true",
+                                                                                        undefined,
+                                                                                        undefined,
+                                                                                      ]
+                                                                                    }
+                                                                                    update={<Input />}
+                                                                                    value="史泰龙"
+                                                                                  >
+                                                                                    <Input
+                                                                                      aria-required="true"
+                                                                                      id="name"
+                                                                                      onChange={[Function]}
+                                                                                      value="史泰龙"
+                                                                                    >
+                                                                                      <Input
+                                                                                        aria-required="true"
+                                                                                        id="name"
+                                                                                        maxLength={30}
+                                                                                        onChange={[Function]}
+                                                                                        placeholder="请输入姓名"
+                                                                                        value="史泰龙"
+                                                                                      >
+                                                                                        <Empty />
+                                                                                        <ForwardRef
+                                                                                          aria-required="true"
+                                                                                          className=""
+                                                                                          classNames={
+                                                                                            Object {
+                                                                                              "input": "ant-input-status-success css-dev-only-do-not-override-12upa3x",
+                                                                                            }
+                                                                                          }
+                                                                                          classes={
+                                                                                            Object {
+                                                                                              "affixWrapper": "ant-input-affix-wrapper-status-success css-dev-only-do-not-override-12upa3x",
+                                                                                              "group": "ant-input-group-wrapper-status-success css-dev-only-do-not-override-12upa3x",
+                                                                                              "wrapper": "css-dev-only-do-not-override-12upa3x",
+                                                                                            }
+                                                                                          }
+                                                                                          disabled={false}
+                                                                                          id="name"
+                                                                                          maxLength={30}
+                                                                                          onBlur={[Function]}
+                                                                                          onChange={[Function]}
+                                                                                          onFocus={[Function]}
+                                                                                          placeholder="请输入姓名"
+                                                                                          prefixCls="ant-input"
+                                                                                          value="史泰龙"
+                                                                                        >
+                                                                                          <BaseInput
+                                                                                            aria-required="true"
+                                                                                            className=""
+                                                                                            classNames={
+                                                                                              Object {
+                                                                                                "input": "ant-input-status-success css-dev-only-do-not-override-12upa3x",
+                                                                                              }
+                                                                                            }
+                                                                                            classes={
+                                                                                              Object {
+                                                                                                "affixWrapper": "ant-input-affix-wrapper-status-success css-dev-only-do-not-override-12upa3x",
+                                                                                                "group": "ant-input-group-wrapper-status-success css-dev-only-do-not-override-12upa3x",
+                                                                                                "wrapper": "css-dev-only-do-not-override-12upa3x",
+                                                                                              }
+                                                                                            }
+                                                                                            disabled={false}
+                                                                                            focused={false}
+                                                                                            handleReset={[Function]}
+                                                                                            id="name"
+                                                                                            inputElement={
+                                                                                              <input
+                                                                                                aria-required="true"
+                                                                                                className="ant-input ant-input-status-success css-dev-only-do-not-override-12upa3x"
+                                                                                                disabled={false}
+                                                                                                id="name"
+                                                                                                maxLength={30}
+                                                                                                onBlur={[Function]}
+                                                                                                onChange={[Function]}
+                                                                                                onFocus={[Function]}
+                                                                                                onKeyDown={[Function]}
+                                                                                                placeholder="请输入姓名"
+                                                                                                type="text"
+                                                                                                value="史泰龙"
+                                                                                              />
+                                                                                            }
+                                                                                            placeholder="请输入姓名"
+                                                                                            prefixCls="ant-input"
+                                                                                            suffix={null}
+                                                                                            triggerFocus={[Function]}
+                                                                                            value="史泰龙"
+                                                                                          >
+                                                                                            <input
+                                                                                              aria-required="true"
+                                                                                              className="ant-input ant-input-status-success css-dev-only-do-not-override-12upa3x"
+                                                                                              disabled={false}
+                                                                                              id="name"
+                                                                                              maxLength={30}
+                                                                                              onBlur={[Function]}
+                                                                                              onChange={[Function]}
+                                                                                              onFocus={[Function]}
+                                                                                              onKeyDown={[Function]}
+                                                                                              placeholder="请输入姓名"
+                                                                                              style={Object {}}
+                                                                                              type="text"
+                                                                                              value="史泰龙"
+                                                                                            />
+                                                                                          </BaseInput>
+                                                                                        </ForwardRef>
+                                                                                      </Input>
+                                                                                    </Input>
+                                                                                  </Component>
+                                                                                </div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </Col>
+                                                                        </FormItemInput>
+                                                                      </div>
+                                                                    </Row>
+                                                                  </div>
+                                                                </ItemHolder>
+                                                              </Field>
+                                                            </WrapperField>
+                                                          </InternalFormItem>
+                                                        </FormItem>
+                                                      </Field>
+                                                    </form>
+                                                  </ForwardRef(Form)>
+                                                </FormProvider>
+                                              </FormProvider>
+                                            </SizeContextProvider>
+                                          </DisabledContextProvider>
+                                        </ForwardRef(InternalForm)>
+                                      </div>
+                                    </BaseForm>
+                                  </div>
+                                  <div
+                                    className="ant-modal-footer"
+                                  >
+                                    <Footer
+                                      className="szzj-antd-modal-form"
+                                      forceRender={true}
+                                      onCancel={[Function]}
+                                      onOk={[Function]}
+                                      open={true}
+                                    >
+                                      <Button
+                                        onClick={[Function]}
+                                      >
+                                        <Empty />
+                                        <Wave
+                                          disabled={false}
+                                        >
+                                          <button
+                                            className="ant-btn css-dev-only-do-not-override-12upa3x ant-btn-default"
+                                            disabled={false}
+                                            onClick={[Function]}
+                                            style={Object {}}
+                                            type="button"
+                                          >
+                                            <LoadingIcon
+                                              existIcon={false}
+                                              loading={false}
+                                              prefixCls="ant-btn"
+                                            >
+                                              <CSSMotion
+                                                motionName="ant-btn-loading-icon-motion"
+                                                onAppearActive={[Function]}
+                                                onAppearStart={[Function]}
+                                                onEnterActive={[Function]}
+                                                onEnterStart={[Function]}
+                                                onLeaveActive={[Function]}
+                                                onLeaveStart={[Function]}
+                                                removeOnLeave={true}
+                                                visible={false}
+                                              >
+                                                <DomWrapper />
+                                              </CSSMotion>
+                                            </LoadingIcon>
+                                            <span
+                                              key=".0"
+                                            >
+                                              Cancel
+                                            </span>
+                                          </button>
+                                        </Wave>
+                                      </Button>
+                                      <Button
+                                        onClick={[Function]}
+                                        type="primary"
+                                      >
+                                        <Empty />
+                                        <Wave
+                                          disabled={false}
+                                        >
+                                          <button
+                                            className="ant-btn css-dev-only-do-not-override-12upa3x ant-btn-primary"
+                                            disabled={false}
+                                            onClick={[Function]}
+                                            style={Object {}}
+                                            type="button"
+                                          >
+                                            <LoadingIcon
+                                              existIcon={false}
+                                              loading={false}
+                                              prefixCls="ant-btn"
+                                            >
+                                              <CSSMotion
+                                                motionName="ant-btn-loading-icon-motion"
+                                                onAppearActive={[Function]}
+                                                onAppearStart={[Function]}
+                                                onEnterActive={[Function]}
+                                                onEnterStart={[Function]}
+                                                onLeaveActive={[Function]}
+                                                onLeaveStart={[Function]}
+                                                removeOnLeave={true}
+                                                visible={false}
+                                              >
+                                                <DomWrapper />
+                                              </CSSMotion>
+                                            </LoadingIcon>
+                                            <span
+                                              key=".0"
+                                            >
+                                              OK
+                                            </span>
+                                          </button>
+                                        </Wave>
+                                      </Button>
+                                    </Footer>
+                                  </div>
+                                </div>
+                              </Component>
+                              <div
+                                aria-hidden="true"
+                                style={
+                                  Object {
+                                    "height": 0,
+                                    "outline": "none",
+                                    "overflow": "hidden",
+                                    "width": 0,
+                                  }
+                                }
+                                tabIndex={0}
+                              />
+                            </div>
+                          </Panel>
+                        </DomWrapper>
+                      </CSSMotion>
+                    </Content>
+                  </div>
+                </div>
+              </Dialog>
+            </Portal>
+          </Portal>
+        </Dialog>
+      </NoFormStyle>
+    </NoCompactStyle>
+  </Modal>
+</ModalForm>
+`;

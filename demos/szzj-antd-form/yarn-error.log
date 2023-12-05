@@ -1,0 +1,85 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe D:\tools\npm\node_global\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_66\bin;C:\Program Files\Java\jdk1.8.0_66\jre\bin;D:\tools\python;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;D:\tools\npm\node_global;D:\tools\npm\node_global\bin;D:\tools\apache-maven-3.6.0\bin;C:\Program Files\nodejs\;C:\Users\shengchao.qsc\AppData\Local\Microsoft\WindowsApps;C:\Users\shengchao.qsc\AppData\Local\Programs\Microsoft VS Code\bin;D:\tools\npm\node_global;;C:\Users\shengchao.qsc\AppData\Local\Programs\Fiddler;C:\Users\shengchao.qsc\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.18.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/@icons/material/download/@icons/material-0.2.4.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (D:\tools\npm\node_global\node_modules\yarn\lib\cli.js:141375:19)
+      at Object.onceWrapper (events.js:421:28)
+      at ClientRequest.emit (events.js:315:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:709:9)
+      at Object.onceWrapper (events.js:421:28)
+      at TLSSocket.emit (events.js:327:22)
+      at TLSSocket.Socket._onTimeout (net.js:482:8)
+      at listOnTimeout (internal/timers.js:549:17)
+      at processTimers (internal/timers.js:492:7)
+
+npm manifest: 
+  {
+    "name": "szzj-antd-form",
+    "version": "0.1.0",
+    "description": "",
+    "main": "./lib/index",
+    "module": "./es/index",
+    "authors": {
+      "name": "xiufan",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    "repository": "http://59.202.42.100/zt/g-ui/szzj-antd-form.git",
+    "scripts": {
+      "dev": "father doc dev",
+      "build": "father build",
+      "test": "father test",
+      "cov": "father test --coverage",
+      "docs": "dumi dev",
+      "site": "dumi build",
+      "pub": "cnpm run test & cnpm run build & npm publish",
+      "deploy": "cnpm run site & gh-pages -d dist"
+    },
+    "peerDependencies": {
+      "rc-field-form": "^1.4.0",
+      "react": "16.x"
+    },
+    "devDependencies": {
+      "@testing-library/react": "^10.0.1",
+      "@testing-library/react-hooks": "^3.2.1",
+      "@types/classnames": "^2.2.10",
+      "@types/jest": "^25.1.4",
+      "@types/lodash": "^4.14.149",
+      "@umijs/hooks": "^1.6.2",
+      "axios": "^0.19.2",
+      "dumi": "^1.0.10",
+      "enzyme": "^3.11.0",
+      "father": "^2.29.2",
+      "typescript": "^3.3.3",
+      "antd": "^4.0.4"
+    },
+    "license": "MIT",
+    "dependencies": {
+      "classnames": "^2.2.6",
+      "lodash": "^4.17.15",
+      "omit.js": "^1.0.2",
+      "react-icons": "^3.10.0"
+    },
+    "sideEffects": false,
+    "publishConfig" : {
+      "registry" : "http://59.202.46.225:18081/repository/npm-hosted/"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

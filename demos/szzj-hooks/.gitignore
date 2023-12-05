@@ -1,0 +1,11 @@
+/yarn.lock
+/package-lock.json
+/dist
+/.docz
+/node_modules
+/src/.umi
+es
+lib
+/site
+/.history
+/.VSCodeCounter

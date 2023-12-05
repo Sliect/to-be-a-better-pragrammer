@@ -1,0 +1,53 @@
+{
+  "name": "@szzj/umi-plugin-layout",
+  "version": "4.0.7",
+  "description": "Umi plugin for app layout.",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "wangyanan",
+      "email": "yanan.wangyn@dtzhejing.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    }
+  ],
+  "main": "lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@umijs/utils": "^4.0.60"
+  },
+  "devDependencies": {
+    "@szzj/layout": "^1.0.6"
+  },
+  "peerDependencies": {
+    "@szzj/layout": "1.x || 2.x",
+    "antd": "4.x",
+    "react": "^18.0.0",
+    "umi": "4.x"
+  }
+}

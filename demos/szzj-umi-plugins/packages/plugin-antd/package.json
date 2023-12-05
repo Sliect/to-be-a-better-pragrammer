@@ -1,0 +1,53 @@
+{
+  "name": "@szzj/umi-plugin-antd",
+  "version": "4.0.4",
+  "description": "Umi plugin for antd or antd-mobile.",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "wangyanan",
+      "email": "yanan.wangyn@dtzhejing.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    },
+    {
+      "name": "xulongfei",
+      "email": "xulongfei0460@dingtalk.com"
+    }
+  ],
+  "main": "lib/index.js",
+  "types": "/lib/types/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@umijs/utils": "^4.0.15",
+    "babel-plugin-import": "^1.13.5"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "umi": "4.x"
+  }
+}

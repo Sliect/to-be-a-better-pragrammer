@@ -1,0 +1,24 @@
+{
+  "name": "feature-request-download",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "@szzj/components": "^1.0.0",
+    "@szzj/utils": "^2.1.0",
+    "antd": "^4.0.4",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "umi-request": "^1.4.0"
+  },
+  "devDependencies": {
+    "@szzj/umi-plugin-request": "^4.1.7",
+    "@types/node": "^14.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "umi": "^4.0.60"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

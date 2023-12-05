@@ -1,0 +1,50 @@
+{
+  "name": "@szzj/umi-preset-subapp",
+  "version": "4.0.21",
+  "description": "Umi preset for subapp build-in.",
+  "files": [
+    "lib",
+    "tpls"
+  ],
+  "main": "lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "umi": "^4.x"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.2",
+    "debug": "^4.3.4",
+    "@szzj/umi-plugin-app": "~4.0.7",
+    "@szzj/umi-plugin-hooks": "~4.1.0",
+    "@szzj/umi-plugin-layout": "~4.0.5",
+    "@szzj/umi-plugin-region": "~4.0.2",
+    "@szzj/umi-plugin-request": "~4.1.0",
+    "@szzj/umi-plugin-antd": "~4.0.1",
+    "@szzj/umi-plugin-initialstate": "~4.0.4",
+    "@szzj/umi-plugin-model": "~4.0.6",
+    "@szzj/umi-plugin-moment2dayjs": "~4.0.0",
+    "@szzj/umi-plugin-qiankun": "~4.0.1",
+    "@umijs/utils": "^4.0.60"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.8",
+    "cross-env": "^6.0.3",
+    "react": "^18.1.0",
+    "umi": "^4.0.60"
+  },
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    }
+  ]
+}

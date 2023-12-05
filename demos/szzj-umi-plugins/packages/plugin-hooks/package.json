@@ -1,0 +1,53 @@
+{
+  "name": "@szzj/umi-plugin-hooks",
+  "version": "4.1.7",
+  "description": "Umi plugin for hooks.",
+  "maintainers": [
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "xulongfei",
+      "email": "xulongfei0460@dingtalk.com"
+    }
+  ],
+  "main": "lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@szzj/hooks": "^1.0.0",
+    "@umijs/utils": "^4.0.60"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "umi": "4.x"
+  },
+  "authors": {
+    "name": "yuliuliu",
+    "email": "liuliu.yull@dtzhejiang.com"
+  }
+}

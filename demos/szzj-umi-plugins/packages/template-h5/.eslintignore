@@ -1,0 +1,5 @@
+.umi
+.umi-production
+.umi-test
+config/*
+resources/*

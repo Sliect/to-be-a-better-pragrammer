@@ -1,0 +1,59 @@
+{
+  "name": "@szzj/umi-plugin-sentry",
+  "version": "4.0.4",
+  "description": "frontend monitor using sentry",
+  "keywords": [
+    "umi"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "wangyanan",
+      "email": "yanan.wangyn@dtzhejing.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    }
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@sentry/browser": "^6.12.0",
+    "@sentry/integrations": "^6.12.0",
+    "@sentry/react": "^6.12.0",
+    "@sentry/rrweb": "^0.3.1",
+    "@sentry/tracing": "^6.12.0",
+    "@umijs/utils": "^4.0.60",
+    "rrweb": "^1.0.2"
+  },
+  "peerDependencies": {
+    "umi": "4.x"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

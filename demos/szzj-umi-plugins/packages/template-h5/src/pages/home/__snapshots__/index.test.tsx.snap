@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders HomePage by snapshot 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <h1>
+      欢迎使用数字浙江数据部h5端工程模板
+    </h1>
+  </div>
+</div>
+`;

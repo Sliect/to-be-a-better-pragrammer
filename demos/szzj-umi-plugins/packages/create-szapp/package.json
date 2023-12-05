@@ -1,0 +1,55 @@
+{
+  "name": "@szzj/create-szapp",
+  "version": "1.0.17",
+  "description": "create app",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "wangyanan",
+      "email": "yanan.wangyn@dtzhejing.com"
+    },
+    {
+      "name": "xulongfei",
+      "email": "xulongfei0460@dingtalk.com"
+    }
+  ],
+  "main": "/lib/index.js",
+  "bin": {
+    "create-szapp": "bin/create-szapp.js"
+  },
+  "files": [
+    "lib",
+    "bin",
+    "tpls",
+    ".cache.json"
+  ],
+  "scripts": {
+    "build": "node scripts/clean.js & father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@umijs/utils": "^4.0.60",
+    "cnpm-api": "^1.0.1",
+    "download-package-tarball": "^1.0.7"
+  },
+  "peerDependencies": {}
+}

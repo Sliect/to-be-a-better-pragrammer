@@ -1,0 +1,77 @@
+{
+  "version": "4.0.0",
+  "private": true,
+  "description": "",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "pnpm install --ignore-scripts",
+    "build": "pnpm --filter \"./packages/create-szapp\" --filter \"./packages/plugin**\" --filter \"./packages/preset**\" --filter \"./packages/renderer**\" --filter \"./packages/spec\" --filter \"./packages/scripts\" run build",
+    "build:script-tools": "pnpm --filter \"./packages/scripts\" run build",
+    "dev": "dumi dev",
+    "docs:build": "cross-env DOCS_ENV=prod dumi build",
+    "pub": "pnpm --filter \"./packages/plugin**\" --filter \"./packages/preset**\" run pub",
+    "clean": "lerna clean & rd /s/q node_modules",
+    "changeset": "changeset",
+    "changeset:version": "pnpm changeset version"
+  },
+  "dependencies": {
+    "@szzj/hooks": "^0.7.4",
+    "@szzj/layout": "^1.0.6",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@babel/core": "^7.8.0",
+    "@changesets/cli": "^2.24.4",
+    "@szzj/umi-plugin-antd": "workspace:*",
+    "@szzj/umi-plugin-app": "workspace:*",
+    "@szzj/umi-plugin-h5": "workspace:*",
+    "@szzj/umi-plugin-hooks": "workspace:*",
+    "@szzj/umi-plugin-initialstate": "workspace:*",
+    "@szzj/umi-plugin-layout": "workspace:*",
+    "@szzj/umi-plugin-model": "workspace:*",
+    "@szzj/umi-plugin-moment2dayjs": "workspace:*",
+    "@szzj/umi-plugin-qiankun": "workspace:*",
+    "@szzj/umi-plugin-region": "workspace:*",
+    "@szzj/umi-plugin-request": "workspace:*",
+    "@szzj/umi-plugin-sentry": "workspace:*",
+    "@szzj/umi-preset-app": "workspace:*",
+    "@szzj/umi-preset-subapp": "workspace:*",
+    "@szzj/umi-preset-h5": "workspace:*",
+    "@szzj/umi-preset-vue2": "workspace:*",
+    "@szzj/umi-renderer-vue2": "workspace:*",
+    "@szzj/script-tools": "workspace:*",
+    "@szzj/spec": "workspace:*",
+    "@types/node": "^14.0.0",
+    "antd": "^4.15.5",
+    "antd-mobile": "^5.31.0",
+    "babel-plugin-import": "^1.13.5",
+    "cross-env": "^7.0.3",
+    "dumi": "^2.0.8",
+    "father": "^4.1.7",
+    "lerna": "^4.0.0",
+    "typescript": "^4.7.2",
+    "umi": "^4.0.60"
+  },
+  "engines": {
+    "node": ">=14",
+    "pnpm": ">=7"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "react",
+        "react-dom",
+        "antd",
+        "dva",
+        "postcss",
+        "webpack",
+        "eslint",
+        "stylelint",
+        "redux"
+      ]
+    }
+  },
+  "__npminstall_done": false
+}

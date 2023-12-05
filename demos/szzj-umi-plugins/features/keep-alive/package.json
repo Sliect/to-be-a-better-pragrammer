@@ -1,0 +1,25 @@
+{
+  "name": "feature-keep-alive",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "@szzj/components": "^1.0.0",
+    "@szzj/utils": "^2.0.6",
+    "antd": "^5.6.4",
+    "react": "^18.1.0",
+    "react-stillness-component": "^0.9.1",
+    "react-dom": "^18.1.0",
+    "umi-request": "^1.4.0"
+  },
+  "devDependencies": {
+    "@szzj/umi-plugin-keepalive": "^4.0.6",
+    "@types/node": "^14.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "umi": "^4.0.60"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

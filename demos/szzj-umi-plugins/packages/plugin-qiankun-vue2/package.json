@@ -1,0 +1,41 @@
+{
+  "name": "@szzj/umi-plugin-qiankun-vue2",
+  "version": "4.0.3",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "keywords": [
+    "microapp",
+    "qiankun"
+  ],
+  "files": [
+    "lib",
+    "src",
+    "tpls"
+  ],
+  "dependencies": {
+    "@umijs/utils": "^4.0.60",
+    "@umijs/bundler-utils": "4.0.60",
+    "qiankun": "^2.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.0",
+    "tslib": "^2"
+  },
+  "peerDependencies": {
+    "umi": "^4.x"
+  },
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    }
+  ]
+}

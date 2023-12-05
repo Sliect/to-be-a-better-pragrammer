@@ -1,0 +1,55 @@
+{
+  "name": "@szzj/umi-preset-h5",
+  "version": "4.1.1",
+  "description": "Umi preset for h5 build-in.",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "wangyanan",
+      "email": "yanan.wangyn@dtzhejing.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    }
+  ],
+  "main": "lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@szzj/umi-plugin-h5": "~4.0.0",
+    "@szzj/umi-plugin-hooks": "~4.1.0",
+    "@szzj/umi-plugin-initialstate": "~4.0.0",
+    "@szzj/umi-plugin-model": "~4.0.0",
+    "@szzj/umi-plugin-moment2dayjs": "~4.0.0",
+    "@szzj/umi-plugin-region": "~4.0.0",
+    "@szzj/umi-plugin-request": "~4.1.0",
+    "@umijs/utils": "^4.0.60"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "umi": "^4.x"
+  }
+}

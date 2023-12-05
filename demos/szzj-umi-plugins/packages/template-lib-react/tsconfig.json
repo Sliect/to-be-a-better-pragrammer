@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "@szzj/template-lib-react": ["src"],
+      "@szzj/template-lib-react/*": ["src/*", "*"]
+    }
+  },
+  "exclude": ["lib", "es"]
+}

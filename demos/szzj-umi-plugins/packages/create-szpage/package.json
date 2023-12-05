@@ -1,0 +1,51 @@
+{
+  "name": "@szzj/create-szpage",
+  "version": "0.0.5",
+  "description": "create page template",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    },
+    {
+      "name": "xulongfei",
+      "email": "xulongfei0460@dingtalk.com"
+    }
+  ],
+  "main": "/lib/index.js",
+  "bin": {
+    "create-szpage": "bin/create-szpage.js"
+  },
+  "files": [
+    "lib",
+    "bin",
+    ".cache.json"
+  ],
+  "scripts": {
+    "build": "node scripts/clean.js & father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@umijs/utils": "^4.0.60",
+    "axios": "^1.2.1",
+    "cnpm-api": "^1.0.1",
+    "download-package-tarball": "^1.0.7",
+    "father": "^4.1.7"
+  },
+  "authors": {
+    "name": "lixin",
+    "email": "xin.lix@dtzhejiang.com"
+  }
+}

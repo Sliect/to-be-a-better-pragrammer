@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a6d857574189f565",
+        "id": "127b6e735cf35f4f",
         "type": "tabs",
         "children": [
           {
-            "id": "dc86f4e1cf651ad3",
+            "id": "76af5b18515dd128",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/daily/2023-10-31.md",
+                "file": "docs/daily/2023-12-04.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/daily/2023-10-31.md",
+                "file": "docs/daily/2023-12-04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/daily/2023-10-31.md",
+                "file": "docs/daily/2023-12-04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/daily/2023-10-31.md"
+                "file": "docs/daily/2023-12-04.md"
               }
             }
           }
@@ -146,8 +146,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "dc86f4e1cf651ad3",
+  "active": "76af5b18515dd128",
   "lastOpenFiles": [
+    "docs/daily/template.md",
+    "docs/daily/2023-12-04.md",
+    "2023-12-04.md",
+    "docs/daily/TASK一览.md",
+    "docs/daily/kanban.md",
+    "docs/daily/2023-10-31.md",
+    "未命名.md",
+    "docs/daily/2023-09-12.md",
     "docs/daily/2022-08-23.md",
     "docs/daily/2023-11-20.md",
     "2023-11-20.md",

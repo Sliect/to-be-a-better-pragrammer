@@ -1,0 +1,51 @@
+{
+  "name": "@szzj/umi-renderer-vue2",
+  "version": "4.0.20",
+  "description": "Umi plugin for vue2 renderer.",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "wangyanan",
+      "email": "yanan.wangyn@dtzhejing.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    }
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@umijs/utils": "^4.0.60"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "umi": "4.x",
+    "vue": "^2.0.0",
+    "vue-router": "^3.0.0",
+    "vuex": "^3.4.0"
+  }
+}

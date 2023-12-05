@@ -1,0 +1,13 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@2.0.0/schema.json",
+  "changelog": "@changesets/cli/changelog",
+  "commit": false,
+  "linked": [["@szzj/*"]],
+  "access": "restricted",
+  "baseBranch": "master",
+  "updateInternalDependencies": "patch",
+  "ignore": ["@szzj/template-h5", "@szzj/template-pc"],
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+      "onlyUpdatePeerDependentsWhenOutOfRange": true
+  }
+}

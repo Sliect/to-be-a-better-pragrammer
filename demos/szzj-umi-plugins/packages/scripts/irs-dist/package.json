@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "echo 'build'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

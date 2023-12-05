@@ -1,0 +1,57 @@
+{
+  "name": "@szzj/umi-plugin-request",
+  "version": "4.1.10",
+  "description": "Umi plugin for request.",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "wangyanan",
+      "email": "yanan.wangyn@dtzhejing.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    },
+    {
+      "name": "xulongfei",
+      "email": "xulongfei0460@dingtalk.com"
+    }
+  ],
+  "main": "lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@umijs/utils": "^4.0.60",
+    "umi-request": "^1.3.9"
+  },
+  "devDependencies": {
+    "@szzj/utils": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@szzj/utils": "^2.0.0",
+    "react": "^18.0.0",
+    "umi": "4.x"
+  }
+}

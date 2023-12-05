@@ -1,0 +1,13 @@
+export { default as alphacn } from './alphacn';
+export { default as alphanumeric } from './alphanumeric';
+export { default as alphanumericcn } from './general';
+export { default as email } from './email';
+export { default as general } from './general';
+export { default as idCard } from './idCard';
+export { default as ipv4 } from './ipv4';
+export { default as ipv6 } from './ipv6';
+export { default as mobileCn } from './mobileCn';
+export { default as port } from './port';
+export { default as telephone } from './telephone';
+export { default as uniscid } from './uniscid';
+export { default as xss } from './xss';

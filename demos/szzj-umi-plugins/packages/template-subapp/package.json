@@ -1,0 +1,87 @@
+{
+  "name": "@szzj/template-subapp",
+  "version": "4.2.1",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    }
+  ],
+  "scripts": {
+    "build": "cross-env DEPLOY_ENV=dev umi build",
+    "build:dev": "cross-env DEPLOY_ENV=dev umi build",
+    "build:prod": "cross-env DEPLOY_ENV=prod umi build",
+    "dev": "umi dev",
+    "postinstall": "husky install & umi setup",
+    "lint:cssinjs": "umi lint --stylelint-only --cssinjs",
+    "lint:es": "umi lint --eslint-only",
+    "lint:es-fix": "umi lint --eslint-only --fix",
+    "lint:style": "umi lint --stylelint-only",
+    "lint:style-fix": "umi lint --stylelint-only --fix",
+    "prettier": "prettier -c **/*",
+    "prettier:write": "prettier -w **/*",
+    "start": "npm run dev",
+    "test": "jest --watchAll"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,less}": [
+      "prettier",
+      "umi lint"
+    ]
+  },
+  "dependencies": {
+    "@szzj/components": "^1.0.0",
+    "@szzj/hooks": "^0.6.17",
+    "@szzj/layout": "^1.0.6",
+    "@szzj/utils": "^2.0.6",
+    "antd": "^4.0.4",
+    "dayjs": "^1.11.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-stillness-component": "^0.9.1",
+    "umi-request": "^1.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@szzj/spec": "~1.0.0",
+    "@szzj/umi-plugin-keepalive": "~4.1.0",
+    "@szzj/umi-preset-subapp": "~4.0.10",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^14.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/testing-library__jest-dom": "^5.14.5",
+    "@umijs/test": "^4.0.60",
+    "babel-plugin-styled-components": "^2.0.7",
+    "cross-env": "^7.0.3",
+    "husky": "^7.0.4",
+    "jest": "^29.4.3",
+    "jest-environment-jsdom": "^29.4.3",
+    "lint-staged": "~11.0.0",
+    "prettier": "^2.5.1",
+    "styled-components": "^5.0.0",
+    "ts-node": "^10",
+    "typescript": "~4.7.2",
+    "umi": "^4.0.60"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

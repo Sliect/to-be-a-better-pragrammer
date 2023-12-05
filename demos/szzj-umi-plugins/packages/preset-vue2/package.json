@@ -1,0 +1,64 @@
+{
+  "name": "@szzj/umi-preset-vue2",
+  "version": "4.0.16",
+  "description": "Umi plugin for vue2 renderer.",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "wangyanan",
+      "email": "yanan.wangyn@dtzhejing.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    }
+  ],
+  "main": "lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "files": [
+    "lib",
+    "src",
+    "templates"
+  ],
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@szzj/umi-renderer-vue2": "^4.0.0",
+    "@types/node": "^14.0.0",
+    "@umijs/utils": "^4.0.60",
+    "@vitejs/plugin-vue2-jsx": "^1.1.0",
+    "@vitejs/plugin-vue2": "^2.2.0",
+    "@vue/component-compiler-utils": "^3.1.2",
+    "vue-loader": "^15.9.2"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@vue/compiler-sfc": "2.x || 3.x",
+    "umi": "4.x",
+    "vue": "^2.0.0",
+    "vue-template-compiler": "^2.0.0",
+    "vue-router": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vue/compiler-sfc": {
+      "optional": true
+    }
+  }
+}

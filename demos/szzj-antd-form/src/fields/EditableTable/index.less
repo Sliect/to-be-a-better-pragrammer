@@ -1,0 +1,66 @@
+.szzj-antd-form-editable-table {
+  .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  .ant-table-row-indent + .ant-table-row-expand-icon {
+    margin-top: 8px;
+  }
+
+  .ant-form-item-label {
+    display: none;
+  }
+
+  // 置于下方，避免遮挡
+  .ant-table-content .ant-form-item-explain {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 3px);
+    width: 136px;
+    z-index: 1080;
+  }
+
+  .ant-table-content .ant-form-item-explain-error {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 5px 5px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px -4px #0000001f, 0 6px 16px #00000014, 0 9px 28px 8px #0000000d;
+  }
+
+  .ant-table-content .ant-form-item-has-error .ant-form-item-explain-error {
+    display: none;
+  }
+
+  .ant-table-content .ant-form-item-has-error:hover .ant-form-item-explain-error {
+    display: block;
+  }
+
+  .required::before {
+    display: inline-block;
+    margin-right: 4 px;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: '*';
+  }
+
+  .ant-table-footer {
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  .top-store-input {
+    .ant-form-item-control-input {
+      display: none;
+    }
+
+    .ant-form-item-explain-error {
+      margin-top: 5px !important;
+      margin-bottom: -16px !important;
+    }
+  }
+}

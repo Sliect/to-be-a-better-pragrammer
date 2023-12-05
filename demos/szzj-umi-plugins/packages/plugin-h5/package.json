@@ -1,0 +1,56 @@
+{
+  "name": "@szzj/umi-plugin-h5",
+  "version": "4.0.9",
+  "description": "Umi plugin for h5 build-in.",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "wangyanan",
+      "email": "yanan.wangyn@dtzhejing.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    },
+    {
+      "name": "xulongfei",
+      "email": "xulongfei0460@dingtalk.com"
+    }
+  ],
+  "main": "lib/index.js",
+  "types": "/lib/types/index.d.ts",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@szzj/components-mobile": "^1.0.9",
+    "@umijs/utils": "^4.0.60",
+    "eruda": "^2.4.1",
+    "postcss-px-to-viewport": "^1.1.1"
+  },
+  "peerDependencies": {
+    "antd-mobile": "^5.x",
+    "react": "^18.0.0",
+    "umi": "4.x"
+  }
+}

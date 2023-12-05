@@ -1,0 +1,58 @@
+{
+  "name": "@szzj/script-tools",
+  "version": "1.0.5",
+  "description": "scripts for app",
+  "maintainers": [
+    {
+      "name": "shengchao.qiushch",
+      "email": "shengchao.qiushch@dtzhejiang.com"
+    },
+    {
+      "name": "lixin",
+      "email": "xin.lix@dtzhejiang.com"
+    },
+    {
+      "name": "zhangw",
+      "email": "wei.zhang@dtzhejiang.com"
+    },
+    {
+      "name": "liuliu.yull",
+      "email": "liuliu.yull@dtzhejiang.com"
+    },
+    {
+      "name": "gaoll",
+      "email": "lili.gao@dtzhejiang.com"
+    },
+    {
+      "name": "wangyanan",
+      "email": "yanan.wangyn@dtzhejing.com"
+    },
+    {
+      "name": "xulongfei",
+      "email": "xulongfei0460@dingtalk.com"
+    }
+  ],
+  "main": "/lib/index.js",
+  "bin": {
+    "script-tools": "bin/index.js"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "scripts": {
+    "build": "father build",
+    "pub": "cnpm publish"
+  },
+  "dependencies": {
+    "@umijs/utils": "^4.0.60",
+    "compressing": "^1.9.1",
+    "less-plugin-sass2less": "^1.2.0",
+    "gogocode": "^1.0.55",
+    "yargs": "^17.7.2"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/yargs": "^17.0.31"
+  }
+}

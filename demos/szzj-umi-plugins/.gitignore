@@ -1,0 +1,20 @@
+/node_modules
+/yarn.lock
+/package-lock.json
+/pnpm-lock.yaml
+/example/dist
+/test/fixtures/*/.umi
+/lib
+/coverage
+.umi
+.dumi/tmp
+.dumi/tmp-production
+.umi-production
+node_modules
+yarn-error.log
+.eslintcache
+packages/create-szapp/.cache
+.history
+
+# 排除 JetBrains IDE 的相关目录
+.idea

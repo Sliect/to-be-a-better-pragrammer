@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    tools {nodejs "node"}
+    environment {
+        def server = ''
+    }
+    stages {
+        stage('代码下载') {
+            steps {
+                git branch: 'master',
+                url: 'http://59.202.42.100/zt/g-ui/szzj-hooks.git',
+                credentialsId: '7ac35d0d-c614-456d-8e83-62a905f86e21',
+                changelog:true
+            }
+        }
+        stage('编译打包') {
+            steps {
+                sh "skywalker deploy --npmClient=cnpm --deployEnv=dev --dist=site --deployDirectory=mods/hooks --deployVersion=prod"
+            }
+        }
+    }
+}

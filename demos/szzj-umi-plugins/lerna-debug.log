@@ -1,0 +1,22 @@
+0 silly argv {
+0 silly argv   _: [ 'clean' ],
+0 silly argv   lernaVersion: '6.6.1',
+0 silly argv   '$0': 'C:\\Program Files\\nodejs\\node_modules\\lerna\\dist\\cli.js'
+0 silly argv }
+1 notice cli v6.6.1
+2 verbose rootPath D:\sourcecode\frontend\fed\szzj-umi-plugins
+3 info versioning independent
+4 verbose packageConfigs Package manager 'pnpm' detected. Resolving packages using 'pnpm-workspace.yaml'.
+5 error JSONError: Unexpected token "}" (0x7D) in JSON at position 2114 while parsing near "...-dom\": \"^18.0.0\",\n  },\n  \"engines\": {\n  ..." in packages\template-lib-react\package.json
+5 error
+5 error [0m [90m 89 |[39m     [32m"react"[39m[33m:[39m [32m"^18.0.0"[39m[33m,[39m[0m
+5 error [0m [90m 90 |[39m     [32m"react-dom"[39m[33m:[39m [32m"^18.0.0"[39m[33m,[39m[0m
+5 error [0m[31m[1m>[22m[39m[90m 91 |[39m   }[33m,[39m[0m
+5 error [0m [90m    |[39m   [31m[1m^[22m[39m[0m
+5 error [0m [90m 92 |[39m   [32m"engines"[39m[33m:[39m {[0m
+5 error [0m [90m 93 |[39m     [32m"node"[39m[33m:[39m [32m">=14.0.0"[39m[0m
+5 error [0m [90m 94 |[39m   }[33m,[39m[0m
+5 error
+5 error     at parseJson (C:\Users\Lenovo\AppData\Roaming\nvm\v16.18.0\node_modules\lerna\node_modules\_parse-json@5.2.0@parse-json\index.js:29:21)
+5 error     at parse (C:\Users\Lenovo\AppData\Roaming\nvm\v16.18.0\node_modules\lerna\node_modules\_load-json-file@6.2.0@load-json-file\index.js:15:9)
+5 error     at module.exports (C:\Users\Lenovo\AppData\Roaming\nvm\v16.18.0\node_modules\lerna\node_modules\_load-json-file@6.2.0@load-json-file\index.js:18:47)
