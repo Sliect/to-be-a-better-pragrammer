@@ -226,7 +226,12 @@ type Res4 = Wrapped<number | boolean>;
 1. 是否作为泛型参数（看Res1和Res2的区别）
 2. 泛型参数在条件类型是否被数组包裹了（看Res3和Res4的区别）
 
-好处是更容易实现集合运算
+好处是更容易实现集合运算, 如
+```ts
+type Intersection<A, B> = A extends B ? A : never;
+
+type IntersectionRes = Intersection<1 | 2 | 3, 2 | 3 | 4>; // 2 | 3
+```
 
 ## tips
 
@@ -305,7 +310,9 @@ type Merge<Res extends { [k: string]: any }, K extends string, V> = {
 
 type IsNegative<T extends number> = `${T}` extends `-${infer U}` ? true : false
 
-type IsAny<T> = unknow extends T ? [T] extends [1] ? true : false : false
+type IsAny<T> = unknown extends T ? [T] extends [1] ? true : false : false
+// 或
+type IsAny<T> = 0 extends 1 & T ? true : false;
 
 // 将两个对象的属性重新遍历合并，用于 StrictEqual 比较
 type mergeObject<T> = {
@@ -324,10 +331,10 @@ type NeverToStr<T> = [T] extends [never] ? '' : T
 // `foo${never}` 仍然是 never类型
 type t1 = NeverToStr<`foo${never}`>
 
-// 1 | 2  T与unknow取交集 则为T
-type t2 = 1 | 2 & unknow
-// unknow T与unknow取并集 则为unknow
-type t3 = 1 | 2 | unknow
+// 1 | 2  T与unknown取交集 则为T
+type t2 = 1 | 2 & unknown
+// unknown T与unknown取并集 则为unknown
+type t3 = 1 | 2 | unknown
 ```
 
 模拟两个数组的增加和移除来计算加法和减法
@@ -369,5 +376,23 @@ type Sub<T extends number, R extends number> =
 ```
 
 
-@types/xxx 安装没有typescript的库
+@types/xxx  安装没有typescript的库  
+ts-node     执行ts文件  
+ts-node-dev 监听文件重新执行  
+> 如 ts-node-dev --respawn --transpile-only app.ts 
+
+declare关键字用于定义全局变量、全局函数或全局类型的声明  
+! 非空断言  
+
+
+一般不直接使用工具类型做类型标注，而是声明一个新的类型别名
+
+interface 和 type 的异同？
+> interface 主要是用来描述对象的属性, 不应该有过于复杂的类型逻辑, type 是类型别名, 主要用来类型编程, 对类型的逻辑进行复杂处理
+
+类型的兼容性比较
+> 如果一个类型的结构包含了另一个类型的结构, 那么它们就是兼容的, 如 A 包含 B 的所有成员, 则 A 是 B 的子类
+
+any、unknown 与 never
+> any 和 unknown 是ts中的Top Type, 所有类型是其子类型; never 是ts中的Bottom Type, 是所有类型的子类型. Top Type 用来包含任意类型, Bottom Type用来表示类型不存在, 如两者取交集. any 完全绕过检查, unknown 类型的值操作前还是会进行检查
 
