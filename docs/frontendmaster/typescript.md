@@ -142,14 +142,27 @@ const val = a?.b
 const foo = a ?? 'default string'
 ```
 
-
-表示 B 是 A 的子类型，即类型为 B 的变量可以赋值给类型为 A 的变量  
-A -> B      
-B extends A
-子小父大
-
 此为协变（顺变），逆变是 子类型推导到超类型，只有函数的参数位置是逆变  
-A | B -> A or B -> A & B  
+为什么函数的参数位置是逆变呢?  
+```ts
+class Animal {
+  asPet() {}
+}
+class Dog extends Animal {
+  bark() {}
+}
+
+let dogs: Dog[] = [];
+let animals: Animal[] = [];
+// 此为协变, 允许子类型替换父类型
+animals = dogs;
+
+let dogFn = (dog: Dog) => { dog.bark() };
+let animalFn = (animal: Animal) => {};
+// 此为逆变, dogFn用animalFn是类型安全的, 反之则是不安全的
+// 所以函数的参数位置不能用协变
+dogFn = animalFn;
+```
 
 ## infer
 
@@ -396,3 +409,14 @@ interface 和 type 的异同？
 any、unknown 与 never
 > any 和 unknown 是ts中的Top Type, 所有类型是其子类型; never 是ts中的Bottom Type, 是所有类型的子类型. Top Type 用来包含任意类型, Bottom Type用来表示类型不存在, 如两者取交集. any 完全绕过检查, unknown 类型的值操作前还是会进行检查
 
+## 特性
+any 类型与任何类型的交叉都是 any，也就是 1 & any 结果是 any，可以用这个特性判断 any 类型。
+联合类型作为类型参数出现在条件类型左侧时，会分散成单个类型传入，最后合并。
+never 作为类型参数出现在条件类型左侧时，会直接返回 never。
+any 作为类型参数出现在条件类型左侧时，会直接返回 trueType 和 falseType 的联合类型。
+元组类型也是数组类型，但 length 是数字字面量，而数组的 length 是 number。可以用来判断元组类型。
+函数参数处会发生逆变，可以用来实现联合类型转交叉类型。
+可选索引的索引可能没有，那 Pick 出来的就可能是 {}，可以用来过滤可选索引，反过来也可以过滤非可选索引。
+索引类型的索引为字符串字面量类型，而可索引签名不是，可以用这个特性过滤掉可索引签名。
+keyof 只能拿到 class 的 public 的索引，可以用来过滤出 public 的属性。
+默认推导出来的不是字面量类型，加上 as const 可以推导出字面量类型，但带有 readonly 修饰，这样模式匹配的时候也得加上 readonly 才行。
