@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/daily/2023-12-04.md",
+                "file": "docs/frontendmaster/vite.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/daily/2023-12-04.md",
+                "file": "docs/frontendmaster/vite.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/daily/2023-12-04.md",
+                "file": "docs/frontendmaster/vite.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/daily/2023-12-04.md"
+                "file": "docs/frontendmaster/vite.md"
               }
             }
           }
@@ -148,8 +148,13 @@
   },
   "active": "76af5b18515dd128",
   "lastOpenFiles": [
-    "docs/daily/2023-10-31.md",
+    "docs/frontendmaster/tailwindcss.md",
+    "docs/frontendmaster/rollup.md",
+    "docs/frontendmaster/vite.md",
+    "docs/daily/2024-01-29.md",
+    "docs/daily/2024-01-24.md",
     "docs/daily/2023-12-04.md",
+    "docs/daily/2023-10-31.md",
     "docs/daily/2023-12-05.md",
     "docs/daily/template.md",
     "2023-12-04.md",
