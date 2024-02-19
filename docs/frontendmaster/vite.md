@@ -244,3 +244,74 @@ pnpm 自身支持patch, 不需要安装 patch-package
 > pnpm patch-remove lodash@4.17.21 
 移除自定义补丁,同理此操作也需删除.vite后重启
 
+q: 如何使用虚拟模块
+a: 分以下几步
+在插件中声明虚拟模块
+```ts
+// plugins/virtual-module.ts
+export default function myPlugin() {
+  const virtualModuleId = 'virtual:my-module'
+  // Vite 中约定对于虚拟模块，解析后的路径需要加上`\0`前缀
+  const resolvedVirtualModuleId = '\0' + virtualModuleId
+
+  return {
+    name: 'my-plugin', // 必须的，将会在 warning 和 error 中显示
+    resolveId(id) {
+      if (id === virtualModuleId) {
+        return resolvedVirtualModuleId
+      }
+    },
+    load(id) {
+      if (id === resolvedVirtualModuleId) {
+        // 也可以在各个钩子里缓存配置信息
+        // 通过虚拟模块直接获取配置信息
+        return `export const msg = "from virtual module"`
+      }
+    },
+  }
+}
+
+// vite.config.ts
+import virtual from './plugins/virtual-module.ts'
+
+// 配置插件
+{
+  plugins: [react(), virtual()]
+}
+```
+引用虚拟模块
+```ts
+// 为了typescript不报错，需要声明一个 .d.ts 文件
+import { msg } from 'virtual:my-module'
+
+console.log(msg)
+
+// shim.d.ts
+declare module 'virtual:my-module' {
+  export default any;
+  export const msg = string;
+  export const resolvedConfig = string;
+}
+```
+
+q: 如何调试插件
+a: 在plugins里引入vite-plugin-inspect插件，在 http://localhost:5173/__inspect/#/ 下查看项目的模块和栈信息
+
+q: HMR 热插拔
+a: accept、dispose
+“接受” 热更新的模块被认为是 HMR 边界，即对自身模块热更新要写在当前文件，对依赖模块热更新要写在引入依赖的页面
+1. 接受自身模块更新
+2. 接受依赖模块更新
+dispose 用来清除副作用，比如清理定时器等
+data 用于将信息从模块的前一个版本传递到下一个版本
+
+q: 如何进行产物分析报告
+a: rollup-plugin-visualizer 插件
+
+q: build.target 是什么意思
+a: 默认是modules, 表示默认兼容的浏览器为 ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14'], 要兼容更低版本的浏览器, 可以设置为 es2015
+
+q: build.cssTarget
+a: 在需要兼容安卓端微信的 webview 时, 需要将 build.cssTarget 设置为 chrome61，以防止 vite 将 rgba() 颜色转化为 #RGBA 十六进制符号的形式
+
+
