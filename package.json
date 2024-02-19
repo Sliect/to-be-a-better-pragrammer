@@ -1,6 +1,7 @@
 {
   "name": "to-be-a-better-pragrammer",
   "version": "1.0.0",
+  "packageManager": "pnpm@8.10.5",
   "description": "记录一些看过的书，一些好的想法",
   "main": "index.js",
   "type": "module",
