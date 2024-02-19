@@ -11,7 +11,9 @@
 
 ## nest cli
 
-> nest g <schematic> <name> [options]
+``` ts
+nest g <schematic> <name> [options]
+```
 
 举个栗子：
 nest g resource xxx     // 生成xxx模块的完整模板文件

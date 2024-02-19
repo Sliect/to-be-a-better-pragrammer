@@ -1,0 +1,1 @@
+import{_ as s,c as i,o as a,a2 as n}from"./chunks/framework.CBOTroAR.js";const g=JSON.parse('{"title":"知识体系","description":"","frontmatter":{},"headers":[],"relativePath":"others/知识体系.md","filePath":"others/知识体系.md"}'),t={name:"others/知识体系.md"},p=n("",52),l=[p];function h(e,k,d,r,E,o){return a(),i("div",null,l)}const y=s(t,[["render",h]]);export{g as __pageData,y as default};

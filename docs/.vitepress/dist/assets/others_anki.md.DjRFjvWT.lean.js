@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as e,a2 as p}from"./chunks/framework.CBOTroAR.js";const f=JSON.parse('{"title":"anki","description":"","frontmatter":{},"headers":[],"relativePath":"others/anki.md","filePath":"others/anki.md"}'),t={name:"others/anki.md"},n=p("",15),i=[n];function l(o,r,c,h,_,d){return e(),s("div",null,i)}const m=a(t,[["render",l]]);export{f as __pageData,m as default};

@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a,a2 as A}from"./chunks/framework.CBOTroAR.js";const x=JSON.parse('{"title":"计算之魂","description":"","frontmatter":{},"headers":[],"relativePath":"others/计算之魂.md","filePath":"others/计算之魂.md"}'),o={name:"others/计算之魂.md"},_=A("",9),r=[_];function s(n,p,c,i,l,d){return a(),e("div",null,r)}const m=t(o,[["render",s]]);export{x as __pageData,m as default};

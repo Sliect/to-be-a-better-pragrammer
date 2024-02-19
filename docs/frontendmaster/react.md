@@ -66,7 +66,10 @@ ReactDOM.render(<Clock />, document.getElementById("root"));
 
 1. e.preventDefault() 阻止默认行为
 2. this 指向，推荐在 constructor 里 bind
-3. 若需要传递参数可以在事件回调上 bind 函数里传参，如 onClick={this.deleteRow.bind(this, id)}
+3. 若需要传递参数可以在事件回调上 bind 函数里传参，如 
+``` ts
+onClick={this.deleteRow.bind(this, id)}
+```
 
 合成事件的实现机制
 

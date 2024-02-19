@@ -1,0 +1,1 @@
+import{_ as a,c as t,o as l,a2 as p}from"./chunks/framework.CBOTroAR.js";const d=JSON.parse('{"title":"网络是怎样连接的","description":"","frontmatter":{},"headers":[],"relativePath":"cs/计算机网络.md","filePath":"cs/计算机网络.md"}'),e={name:"cs/计算机网络.md"},s=p("",88),n=[s];function i(r,o,b,c,P,C){return l(),t("div",null,n)}const I=a(e,[["render",i]]);export{d as __pageData,I as default};

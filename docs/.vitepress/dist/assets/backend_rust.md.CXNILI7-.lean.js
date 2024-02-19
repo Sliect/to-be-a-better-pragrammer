@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as t,a2 as e}from"./chunks/framework.CBOTroAR.js";const _=JSON.parse('{"title":"rust","description":"","frontmatter":{},"headers":[],"relativePath":"backend/rust.md","filePath":"backend/rust.md"}'),p={name:"backend/rust.md"},n=e("",23),l=[n];function o(i,r,c,d,u,h){return t(),s("div",null,l)}const f=a(p,[["render",o]]);export{_ as __pageData,f as default};

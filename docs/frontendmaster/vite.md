@@ -239,7 +239,7 @@ pnpm 自身支持patch, 不需要安装 patch-package
 修改node_modules下的第三方库,建议安装指定版本,比如 lodash@4.17.21
 > pnpm patch lodash@4.17.21
 会在本地临时文件夹生成一个软链, 然后在上面进行自定义修改后
-> pnpm patch-commit <path>  #path为临时生成的目录位置
+> pnpm patch-commit [path]  #path为临时生成的目录位置
 因为vite的依赖是强缓存,需要在vite项目中删除.vite后重启,即可将修改生效,git提交后,所有用户只需要删除.vite重启即可应用
 > pnpm patch-remove lodash@4.17.21 
 移除自定义补丁,同理此操作也需删除.vite后重启

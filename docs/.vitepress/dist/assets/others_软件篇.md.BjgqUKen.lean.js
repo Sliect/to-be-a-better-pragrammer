@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as a,a2 as t}from"./chunks/framework.CBOTroAR.js";const w=JSON.parse('{"title":"软件篇","description":"","frontmatter":{},"headers":[],"relativePath":"others/软件篇.md","filePath":"others/软件篇.md"}'),l={name:"others/软件篇.md"},o=t("",3),i=[o];function n(s,h,d,f,_,c){return a(),r("div",null,i)}const b=e(l,[["render",n]]);export{w as __pageData,b as default};

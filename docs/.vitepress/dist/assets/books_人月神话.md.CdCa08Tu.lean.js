@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as t,a2 as o}from"./chunks/framework.CBOTroAR.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"books/人月神话.md","filePath":"books/人月神话.md"}'),r={name:"books/人月神话.md"},i=o("",15),l=[i];function s(n,h,_,c,p,d){return t(),e("div",null,l)}const b=a(r,[["render",s]]);export{m as __pageData,b as default};

@@ -1,0 +1,10 @@
+import{_ as s,c as a,o as n,a2 as i}from"./chunks/framework.CBOTroAR.js";const D=JSON.parse('{"title":"工程化","description":"","frontmatter":{},"headers":[],"relativePath":"frontendmaster/工程化.md","filePath":"frontendmaster/工程化.md"}'),e={name:"frontendmaster/工程化.md"},t=i(`<h1 id="工程化" tabindex="-1">工程化 <a class="header-anchor" href="#工程化" aria-label="Permalink to &quot;工程化&quot;">​</a></h1><p>简单搭建环境</p><div class="language-js vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">js</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 1. npm init -y</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 2. npm i -S eslint</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 3. eslint ./**/*.js 在 scripts 下指定检查哪些文件</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 4. 配置.eslintrc，指定规则，也可以用 eslint --init 来初始化规则</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 5. npm install -D @babel/core @babel/cli @babel/preset-env</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 6. npm install -S core-js@3 安装兼容老版本浏览器模块</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 7. 配置 .babelrc </span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 8. npm install -D webpack webpack-cli webpack-dev-server babel-loader</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 9. 配置 webpack.config.js</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 10. 服务器上部署gitlab 和 jenkins      https://blog.csdn.net/weixin_43155926/article/details/83033371</span></span></code></pre></div>`,3),l=[t];function p(c,r,h,o,d,k){return n(),a("div",null,l)}const A=s(e,[["render",p]]);export{D as __pageData,A as default};
