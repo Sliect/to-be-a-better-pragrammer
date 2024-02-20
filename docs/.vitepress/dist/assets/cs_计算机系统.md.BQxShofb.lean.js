@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as r,a2 as a}from"./chunks/framework.CBOTroAR.js";const m=JSON.parse('{"title":"计算机系统","description":"","frontmatter":{},"headers":[],"relativePath":"cs/计算机系统.md","filePath":"cs/计算机系统.md"}'),_={name:"cs/计算机系统.md"},o=a("",5),i=[o];function l(s,c,n,d,p,b){return r(),t("div",null,i)}const f=e(_,[["render",l]]);export{m as __pageData,f as default};

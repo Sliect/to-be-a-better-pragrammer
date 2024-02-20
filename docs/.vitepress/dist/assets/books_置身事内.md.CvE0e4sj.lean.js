@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as r,a2 as t}from"./chunks/framework.CBOTroAR.js";const q=JSON.parse('{"title":"置身事内","description":"","frontmatter":{},"headers":[],"relativePath":"books/置身事内.md","filePath":"books/置身事内.md"}'),o={name:"books/置身事内.md"},h=t("",36),i=[h];function l(n,d,s,c,p,b){return r(),e("div",null,i)}const _=a(o,[["render",l]]);export{q as __pageData,_ as default};

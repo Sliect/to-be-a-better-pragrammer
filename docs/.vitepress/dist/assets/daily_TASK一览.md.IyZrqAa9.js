@@ -1,5 +1,0 @@
-import{_ as a,c as s,o as e,a2 as t}from"./chunks/framework.CBOTroAR.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"daily/TASK一览.md","filePath":"daily/TASK一览.md"}'),n={name:"daily/TASK一览.md"},p=t(`<h2 id="task" tabindex="-1">TASK <a class="header-anchor" href="#task" aria-label="Permalink to &quot;TASK&quot;">​</a></h2><div class="language-dataview vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">dataview</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span>TASK FROM &quot;daily&quot; </span></span>
-<span class="line"><span>WHERE </span></span>
-<span class="line"><span>	file.name != &quot;template&quot; </span></span>
-<span class="line"><span>	AND !completed</span></span>
-<span class="line"><span>SORT file.name ASC</span></span></code></pre></div>`,2),i=[p];function l(o,c,d,_,r,h){return e(),s("div",null,i)}const S=a(n,[["render",l]]);export{u as __pageData,S as default};

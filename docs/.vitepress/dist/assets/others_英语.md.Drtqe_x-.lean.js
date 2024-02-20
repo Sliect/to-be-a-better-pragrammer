@@ -1,1 +1,0 @@
-import{_ as e,c as a,o as t,a2 as r}from"./chunks/framework.CBOTroAR.js";const m=JSON.parse('{"title":"英语","description":"","frontmatter":{},"headers":[],"relativePath":"others/英语.md","filePath":"others/英语.md"}'),o={name:"others/英语.md"},i=r("",42),p=[i];function h(l,s,d,n,c,u){return t(),a("div",null,p)}const _=e(o,[["render",h]]);export{m as __pageData,_ as default};

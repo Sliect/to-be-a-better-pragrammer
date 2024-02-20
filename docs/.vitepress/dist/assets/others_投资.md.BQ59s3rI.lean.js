@@ -1,1 +1,0 @@
-import{_ as a,c as l,o as i,a2 as e}from"./chunks/framework.CBOTroAR.js";const m=JSON.parse('{"title":"投资","description":"","frontmatter":{},"headers":[],"relativePath":"others/投资.md","filePath":"others/投资.md"}'),t={name:"others/投资.md"},o=e("",8),r=[o];function p(s,h,n,_,c,d){return i(),l("div",null,r)}const f=a(t,[["render",p]]);export{m as __pageData,f as default};

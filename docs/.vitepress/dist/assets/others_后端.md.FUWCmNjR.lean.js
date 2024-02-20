@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as t,a2 as o}from"./chunks/framework.CBOTroAR.js";const x=JSON.parse('{"title":"后端","description":"","frontmatter":{},"headers":[],"relativePath":"others/后端.md","filePath":"others/后端.md"}'),r={name:"others/后端.md"},i=o("",22),c=[i];function n(s,l,d,h,b,p){return t(),e("div",null,c)}const j=a(r,[["render",n]]);export{x as __pageData,j as default};

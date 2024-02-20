@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as a,a2 as n}from"./chunks/framework.CBOTroAR.js";const F=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"zhaowa/4.ts.md","filePath":"zhaowa/4.ts.md"}'),h={name:"zhaowa/4.ts.md"},k=n("",23),t=[k];function p(l,e,E,r,d,g){return a(),i("div",null,t)}const C=s(h,[["render",p]]);export{F as __pageData,C as default};

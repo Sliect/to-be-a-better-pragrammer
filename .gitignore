@@ -1,5 +1,6 @@
 /node_modules
 /docs/.vuepress/dist
+/docs/.vitepress/dist
 /docs/.obsidian/**
 !/docs/.obsidian/plugins/**
 !/docs/.obsidian/app.json

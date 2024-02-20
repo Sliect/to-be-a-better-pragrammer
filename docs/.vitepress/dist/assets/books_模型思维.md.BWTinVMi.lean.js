@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as t,a2 as s}from"./chunks/framework.CBOTroAR.js";const y=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"books/模型思维.md","filePath":"books/模型思维.md"}'),i={name:"books/模型思维.md"},r=s("",8),d=[r];function m(o,_,l,c,n,u){return t(),e("div",null,d)}const p=a(i,[["render",m]]);export{y as __pageData,p as default};

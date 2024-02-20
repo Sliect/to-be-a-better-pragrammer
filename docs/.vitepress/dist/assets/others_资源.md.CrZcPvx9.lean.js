@@ -1,1 +1,0 @@
-import{_ as e,c as r,o as a,a2 as t}from"./chunks/framework.CBOTroAR.js";const d=JSON.parse('{"title":"优秀资源","description":"","frontmatter":{},"headers":[],"relativePath":"others/资源.md","filePath":"others/资源.md"}'),o={name:"others/资源.md"},n=t("",79),h=[n];function l(p,i,s,c,f,b){return a(),r("div",null,h)}const g=e(o,[["render",l]]);export{d as __pageData,g as default};
