@@ -606,3 +606,27 @@ function onClick(e) {
 ### others
 
 在“严格模式”下开发时，React 会调用每个组件的函数两次，这有助于暴露由不纯函数引起的错误。
+
+``` ts
+// ReactNode > ReactElement
+type ReactNode = 
+  | ReactElement
+  | string
+  | number
+  | Iterable<ReactNode>
+  | ReactPortal
+  | boolean
+  | null
+  | undefined
+
+// style
+CssProperties
+
+type PropsWithChildren<P> = P & { children?: ReactNode | undefined }
+
+// html通用元素属性
+HTMLAttributes<HTMLDivElement>
+
+// 鼠标事件对象
+MouseEvent<HTMLDivElement>
+```

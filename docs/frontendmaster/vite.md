@@ -315,3 +315,110 @@ q: build.cssTarget
 a: 在需要兼容安卓端微信的 webview 时, 需要将 build.cssTarget 设置为 chrome61，以防止 vite 将 rgba() 颜色转化为 #RGBA 十六进制符号的形式
 
 
+## 实战篇
+
+### 脚手架搭建
+
+1. 新建项目运行 pnpm init 并安装 @types/node, cac
+2. 新建tsconfig.json
+``` json
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ESNext" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+    "module": "commonjs" /* Specify what module code is generated. */,
+    "rootDir": "src" /* Specify the root folder within your source files. */,
+  }
+}
+```
+3. 输入以下代码
+``` js
+// src/node/cli.ts
+import cac from 'cac';
+import { createServer } from './dev';
+
+const cli = cac('island').version('0.0.1').help();
+
+cli.command('dev [root]', 'start dev server').action(async (root: string) => {
+  console.log(root);
+  const server = await createServer(root);
+  await server.listen();
+  server.printUrls();
+});
+
+cli
+  .command('build [root]', 'build in production')
+  .action(async (root: string) => {
+    console.log('build', root);
+  });
+
+cli.parse();
+
+// src/node/dev.ts
+import { createServer as createViteDevServer } from 'vite';
+
+export async function createServer(root = process.cwd()) {
+  return createViteDevServer({ root });
+}
+
+// bin/island.js
+#!/usr/bin/env node
+require("../dist/node/cli.js");
+```
+
+``` json
+// package.json
+{
+  "scripts": {
+    "start": "tsc -w",
+  },
+  "bin": {
+    "island": "bin/island.js"
+  }
+}
+```
+4. npm start 打完包后 npm link，关联全局的软链
+5. 在本机中可以全局运行 cli 命令 island dev docs, 可以打开当前目录下的docs目录, 在路由上添加其下的文件名, 即可访问
+
+### ssr
+
+1. 在build阶段，打包一份客户端作为交互，打包一份服务端作为html渲染
+2. 模板文件引入服务端的字符串作为渲染，引入客户端的入口文件作为交互
+
+### 开发工作流搭建
+
+1. 接入库工具搭建
+cjs是同步引入, esm是异步引入, 用tsup可以做兼容处理
+要在esm模块中引入cjs模块通常需要添加配置
+``` json
+// tsconfig.json
+{
+  "compilerOptions": {
+    "esModuleInterop": true
+  }
+}
+```
+``` ts
+import { defineConfig } from 'tsup';
+
+export default defineConfig({
+  // 入口文件
+  entry: ['src/node/cli.ts'],
+  // 输出目录
+  outDir: 'dist',
+  // 表示是否将构建后的文件进行捆绑，即将所有模块捆绑为一个文件
+  bundle: true,
+  // 按需加载，表示是否启用代码拆分，即将构建后的文件拆分为多个文件
+  splitting: true,
+  // 输出格式
+  format: ['cjs', 'esm'],
+  // 是否生成.d.ts类型声明文件
+  dts: true,
+  // 表示是否启用 shims 支持，用于在构建时自动为一些环境提供缺失的 API，例如 process、Buffer 等
+  shims: true,
+});
+
+```
+2. 集成代码工具链
+> pnpm i eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin -D
+3. 搭建单元测试

@@ -154,6 +154,8 @@ Button.tsx --tsc--> Button.js --babel--> Button.js --> bundle.js
 },
 ```
 
+可以用JavaScript调试终端执行命令来调试node
+
 ## 调试ts
 
 ``` json

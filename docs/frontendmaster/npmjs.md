@@ -86,3 +86,5 @@ speed-measure-webpack-plugin  速度分析插件作用
 eruda         调试栏
 
 patch-package 保留依赖修复操作
+
+zustand       状态管理库
