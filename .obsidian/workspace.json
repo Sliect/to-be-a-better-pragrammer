@@ -4,43 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "9ae8b4d8568300d3",
-        "type": "split",
+        "id": "691099744dc4358b",
+        "type": "tabs",
         "children": [
           {
-            "id": "127b6e735cf35f4f",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "76af5b18515dd128",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "docs/frontendmaster/electron.md",
-                    "mode": "source",
-                    "source": false
-                  }
-                }
+            "id": "1b9c71ec2db571e1",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "docs/daily/kanban.md"
               }
-            ]
-          },
-          {
-            "id": "3eb322a53aee4c08",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "17ac0e2500fd0c65",
-                "type": "leaf",
-                "state": {
-                  "type": "mindmap",
-                  "state": {}
-                }
-              }
-            ]
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/frontendmaster/electron.md",
+                "file": "docs/daily/kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/frontendmaster/electron.md",
+                "file": "docs/daily/kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/frontendmaster/electron.md"
+                "file": "docs/daily/kanban.md"
               }
             }
           }
@@ -167,31 +144,36 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "76af5b18515dd128",
+  "active": "1b9c71ec2db571e1",
   "lastOpenFiles": [
+    "docs/xmind/react-router.md",
+    "docs/frontendmaster/router.md",
+    "docs/xmind/知识树.md",
+    "docs/daily/kanban.md",
+    "docs/frontendmaster/react-hook-form.md",
+    "docs/frontendmaster/react-query-form.md",
+    "docs/frontendmaster/react-query.md",
+    "docs/daily/template.md",
+    "docs/daily/TASK一览.md",
+    "docs/daily/2024-01-29.md",
+    "docs/templates/anki.md",
+    "docs/others/后端.md",
+    "docs/daily/2023-10-31.md",
+    "docs/daily/2022-08-23.md",
+    "docs/daily/2024-01-24.md",
+    "docs/daily/2023-12-04.md",
+    "docs/daily/2023-09-12.md",
+    "docs/daily/2023-04-03.md",
+    "docs/daily/2023-03-02.md",
+    "docs/daily/2022-08-24.md",
+    "未命名.canvas",
+    "docs/frontendmaster/electron.md",
+    "docs/xmind/知识树.md.md",
+    "docs/xmind",
     "docs/frontendmaster/css高级.md",
     "docs/frontendmaster/css_in_js.md",
     "docs/frontendmaster/bugs.md",
     "docs/frontendmaster/babel.md",
-    "docs/frontendmaster/微信小程序.md",
-    "docs/frontendmaster/算法.md",
-    "docs/frontendmaster/vite.md",
-    "docs/frontendmaster/tailwindcss.md",
-    "docs/frontendmaster/rollup.md",
-    "docs/daily/2024-01-29.md",
-    "docs/daily/2024-01-24.md",
-    "docs/daily/2023-12-04.md",
-    "docs/daily/2023-10-31.md",
-    "docs/daily/2023-12-05.md",
-    "docs/daily/template.md",
-    "2023-12-04.md",
-    "docs/daily/TASK一览.md",
-    "docs/daily/kanban.md",
-    "未命名.md",
-    "docs/daily/2023-09-12.md",
-    "docs/daily/2022-08-23.md",
-    "docs/daily/2023-11-20.md",
-    "2023-11-20.md",
     "demos/function-lib/src/index.js",
     "demos/build-react/src/index.js",
     "demos/build-react/public/index.html",
@@ -199,9 +181,7 @@
     "demos/function-lib/src/compose.js",
     "demos/build-react/src",
     "demos/build-react/public",
-    "demos/build-react/README.md",
     "demos/function-lib/src",
-    "demos/build-react/package.json",
-    "demos/function-lib"
+    "demos/build-react/package.json"
   ]
 }

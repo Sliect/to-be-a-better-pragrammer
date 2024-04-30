@@ -140,3 +140,8 @@ const useUserList = () => {
 同类型的状态保存，避免状态拆分的过细，导致连续多个状态的更新，最佳实践是选择 useReducer  
 同时过粗的拆分会导致耦合性过大，不利于复用  
 
+## 元素绑定的三种方式
+
+1. 直接传 el 给hooks, 通过 React.cloneElement 绑定事件
+2. 传 ref 给hooks, 通过 addEventListener 绑定事件
+3. hooks 返回事件, 自己去绑定到元素上

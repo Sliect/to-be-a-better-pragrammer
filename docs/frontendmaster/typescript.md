@@ -128,6 +128,9 @@ Parameters<T>
 
 // T为函数，用T中的返回值来构造新类型
 ReturnType<T>
+
+// 取Promise返回的值
+Awaited<T>
 ```
 
 ## 特殊符号

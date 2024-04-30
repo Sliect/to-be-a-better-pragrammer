@@ -211,3 +211,7 @@ npx jest src/test.ts -t "xxx"
   "preset": "ts-jest"
 }
 ```
+
+## tips
+
+pnpm+vite环境下，如果要在jsx函数组件里打断点，比如 RouterProvider 里，可以尝试先在项目上直接调用 RouterProvider(), 并在该行打上断点，进入函数后在内部打上断点后，即可删除那行进入语句

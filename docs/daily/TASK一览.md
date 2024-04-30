@@ -1,7 +1,7 @@
 ## TASK
 
 ``` dataview
-TASK FROM "daily" 
+TASK FROM "docs/daily" 
 WHERE 
 	file.name != "template" 
 	AND !completed

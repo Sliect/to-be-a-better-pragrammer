@@ -334,6 +334,18 @@ a: 默认是 modules, 表示默认兼容的浏览器为 ['es2020', 'edge88', 'fi
 q: build.cssTarget
 a: 在需要兼容安卓端微信的 webview 时, 需要将 build.cssTarget 设置为 chrome61，以防止 vite 将 rgba() 颜色转化为 #RGBA 十六进制符号的形式
 
+q: 在esm中如何模拟__dirname和require
+a: 如下
+``` js
+import { fileURLToPath } from 'url';
+import { createRequire } from 'module';
+import path from 'path';
+
+const require = createRequire(import.meta.url);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+```
+
 ## 实战篇
 
 ### 脚手架搭建
@@ -449,3 +461,15 @@ export default defineConfig({
 3. 搭建单元测试
 
 ### 配置解析器
+
+1. 获取配置文件路径
+2. 读取配置文件的内容
+3. 自定义 pluginConfig，实现 siteData 虚拟模块和 config 配置文件热更新
+
+### 约定式路由
+
+1. 自定义 pluginRoutes，实现 routes 虚拟模块，借助 fast-glob，将配置的根目录下指定格式的文件转换成路由映射组件
+2. 用 @loadable/component 实现懒加载，注意用 normalizePath 方法兼容不同系统的 path
+3. 用 vitest 完成单元测试，expect(xxx).toMatchInlineSnapshot() 可以实现行内快照
+4. 用 react-router-dom 的 useRoutes(routes) 生成路由组件
+

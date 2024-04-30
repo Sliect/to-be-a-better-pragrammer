@@ -8,7 +8,7 @@ function Welcome(props) {
 }
 
 const element = <Welcome name="Sara" />;
-ReactDOM.render(element, document.getElementById("root"));
+ReactDOM.render(element, document.getElementById('root'));
 ```
 
 1. react 将调用 render 函数，并将 Welcome 传入作为参数
@@ -53,7 +53,7 @@ class Clock extends React.Component {
   }
 }
 
-ReactDOM.render(<Clock />, document.getElementById("root"));
+ReactDOM.render(<Clock />, document.getElementById('root'));
 ```
 
 1. 调用 ReactDOM.render 函数，调用 Clock 的构造函数，初始化 this.state
@@ -66,8 +66,9 @@ ReactDOM.render(<Clock />, document.getElementById("root"));
 
 1. e.preventDefault() 阻止默认行为
 2. this 指向，推荐在 constructor 里 bind
-3. 若需要传递参数可以在事件回调上 bind 函数里传参，如 
-``` ts
+3. 若需要传递参数可以在事件回调上 bind 函数里传参，如
+
+```ts
 onClick={this.deleteRow.bind(this, id)}
 ```
 
@@ -111,7 +112,7 @@ onClick={this.deleteRow.bind(this, id)}
 // Provider接收一个value属性，传递给消费组件
 // 如果传递的是一个对象，在对象里传递值和更改值的回调，即可完成在consumer组件更新context对象
 // 当Provider的value值发生变化时，内部所有的消费组件都会重新渲染
-const ThemeContext = React.createContext("light");
+const ThemeContext = React.createContext('light');
 class App extends React.Component {
   render() {
     return (
@@ -197,7 +198,7 @@ render() {
 3. 复制静态方法
 
 ```js
-import hoistNonReactStatic from "hoist-non-react-statics";
+import hoistNonReactStatic from 'hoist-non-react-statics';
 function enhance(WrappedComponent) {
   class Enhance extends React.Component {
     /*...*/
@@ -228,7 +229,7 @@ render prop 是一个用于告知组件需要渲染什么内容的函数 prop
 ## PropTypes
 
 ```js
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 MyComponent.propTypes = {
   // 你可以将属性声明为 JS 原生类型，默认情况下
@@ -257,7 +258,7 @@ MyComponent.propTypes = {
 
   // 你可以让你的 prop 只能是特定的值，指定它为
   // 枚举类型。
-  optionalEnum: PropTypes.oneOf(["News", "Photos"]),
+  optionalEnum: PropTypes.oneOf(['News', 'Photos']),
 
   // 一个对象可以是几种类型中的任意一个类型
   optionalUnion: PropTypes.oneOfType([
@@ -293,15 +294,15 @@ MyComponent.propTypes = {
 
   // 你可以指定一个自定义验证器。它在验证失败时应返回一个 Error 对象。
   // 请不要使用 `console.warn` 或抛出异常，因为这在 `onOfType` 中不会起作用。
-  customProp: function(props, propName, componentName) {
+  customProp: function (props, propName, componentName) {
     if (!/matchme/.test(props[propName])) {
       return new Error(
-        "Invalid prop `" +
+        'Invalid prop `' +
           propName +
-          "` supplied to" +
-          " `" +
+          '` supplied to' +
+          ' `' +
           componentName +
-          "`. Validation failed."
+          '`. Validation failed.'
       );
     }
   },
@@ -311,7 +312,7 @@ MyComponent.propTypes = {
   // 验证器将验证数组或对象中的每个值。验证器的前两个参数
   // 第一个是数组或对象本身
   // 第二个是他们当前的键。
-  customArrayProp: PropTypes.arrayOf(function(
+  customArrayProp: PropTypes.arrayOf(function (
     propValue,
     key,
     componentName,
@@ -320,12 +321,12 @@ MyComponent.propTypes = {
   ) {
     if (!/matchme/.test(propValue[key])) {
       return new Error(
-        "Invalid prop `" +
+        'Invalid prop `' +
           propFullName +
-          "` supplied to" +
-          " `" +
+          '` supplied to' +
+          ' `' +
           componentName +
-          "`. Validation failed."
+          '`. Validation failed.'
       );
     }
   }),
@@ -356,9 +357,9 @@ const initialState = { count: 0 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case "increment":
+    case 'increment':
       return { count: state.count + 1 };
-    case "decrement":
+    case 'decrement':
       return { count: state.count - 1 };
     default:
       throw new Error();
@@ -370,8 +371,8 @@ function Counter() {
   return (
     <>
       Count: {state.count}
-      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>-</button>
+      <button onClick={() => dispatch({ type: 'increment' })}>+</button>
     </>
   );
 }
@@ -400,9 +401,9 @@ const initialState = {
 
 function reducer(state, action) {
   const { count, step } = state;
-  if (action.type === "tick") {
+  if (action.type === 'tick') {
     return { count: count + step, step };
-  } else if (action.type === "step") {
+  } else if (action.type === 'step') {
     return { count, step: action.step };
   } else {
     throw new Error();
@@ -414,7 +415,7 @@ const { count, step } = state;
 
 useEffect(() => {
   const id = setInterval(() => {
-    dispatch({ type: "tick" }); // Instead of setCount(c => c + step); step作为依赖会每次移除新增计时器
+    dispatch({ type: 'tick' }); // Instead of setCount(c => c + step); step作为依赖会每次移除新增计时器
   }, 1000);
   return () => clearInterval(id);
 }, [dispatch]);
@@ -550,13 +551,13 @@ React 在 render 第一次渲染时，会通过 React.createElement 创建一颗
 
 3. 如果在执行更新任务的时候，有新的任务进来，会判断两个任务的优先级高低。假如新任务优先级高，那么打断旧的任务，重新开始，否则继续执行任务
 
-diff算法
+diff 算法
 
-1. 分层对比，同一层级才会diff
+1. 分层对比，同一层级才会 diff
 
 2. 类型一致的节点才对比
 
-3. key值相同，尽可能重用
+3. key 值相同，尽可能重用
 
 ## 其它
 
@@ -607,9 +608,9 @@ function onClick(e) {
 
 在“严格模式”下开发时，React 会调用每个组件的函数两次，这有助于暴露由不纯函数引起的错误。
 
-``` ts
+```ts
 // ReactNode > ReactElement
-type ReactNode = 
+type ReactNode =
   | ReactElement
   | string
   | number
@@ -617,16 +618,22 @@ type ReactNode =
   | ReactPortal
   | boolean
   | null
-  | undefined
+  | undefined;
+
+FC<IProps>;
+
+ForwardRefRenderFunction<XxxRef, XxxProps>;
 
 // style
-CssProperties
+CssProperties;
 
-type PropsWithChildren<P> = P & { children?: ReactNode | undefined }
+type PropsWithChildren<P> = P & { children?: ReactNode | undefined };
 
 // html通用元素属性
-HTMLAttributes<HTMLDivElement>
+HTMLAttributes<HTMLDivElement>;
+// 也可以用interface 继承 ComponentProps
+ComponentProps<'div'>;
 
 // 鼠标事件对象
-MouseEvent<HTMLDivElement>
+MouseEvent<HTMLDivElement>;
 ```
