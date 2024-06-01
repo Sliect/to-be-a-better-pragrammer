@@ -145,3 +145,19 @@ const useUserList = () => {
 1. 直接传 el 给hooks, 通过 React.cloneElement 绑定事件
 2. 传 ref 给hooks, 通过 addEventListener 绑定事件
 3. hooks 返回事件, 自己去绑定到元素上
+
+## 按用户操作或内容块分层
+
+如表单项填报按用户操作分层：
+1. hooks/index.ts 中用 createContainer 共享状态和方法
+2. useInit 中获取表单数据
+3. useOperation 中获取表单操作方法
+4. useSubmit 中获取表单提交、保存等逻辑
+5. useValidate 中获取表单校验方法
+6. useRender 中获取表单渲染方法
+7. 其他逻辑放 index.ts 中
+
+如复杂的首页看板或复杂的分步表单：
+1. hooks/index.ts 中用 createContainer 共享状态和方法
+2. useXXA, useXXB, useXXC 中分别填写块逻辑
+3. 其他逻辑放 index.ts 中

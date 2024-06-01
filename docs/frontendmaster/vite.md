@@ -89,6 +89,31 @@ export default defineConfig({
 })
 ```
 
+q: 如何集成 tailwindcss
+a: 配置如下
+
+> npm install -D tailwindcss postcss autoprefixer
+> npx tailwindcss init -p
+
+在生成的tailwind.config.ts中添加如下配置
+``` ts
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+在 src/index.css 中添加如下配置
+``` css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+
 q: 如何集成 unocss
 a: 配置如下
 
@@ -346,6 +371,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ```
 
+q: html中如何引入react这种包
+a: import maps 配合 esm.sh 网站引入
+
 ## 实战篇
 
 ### 脚手架搭建
@@ -425,6 +453,12 @@ require("../dist/node/cli.js");
 1. 接入库工具搭建
    cjs 是同步引入, esm 是异步引入, 用 tsup 可以做兼容处理
    要在 esm 模块中引入 cjs 模块通常需要添加配置
+``` tsx
+// esModuleInterop: false commonjs 模块只能这么引用
+import * as fs from 'fs';
+// esModuleInterop: true 可以这么引用
+import fs from 'fs';
+```
 
 ```json
 // tsconfig.json

@@ -231,7 +231,7 @@ offsetY 表示点击位置到点击元素上方的距离
 
 getBoundingClientRect()获取的 top 为点击元素到视口上方的距离，bottom 为元素下方到视口上方的距离
 window.scrollY 为滚动条在垂直方向上滚动的距离
-el.scrollTop   为元素的滚动条在垂直方向上滚动的距离
+el.scrollTop 为元素的滚动条在垂直方向上滚动的距离
 offsetTop 是距离最近的有 position 属性（relative 或 absolute 或 fixed）的元素的距离
 clientTop 是指元素上边框的宽度
 clientHeight 是内容区域的高度，不包括 border
@@ -250,4 +250,55 @@ const mouseHandler = (e) => {
   // 或者拿到原生事件对象
   e.nativeEvent.offsetY
 };
+```
+
+```js
+// object 为File对象或Blob对象
+// objectURL 为一段带hash的url, 储存在浏览器的内存中
+const objectURL = URL.createObjectURL(object);
+```
+
+IntersectionObserver 是一个 Web API,它能够监听目标元素是否进入或离开可视区域,从而触发相应的回调函数
+
+```js
+// 创建观察者
+const observer = new IntersectionObserver(
+  (entries) => {
+    // 被观察的对象数组
+    entries.forEach((entry) => {
+      /**
+       * .target: 观察的目标元素。
+       *  .isIntersecting: 目标元素是否进入可视区域,布尔值。
+       *  .intersectionRatio: 目标元素与根元素的交叉面积占目标元素自身面积的比例,0-1 之间的浮点数。
+       *  .boundingClientRect: 目标元素在视口中的位置信息,包括 left、top、right、bottom 等。
+       *  .rootBounds: 根元素在视口中的位置信息。
+       *  .time: 观察到交叉状态变化的时间戳。
+       */
+      if (entry.isIntersecting) {
+        // 元素进入可视区域时触发
+        console.log('Element is visible');
+      } else {
+        // 元素离开可视区域时触发
+        console.log('Element is not visible');
+      }
+    });
+  },
+  {
+    // root 默认为浏览器视窗
+    // rootMargin 观察区域的偏移量
+    rootMargin: '0px 0px 200px 0px',
+    // threshold: 0-1之间的比例值,0表示即使只有1px的交叉，该元素也会被视为可见
+    // 1表示整个元素在可见范围时才算可见
+    threshold: 0,
+  }
+);
+
+// 观察目标元素
+const target = document.getElementById('my-element');
+/**
+ * observe(target) 开始观察指定target
+ * unobserve(target) 停止观察指定target
+ * disconnect() 停止所有观察
+ */
+observer.observe(target);
 ```

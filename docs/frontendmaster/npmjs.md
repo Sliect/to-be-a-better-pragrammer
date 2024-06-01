@@ -112,3 +112,21 @@ passport      身份认证
 winston       nojs日志记录
 
 pm2           生产环境进程管理和监控
+
+react-grid-layout  栅格布局
+
+allotment     拖动分配面板大小
+
+@monaco-editor/react 在线编辑器
+
+@typescript/ata   自动下载用到的类型包
+
+dompurify     预防xss攻击
+
+he            html转译
+
+click-to-react-component  点击浏览器元素，打开vscode源码文件
+
+@floating-ui  浮动元素定位
+
+react-intl    国际化
