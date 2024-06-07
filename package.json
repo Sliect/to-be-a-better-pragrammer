@@ -1,12 +1,17 @@
 {
   "name": "to-be-a-better-pragrammer",
   "version": "1.0.0",
+  "packageManager": "pnpm@8.10.5",
   "description": "记录一些看过的书，一些好的想法",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "vuepress dev docs",
     "build": "vuepress build docs",
-    "publish": "deploy.sh"
+    "publish": "deploy.sh",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,7 @@
   },
   "homepage": "https://github.com/Sliect/to-be-a-better-pragrammer#readme",
   "devDependencies": {
+    "vitepress": "1.0.0-rc.43",
     "vuepress": "^1.7.1"
   }
 }
