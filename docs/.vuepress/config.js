@@ -34,13 +34,6 @@ module.exports = {
           children: getChildrenFilesFrom('frontendmaster')
         }
       ],
-      '/cs/': [
-        {
-          title: 'CS',
-          collapsable: false,
-          children: getChildrenFilesFrom('cs')
-        }
-      ],
       '/others/': [
         {
           title: '其它',
