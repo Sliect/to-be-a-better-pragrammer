@@ -198,3 +198,10 @@ pnpm i commitlint @commitlint/cli @commitlint/config-conventional -D
 ```
 npx --no -- commitlint --edit "$1"
 ```
+
+
+## 极速版eslint —— oxlint
+
+> npm i -g oxlint
+
+在项目下运行 oxlint . 即可检查项目下所有
