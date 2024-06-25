@@ -15,3 +15,6 @@ pnpm update 更新package.json范围内的所有依赖项
 pnpm up --latest 更新所有依赖项，包括package.json中不包含的依赖
 pnpm update foo@2  更新foo的指定版本
 pnpm remove foo
+
+
+pnpm i --ignore-scripts --no-frozen-lockfile

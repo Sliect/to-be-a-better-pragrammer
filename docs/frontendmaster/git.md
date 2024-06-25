@@ -20,3 +20,14 @@ cnpm config set registry https://registry.npm.taobao.org 切换淘宝镜像源
 
 可以修改当前分支的提交
 git rebase -i HEAD~3   // 修改最近的三个提交，并进入vi 模式，输入 i 进行提交的编辑，按esc按钮退出编辑状态，输入 :wq 保存
+
+合并其他分支部分提交代码
+``` bash
+git checkout target_branch
+git log source_branch
+git cherry-pick <commit-id1> <commit-id2> ...
+git add .
+# 可能会出现vim文本，:wq退出即可
+git cherry-pick --continue
+git push
+```
