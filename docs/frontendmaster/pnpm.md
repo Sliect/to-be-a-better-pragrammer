@@ -18,3 +18,15 @@ pnpm remove foo
 
 
 pnpm i --ignore-scripts --no-frozen-lockfile
+
+```bash
+# 组件库szzj-drs-components下
+pnpm link --global
+# 在项目下 import { DilverHeader } from 'szzj-drs-components' 即可使用本地最新代码
+# 记得szzj-drs-components拉取最新代码
+pnpm link --global @szzj/drs-components
+# 解除软链
+pnpm unlink --global @szzj/drs-components
+# 查看全局生成的软链
+pnpm ls --global
+```

@@ -130,3 +130,7 @@ click-to-react-component  点击浏览器元素，打开vscode源码文件
 @floating-ui  浮动元素定位
 
 react-intl    国际化
+
+click-to-react-component  定位源码
+
+cac   用于cli构建的ts库，基于esbuild
